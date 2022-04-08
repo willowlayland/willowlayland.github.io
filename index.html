@@ -3,45 +3,46 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
     <title>Willow Layland. tryin'stuff.</title>
-    <link rel="stylesheet" href="global.css" type="text/css">
-    <link rel="stylesheet" href="home-page.css" type="text/css">
-    <link rel="stylesheet" href="p-cards.css" type="text/css">
-    <link rel="stylesheet" href="fonts.css" type="text/css">
-    <link href="favicon.png" rel="icon" type="image/x-icon">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/global.css" type="text/css">
+    <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
+    <link rel="stylesheet" href="./css/home-page.css" type="text/css">
+    <link rel="stylesheet" href="./css/p-cards.css" type="text/css">
+    <link href="./images/favicon.png" rel="icon" type="image/x-icon">
+    <script src="./script/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header class="hero parallax">
         <!-- <h1>H<span class="min">e</span>l<span class="min">l</span>o<br/>there</h1> -->
-        <h1>tit<sup>le of</sup>th<sup>e page</sup>.here</h1>
+        <!-- <h1>wil<sup>low la</sup>yl<sup>and</sup>. tryin' stuff.</h1> -->
+        <h1>title<sup>of</sup><br/>the<sup>page</sup> here.</h1>
     </header>
 
     <div class="title">    
-        <h2>Page title. <br><span class="accent">write stuff here.</span></h2>
+        <!-- <h2>I'm Willow Layland. <br><span class="accent">I design and code. 
+            I codesign. I'm a codesigner.</span></h2> -->
+            <h2 class="biggy">Page title. <br><span class="accent">Write stuff here.</span></h2>
             <!-- <span class="learnmore"> <a href="/">(learn more)</a></span> -->
-            <!-- <div class="link">
-                <a href="/">(more)</a>
-            </div>  -->
+            <div class="link">
+                <a href="about.html">(more)</a>
+            </div> 
     </div>
 
     <section class="home-portfolio">
         <div class="portfolio flex-row justify-between">
             <div class="portfolio-item">
                 <h3>Website with a K</h3>
+                <!-- <p  class="arrowafter">Coded Website</p> -->
                 <a href="website-with-a-k.html">
                     <img class="port-img">
                 </a>
             </div>
-            
             <div class="portfolio-item">
                 <h3>Cann'd Ans'er</h3>
                 <img class="port-img">
             </div>
-            
             <div class="portfolio-item">
                 <h3>Other projects</h3>
                 <img class="port-img">
@@ -53,14 +54,29 @@
     </section>
 
     <div class="follow">
-        <div class="title flex-row justify-between">
-            <h3>Follow me</h3>
+        <div class="title flex-row justify-between biggy">
+            <h4>Follow me</h4><span class="arrowafter"></span>
             <div class="follow-links">
-                <a href="/">@</a>
-                <a href="/">@</a>
-                <a href="/">@</a>
-                <a href="/">@</a>
-                <a href="/">@</a>
+                <span class="fa-stack">
+                    <a href="#" class="fa fa-circle fa-stack-2x"></a>
+                    <a href="https://github.com/willowlayland" class="fa fa-github fa-stack-1x fa-inverse" target="_blank" rel="noopener noreferrer"></a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#" class="fa fa-circle fa-stack-2x"></a>
+                    <a href="https://codepen.io/willowlayland" class="fa fa-codepen fa-stack-1x fa-inverse" target="_blank" rel="noopener noreferrer"></a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#" class="fa fa-circle fa-stack-2x"></a>
+                    <a href="https://www.linkedin.com/in/willow-layland" class="fa fa-linkedin fa-stack-1x fa-inverse" target="_blank" rel="noopener noreferrer"></a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#" class="fa fa-circle fa-stack-2x"></a>
+                    <a href="https://instagram.com/willowlaylandotcom" class="fa fa-instagram fa-stack-1x fa-inverse" target="_blank" rel="noopener noreferrer"></a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#" class="fa fa-circle fa-stack-2x"></a>
+                    <a href="https://letterboxd.com/deerstarlings" class="fa fa-star-half-full fa-stack-1x fa-inverse" target="_blank" rel="noopener noreferrer"></a>
+                </span>
             </div>
         </div>
     </div>
@@ -68,9 +84,9 @@
     <footer class="flex-row justify-between">
         <p>Willow Layland © <script>document.write(new Date().getFullYear())</script></p>
         <div class="footer-links">
-            <a href="/past">Past work</a>
-            <a href="/resume">Resume</a>
-            <a href="/notebook">Notebook</a>
+            <a href="past.html">Past work</a>
+            <a href="resume.html">Resume</a>
+            <a href="notebook.html">Notebook</a>
         </div>
         <p>willowlayland@gmail.com</p>
     </footer>
