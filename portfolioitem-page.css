@@ -1,0 +1,19 @@
+.portfolio-page {
+    justify-content: center;
+    
+    
+    border: 5px solid lightgrey;
+    width: 75vw; 
+    
+    max-width: 1920px;
+    /* margin: 3em auto; */
+    margin: 12vw auto;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
