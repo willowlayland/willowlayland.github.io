@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Past work - Willow Layland</title>
-    <link rel="stylesheet" href="./css/global.css" type="text/css">
-    <link rel="stylesheet" href="./css/p-cards.css" type="text/css">
-    <link href="./images/icon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="global.css" type="text/css">
+    <link rel="stylesheet" href="p-cards.css" type="text/css">
+    <link href="favicon.png" rel="icon" type="image/x-icon">
     <script src="./script/script.js"></script>
 </head>
 
