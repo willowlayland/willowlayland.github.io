@@ -1,7 +1,7 @@
 .portfolio {
     max-width: 1920px;
     margin: auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .portfolio-item {
@@ -10,11 +10,13 @@
     margin-top: 2em; */
     width: 100%;
     flex-basis: 33.33%;
-    padding: 0 2rem 3rem 0;
+    padding: 0 1rem 3rem 1rem;
     transition: all 0.5s;
 
     h3 {
         //font-size: 6vmin;
+        font-size: 24px;
+        
         margin: .5em 0;
         white-space: nowrap;
         

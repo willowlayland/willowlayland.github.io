@@ -71,20 +71,26 @@ p {
 //     }
 // }
 
+
+
 h1 {
     font-size: 3rem;
+    font-size: 52px; 
 }
 
 h2 {
     font-size: 2.5rem;
+    font-size: 24px;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-size: 14px;
 }
 
 .biggy {
     font-size: 6vmin;
+    font-size: 52px;
     font-size: auto;
     line-height: 1.25em;
 }
@@ -92,6 +98,7 @@ h3 {
 header {
     h1.biggy {
     font-size: 8vmin;
+    font-size: 72px;
     }
 }
 
@@ -190,6 +197,7 @@ section {
 footer {
     background-color: var(--background-color-footer);
     font-size: .8em;
+    font-size: 14px;
     
     padding: 2rem 3rem;
     width: 100%;
@@ -213,7 +221,6 @@ footer {
     @media (max-width: 818px) {
         padding: 1rem 1.5rem;
 
-        font-size: 14px;
         flex-flow: row wrap;
         flex-basis: 50%;
           

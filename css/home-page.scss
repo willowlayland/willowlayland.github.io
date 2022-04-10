@@ -1,14 +1,19 @@
 .hero {
+    color: var(--light-grey);
     background-color: black;
-    min-height: 100vh;
+    min-height: 140vh;
 
     h1 {
-        font-size: 25.5vmin;
+        font-size: 25.5vw;
         font-weight: 500;
-        color: var(--light-grey);
         text-transform: uppercase;
         font-family: "Double Bass", sans-serif;
         // font-family: "Anton"; 
+    }
+
+    p {
+        text-align: right;
+        padding: 6vmin;
     }
 }
 
@@ -21,13 +26,18 @@
     display: inline-block;
 } */
 
+
 .learnmore {
+    margin: 1em 0;
     font-weight: 500;
+    align-self: flex-end;
+    padding-right: 2rem;
 }
 
 
 .follow {
     margin: 2rem 3rem;
+    color: var(--black);
     background-color: var(--light-grey);
 
     .title {
@@ -35,19 +45,20 @@
     }
 
     .arrowafter {
-        color: var(--light-grey);
+        color: transparent;
         transition: all 0.5s;
     }
 
     &:hover {
         .arrowafter {
-            color: black;
+            color: var(--black);
             transform: translate(16px, 0);
         }
     }
 
     .follow-links {
         font-size: 3.5vmin;
+        font-size: 24px;
         align-content: right;
         text-align: right;
     
