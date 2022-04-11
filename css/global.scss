@@ -36,6 +36,10 @@
 
 .justify-between {
     justify-content: space-between;
+
+    @media (max-width: 375px) {
+        justify-content: center;
+    }
 }
 
 .fixed-bottom {
@@ -48,62 +52,46 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 	pointer-events: auto;
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 
 body {
     font-family: var(--global-font-primary);
     color: var(--black);
-    overflow-x: hidden;
 }
-
-/* h1 {
-    font-size: 2vmin;
-}
-
-h2,h3 {
-    font-size: .5vmin;
-}
-
-p {
-    font-size: 1vmin;
-} */
-
-// .title {
-//     h1, h2, h3, h4 {
-//         font-size: 6vmin;
-//         font-size: auto;
-//         line-height: 1.25em;
-//     }
-// }
-
-
 
 h1 {
     font-size: 3rem;
-    font-size: 52px; 
+    //font-size: 52px; 
 }
 
 h2 {
     font-size: 2.5rem;
-    font-size: 24px;
+    //font-size: 24px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-size: 14px;
+    font-size: 2rem;
+    //font-size: 14px;
 }
 
 .biggy {
-    font-size: 6vmin;
-    font-size: 52px;
-    font-size: auto;
+    //font-size: 6vmin;
+    // font-size: 52px;
+    // font-size: auto;
+    font-size: 4rem;
     line-height: 1.25em;
 }
 
 header {
     h1.biggy {
-    font-size: 8vmin;
-    font-size: 72px;
+    // font-size: 8vmin;
+    //font-size: 72px;
+    font-size: auto;
     }
 }
 
@@ -124,26 +112,26 @@ a {
     }
 }
 
-@media( max-width: 768px) {
+// @media( max-width: 768px) {
 
-    p {
-      font-size: 14px;
-    }
+//     p {
+//       font-size: 14px;
+//     }
     
-    h1, .h1, h2, .h2 {
-      font-size: 36px;
-    }
+//     h1, h2 {
+//       font-size: 36px;
+//     }
     
-    h3, .h3 {
-      font-size: 22px;
-    }
-  }
+//     h3 {
+//       font-size: 22px;
+//     }
+//   }
   
-  @media( max-width: 414px) {
-    h1, .h1, h2, .h2 {
-      font-size: 32px;
-    }
-  }
+//   @media( max-width: 414px) {
+//     h1, h2 {
+//       font-size: 22px;
+//     }
+//   }
 
 
 .link {
@@ -226,8 +214,6 @@ section {
 
 footer {
     background-color: var(--background-color-footer);
-    font-size: .8em;
-    font-size: 14px;
     
     padding: 2rem 3rem;
     width: 100%;
@@ -236,6 +222,7 @@ footer {
 
     p {
         font-family: var(--global-font-primary);
+        margin: 0 1em;
     }
 
     a {
@@ -248,13 +235,23 @@ footer {
         }
     }
 
-    @media (max-width: 818px) {
+    
+
+    @media (max-width: 375px) {
+        flex-direction: column;
         padding: 1rem 1.5rem;
 
-        flex-flow: row wrap;
-        flex-basis: 50%;
-          
-      }
+        p {
+            order: 3;
+            margin-top: 1rem;
+        }
+            
+        a {
+            margin-bottom: 2em;
+           
+            order: 1;
+        }
+    }
 }
 
 
