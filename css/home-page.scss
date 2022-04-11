@@ -47,12 +47,13 @@
     .arrowafter {
         color: transparent;
         transition: all 0.5s;
+        transform: translate(-32px, 0);
     }
 
     &:hover {
         .arrowafter {
             color: var(--black);
-            transform: translate(16px, 0);
+            transform: translate(0, 0);
         }
     }
 

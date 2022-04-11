@@ -18,6 +18,10 @@
     --global-font-secondary: -apple-system, system-ui;
 }
 
+.accent {
+    color: var(--accent);
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -49,6 +53,7 @@ html {
 body {
     font-family: var(--global-font-primary);
     color: var(--black);
+    overflow-x: hidden;
 }
 
 /* h1 {
@@ -119,6 +124,27 @@ a {
     }
 }
 
+@media( max-width: 768px) {
+
+    p {
+      font-size: 14px;
+    }
+    
+    h1, .h1, h2, .h2 {
+      font-size: 36px;
+    }
+    
+    h3, .h3 {
+      font-size: 22px;
+    }
+  }
+  
+  @media( max-width: 414px) {
+    h1, .h1, h2, .h2 {
+      font-size: 32px;
+    }
+  }
+
 
 .link {
     margin: 0 auto;
@@ -132,6 +158,11 @@ p, li {
 	user-select: none;
 }
 
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
 section {
     width: 100%;
     max-width: 1920px;
@@ -140,9 +171,13 @@ section {
     background-color: var(--background-color-secondary);
     line-height: 1.5em;
 
-    @media (max-width: 818px) {  
-        padding: 1.5rem;
-    }
+    @media ( max-width: 768px) {
+        padding: 85px 0;
+      }
+      
+      @media ( max-width: 414px) {
+       padding: 60px 0;
+      }
 }
 
 .title {
@@ -162,10 +197,6 @@ section {
     @media (max-width: 818px) {  
         padding: 1.5rem;
     }
-}
-
-.accent {
-    color: var(--accent);
 }
 
 .arrowbefore:before {
@@ -193,7 +224,6 @@ section {
 // }
 
 
-
 footer {
     background-color: var(--background-color-footer);
     font-size: .8em;
@@ -209,7 +239,7 @@ footer {
     }
 
     a {
-        margin-left: 1em;
+        margin: 0 1em;
     }
 
     .footer-links {

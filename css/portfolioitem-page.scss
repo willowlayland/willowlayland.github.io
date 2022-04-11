@@ -1,0 +1,166 @@
+.portfolio-page {
+    justify-content: center;
+    
+    
+    //border: 5px solid lightgrey;
+    //width: 75vw; 
+    
+    //max-width: 1920px;
+    /* margin: 3em auto; */
+    // margin: 12vw auto;
+    // margin-top: 3rem;
+    // padding-bottom: 3rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+// .gallery-container {
+//     height: 100vh;
+//     flex: 50%;
+
+//     .lightbox {
+//         position: relative;
+//        //flex-grow: 1;
+//         background-size: cover;
+//         overflow: hidden;
+//         margin: 0 0.5em 0.5em 0;
+
+//         &:nth-of-type(1) {
+//             background: url(https://source.unsplash.com/featured/?office);
+//             background-size: cover;
+//             flex-grow: 1;
+//           }
+  
+//           &:nth-of-type(2) {
+//             background: url(https://source.unsplash.com/featured/?meeting);
+//             background-size: cover;
+//             flex-grow: 2;
+//           }
+  
+//           &:nth-of-type(3) {
+//             background: url(https://source.unsplash.com/featured/?skyscraper);
+//             background-size: cover;
+//             flex-grow: 3;
+//           }
+  
+//           &:nth-of-type(4) {
+//             background: url(https://source.unsplash.com/featured/?laptop);
+//             background-size: cover;
+//             flex-grow: 1;
+//           }
+
+//         .lightbox-inner {
+//             flex-grow: 1;
+//             .img {
+//                 width: 100%;
+//             }
+
+//             h2 {
+//                 //position: absolute;
+//                 top: 50%;
+//                 right: 50%;
+//             }
+//         }
+//     }
+// }
+
+section.gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 6em 0;
+
+    .inner {
+
+        padding: 0 10em;
+
+        width: 85%;
+        padding: 0 1em;
+        transition: .5s all;
+      
+      @media (max-width: 910px) {
+        //padding: 0 1em;
+        //width: 100%;
+      }
+    
+      .gallery-container {
+        height: 60em;
+        flex: 50%;
+        //cursor: pointer;
+  
+        .img-container {
+          position: relative;
+          background-color: var(--black);
+          background-size: cover;
+          width: 50%;
+          overflow: hidden;
+          margin: 0 .5em .5em 0;
+  
+          &:nth-of-type(1) {
+            background: url(https://source.unsplash.com/featured/?office);
+            background-size: cover;
+            flex-grow: 1;
+          }
+  
+          &:nth-of-type(2) {
+            background: url(https://source.unsplash.com/featured/?meeting);
+            background-size: cover;
+            flex-grow: 2;
+          }
+  
+          &:nth-of-type(3) {
+            background: url(https://source.unsplash.com/featured/?skyscraper);
+            background-size: cover;
+            flex-grow: 3;
+          }
+  
+          &:nth-of-type(4) {
+            background: url(https://source.unsplash.com/featured/?laptop);
+            background-size: cover;
+            flex-grow: 1;
+          }
+          
+          .category {
+            position: absolute;
+            padding: 2em;
+            bottom: 0;
+            right: 0;
+            line-height: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #fff;
+          }
+  
+          &:before {
+            content: "";
+            background: var(--black);
+            opacity: .75;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            clip-path: polygon(100% 75%, 25% 100%, 100% 100%);
+            transition: .25s all;
+          }
+        }
+  
+        :hover::before {
+          background: black;
+          opacity: .85;
+          clip-path: polygon(100% 70%, 15% 100%, 100% 100%);
+        }
+      }
+  
+    .gallery-container > * {
+        flex: 0 0 33.3333%;
+      }
+      
+      .justifycenter {
+        margin-top: 2em;
+      }
+    }
+  }
+
