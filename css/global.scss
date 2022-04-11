@@ -53,10 +53,6 @@ html {
     -webkit-text-size-adjust: 100%;
 	pointer-events: auto;
     font-size: 14px;
-
-    @media (max-width: 768px) {
-        font-size: 12px;
-    }
 }
 
 body {
