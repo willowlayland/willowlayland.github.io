@@ -37,8 +37,10 @@
 .justify-between {
     justify-content: space-between;
 
-    @media (max-width: 375px) {
-        justify-content: center;
+    @media (max-width: 425px) {
+       
+            justify-content: center;
+        
     }
 }
 
@@ -79,8 +81,12 @@ h3 {
     //font-size: 6vmin;
     // font-size: 52px;
     // font-size: auto;
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 1.25em;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
 }
 
 header {
@@ -215,6 +221,7 @@ footer {
     width: 100%;
     margin-top: 2em;
     border-top: 1px solid var(--light-grey);
+    justify-content: space-between;
 
     p {
         font-family: var(--global-font-primary);
@@ -226,27 +233,34 @@ footer {
     }
 
     .footer-links {
+
         p {
             margin-left: 1em;
+            
         }
     }
 
     
 
-    @media (max-width: 375px) {
-        flex-direction: column;
-        padding: 1rem 1.5rem;
+    @media (max-width: 768px) {
+        flex-flow: column wrap;
+        padding: 2rem 0;
+        //margin-bottom: 1rem;
+        justify-content: center;
 
         p {
             order: 3;
-            margin-top: 1rem;
+        }
+
+        p, .footer-links {
+            padding: 1rem 0;
         }
             
         a {
-            margin-bottom: 2em;
-           
             order: 1;
         }
+
+        
     }
 }
 
