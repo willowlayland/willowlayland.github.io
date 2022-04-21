@@ -232,13 +232,13 @@ footer {
 
     a {
         margin: 0 1em;
+        text-transform: capitalize;
     }
 
     .footer-links {
 
         p {
             margin-left: 1em;
-            
         }
     }
 
@@ -249,6 +249,7 @@ footer {
         padding: 2rem 0;
         //margin-bottom: 1rem;
         justify-content: center;
+        text-align: center;
 
         p {
             order: 3;
@@ -261,7 +262,6 @@ footer {
         a {
             order: 1;
         }
-
         
     }
 }

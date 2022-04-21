@@ -61,13 +61,13 @@
                 font-weight: 400;
                 line-height: var(--global--line-height-body);
                 /* line-height: 2em; */
-                transition: .5s all;
+                transition: .25s all;
             }
         
             &:hover {
                 flex-grow: 20;
                 padding-top: 0;
-                color: red;
+                color: var(--accent);
 
             }
         }
