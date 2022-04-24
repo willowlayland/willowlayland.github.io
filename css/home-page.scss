@@ -6,13 +6,12 @@ header, .name {
 
     @media (max-height: 600px) {
         //max-height: 50vh;
+        .name {
+            font-size: 20vmin;
+        }
     }
 }
 
-  
-h1,.subhead {
-    will-change: transform, opacity;
-}
 
 .hero {
     background: #121212;
@@ -53,6 +52,12 @@ h1,.subhead {
     @return $value;
 }
 
+
+  
+h1,.subhead {
+    will-change: transform, opacity;
+}
+
 h1 {
     color: #fcedd8;
     font-size: 15vw;
@@ -87,7 +92,7 @@ h1 {
     }
 
     80% {
-        opacity: 1;
+        //opacity: 1;
         transform: translate(0);
         text-shadow: none;
     }
@@ -100,7 +105,7 @@ h1 {
 
 @keyframes moveInRight {
     0% {
-        opacity: 0;
+        //opacity: 0;
         transform: translateX(100%);
     }
 
