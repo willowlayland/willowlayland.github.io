@@ -21,7 +21,7 @@ h1,.subhead {
     text-transform: uppercase;
     cursor: default;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
 
     &:after {
         content: ""; 
@@ -157,6 +157,7 @@ p, .scrolltext  {
     font-weight: 600;
     letter-spacing: .5vw;
     padding: 1em;
+    overflow: hidden;
 }
 
 .scrolltext {
