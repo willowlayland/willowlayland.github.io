@@ -233,6 +233,7 @@ section {
 footer {
     margin-top: 1em;
     width: 100%;
+    font-size: 16px;
     
     div {
         padding: 1rem 2rem;
@@ -266,6 +267,7 @@ footer {
             //text-transform: uppercase;
             padding: .5em;
             font-weight: 800;
+            //color: var(--offwhite);
         }
     }
     
@@ -273,7 +275,7 @@ footer {
         align-self: center;
     }
     
-    .icons {
+    .icons,.contact {
         justify-content: center;
     }
     
@@ -320,13 +322,13 @@ footer {
       
   
     @media (max-width: 768px) {
-        font-size: 1rem;
+        //font-size: 18px;
         flex-flow: column wrap;
         justify-content: center;
         text-align: center;
 
         .site-title {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
@@ -334,7 +336,7 @@ footer {
             padding: 1.5rem .5rem;
         }
         
-        .icons,.contact,.nocookies {
+        .footer-links-container,.icons,.contact,.nocookies {
             //padding: .5rem;
             flex-direction: column;
             
