@@ -13,7 +13,7 @@ header, .name {
 
 
 .hero {
-    background: #121212;
+    background: var(--black);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -55,11 +55,10 @@ header, .name {
   
 h1,.subhead {
     will-change: transform, opacity;
-    transition: all 0.5s;
 }
 
 h1 {
-    color: #fcedd8;
+    color: var(--offwhite);
     font-size: 15vw;
     line-height: 1;
     font-weight: 900;
@@ -116,7 +115,7 @@ h1 {
     }
 
     100% {
-        text-shadow: textShadow(0.25, 15, royalblue), textShadow(0.25, 30, hotpink),textShadow(0.25, 45, orange);
+        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
         transform: skew(-10deg, -5deg);
     }
 }
@@ -131,8 +130,7 @@ h1 {
 
 .arrowdown:after {
     content: "\2193";
-    color: #343434;
-    color: #fcedd8;
+    color: var(--offwhite);
     opacity: 0;
     animation-name: moveFade;
     animation-duration: 2s;
@@ -156,7 +154,7 @@ h1 {
 }
 
 .subhead, .scrolltext  {
-    color: #fcedd8;
+    color: var(--offwhite);
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
@@ -166,7 +164,7 @@ h1 {
 }
 
 .scrolltext {
-    color: #343434;
+    color: var(--dark-grey);
 }
 
 @keyframes scrollleft {

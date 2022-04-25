@@ -4,7 +4,6 @@ h2 {
 }
 
 .entry-inner { 
-
     p {
         margin: 1rem 0;
         line-height: 1.75em;
@@ -18,25 +17,6 @@ h2 {
         }
     }
 }
-
-
-// .notebook-container {
-//     max-width: 1920px;
-//     margin: auto;
-//     padding: 1rem 2rem;
-
-//     .entry-container {
-//         display: inline-block;
-//         width: 31%;
-//         margin: 1%;
-//         text-align: left;
-
-//         .entry-inner {
-//             border: 1px solid black;
-//             padding: 2rem;
-//         }
-//     }
-// }
 
 .notebook-container {
     max-width: 1920px;
@@ -58,7 +38,7 @@ h2 {
 
 
 @media screen and (min-width: 700px) {
-.notebook-container {
+    .notebook-container {
         width: 100%;
     }
 }
