@@ -4,8 +4,7 @@ header, .name {
     backface-visibility: hidden;
     --webkit-filter: blur(0);
 
-    @media (max-height: 600px) {
-        //max-height: 50vh;
+    @media (min-width: 768px) {
         h1 {
             font-size: 20vmin;
         }
@@ -56,6 +55,7 @@ header, .name {
   
 h1,.subhead {
     will-change: transform, opacity;
+    transition: all 0.5s;
 }
 
 h1 {
@@ -221,6 +221,11 @@ h1 {
 //     }
 // }
 
+
+.title {
+    margin-top: 0;
+    padding-top: 5rem;
+}
 
 .learnmore {
     margin: 1rem 0;

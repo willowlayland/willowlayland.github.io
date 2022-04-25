@@ -116,9 +116,6 @@ h3 {
 }
 
 .biggy {
-    //font-size: 6vmin;
-    // font-size: 52px;
-    // font-size: auto;
     font-size: 4.5rem;
     line-height: 1.25em;
 
@@ -231,14 +228,15 @@ section {
 
 
 footer {
-    margin-top: 1em;
+    //margin-top: 1em;
     width: 100%;
-    font-size: 16px;
+    //font-size: 16px;
     
     div {
         padding: 1rem 2rem;
         width: 100%;
         border-top: 2px solid var(--black);
+        //margin-top: 5px;
     }
   
     a, p {
@@ -264,9 +262,9 @@ footer {
     
     .follow-links, .footer-links {
         a {
-            //text-transform: uppercase;
+            text-transform: uppercase;
             padding: .5em;
-            font-weight: 800;
+            font-weight: 500;
             //color: var(--offwhite);
         }
     }
@@ -292,13 +290,13 @@ footer {
     }
     
     .fa  {
-        //font-size: 1.25em;
+        font-size: 1.25em;
         color: var(--black);
     } 
     
     .contact {
         a {
-            margin-right: .5em;
+            margin: 0 .5em;
             margin-top: .45em;
         }
     }
@@ -306,10 +304,11 @@ footer {
     .mail {
         cursor: text;
         font-weight: 500;
+        text-transform: uppercase;
         font-size: .8rem;
         border-bottom: 1px solid var(--black);
         padding: 0 5px;
-        padding-right: 16%;
+        padding-right: 8%;
         margin: 0 .5em;
         
         @media (max-width: 768px) {
@@ -318,17 +317,21 @@ footer {
             margin: 5px;
             padding: 5px;
         }
+
+        &:nth-of-type(4) {
+            padding-right: 28%;
+        }
     }
       
   
     @media (max-width: 768px) {
-        //font-size: 18px;
+        font-size: 16px;
         flex-flow: column wrap;
         justify-content: center;
         text-align: center;
 
         .site-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
         }
 
