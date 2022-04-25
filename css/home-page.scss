@@ -6,7 +6,7 @@ header, .name {
 
     @media (max-height: 600px) {
         //max-height: 50vh;
-        .name {
+        h1 {
             font-size: 20vmin;
         }
     }
@@ -20,7 +20,7 @@ header, .name {
     text-transform: uppercase;
     cursor: default;
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
 
     &:after {
         content: ""; 
@@ -155,7 +155,7 @@ h1 {
     }
 }
 
-p, .scrolltext  {
+.subhead, .scrolltext  {
     color: #fcedd8;
     text-align: center;
     text-transform: uppercase;
