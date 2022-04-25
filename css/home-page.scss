@@ -3,12 +3,6 @@ header, .name {
     transition: all .25s;
     backface-visibility: hidden;
     --webkit-filter: blur(0);
-
-    @media (min-width: 768px) {
-        h1 {
-            font-size: 20vmin;
-        }
-    }
 }
 
 
@@ -73,6 +67,10 @@ h1 {
         -webkit-animation-timing-function: ease;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
+
+        @media (max-width: 768px) {
+            font-size: 20vmin;
+        }
     }
 
     .layland {
