@@ -95,8 +95,8 @@ h1 {
     }
 
     100% {
-        text-shadow: textShadow(0.25, 15, royalblue), textShadow(0.25, 30, hotpink),textShadow(0.25, 45, orange);
         transform: skew(-10deg, -5deg);
+        text-shadow: textShadow(0.25, 15, royalblue), textShadow(0.25, 30, hotpink),textShadow(0.25, 45, orange);
     }
 }
 
@@ -113,8 +113,8 @@ h1 {
     }
 
     100% {
-        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
         transform: skew(-10deg, -5deg);
+        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
     }
 }
 
@@ -218,16 +218,25 @@ h1 {
 // }
 
 
-.title {
-    margin-top: 0;
-    padding-top: 5rem;
-}
-
 .learnmore {
     margin: 1rem 0;
     font-weight: 500;
     align-self: flex-end;
     padding-right: 2rem;
+}
+
+footer {
+    justify-content: space-between;
+    padding: 0;
+    .global-footer-container {
+        //padding: 3rem 0;
+        max-width: auto;
+        max-width: 400px;
+    }
+
+    .global-footer-container > div:first-of-type {
+        order: 0;
+    }
 }
 
 

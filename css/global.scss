@@ -26,14 +26,10 @@
     color: var(--accent);
 }
 
-.normalbg {
-    background-color: var(--background-color-primary);
-}
-
 .blackbg {
     background-color: var(--black);
 
-    a, p {
+    h1,h2,h3,h4,h5,h6,a,p {
         color: var(--offwhite);
     }
 
@@ -62,6 +58,14 @@
     background-color: var(--offwhite);
 }
 
+.normalbg {
+    background-color: var(--background-color-primary);
+    
+    a, p {
+        color: var(--black);
+    }
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -81,6 +85,11 @@
         //justify-content: center;
         justify-content: auto;
     }
+}
+
+.justify-center {
+    justify-content: center;
+    text-align: center;
 }
 
 .fixed-bottom {
@@ -172,11 +181,14 @@ img {
 
 section {
     width: 100%;
-    max-width: 1920px;
-    margin: auto;
     padding: 3rem;
     background-color: var(--background-color-secondary);
     line-height: 1.5em;
+
+    .section-inner {
+        max-width: 1920px;
+        margin: auto;
+    }
 
     @media ( max-width: 768px) {
         padding: 85px 0;
@@ -185,13 +197,23 @@ section {
       @media ( max-width: 414px) {
        padding: 60px 0;
       }
+      
+}
+
+
+.full {
+    height: 100vh;
+}
+
+.strong {
+    font-weight: 600;
 }
 
 .title {
     max-width: 1920px;
     margin: auto;
-    margin-top: 2em;
     padding: 3rem;
+    padding-top: 5em;
 
     h1,h2,h3 {
         max-width: 920px;
@@ -237,7 +259,9 @@ footer {
     }
 
     .global-footer-container,.follow-container,.contact-container {
-        width: 65vw;
+        width: 75vw;
+        //padding: 3rem;
+        max-width: 1920px;
         margin: 0 auto;
     }
   
@@ -250,7 +274,8 @@ footer {
   
     .global-footer-container {
         flex-wrap: nowrap;
-        min-height: 300px;
+        //padding: 3rem;
+        min-height: 250px;
         text-align: left;
 
         .site-title {
@@ -273,10 +298,10 @@ footer {
             text-transform: none;
         }
         
-    @media (max-width: 768px) { 
-        padding: 1rem;
-        flex-flow: column wrap;
-      }
+        @media (max-width: 768px) { 
+            padding: 1rem;
+            flex-flow: column wrap;
+        }
     }
     
     .follow-container {
@@ -321,6 +346,7 @@ footer {
         }
     }
 
+
     .contact,.mail,.nocookies {
         font-size: .9em;
     }
@@ -341,6 +367,18 @@ footer {
             padding: 1.5rem .5rem;
             width: 100%;
         }
+
+        .global-footer-container > div:first-of-type {
+            order: 2;
+        }
+
+        .footer-links > a {
+            width: 100%;
+            display: block;
+            padding-top: .5em;
+            //text-align: center;
+        }
+
 
         .follow-container {
             padding: 0;
