@@ -20,7 +20,7 @@ header, .name {
     text-transform: uppercase;
     cursor: default;
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
 
     &:after {
         content: ""; 
