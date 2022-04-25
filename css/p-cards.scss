@@ -1,22 +1,20 @@
 .portfolio {
     max-width: 1920px;
     margin: auto;
-    padding: 2rem 0;
+    //padding: 2rem 0;
     flex-wrap: wrap;
 }
 
 .portfolio-item {
     flex-grow: 1;
-    padding: 0 1rem 3rem 1rem;
+    //padding: 0 1rem 3rem 1rem;
     transition: all 0.5s;
 
     h3 {
         //font-size: 6vmin;
         font-size: 24px;
-
         margin: .5em 0;
         white-space: nowrap;
-        
         transition: all 0.5s;
     }
 
@@ -46,9 +44,10 @@
 
 .home-portfolio {
     .portfolio {
-        height: 100vh;
-
-        .portfolio-item {
+        //height: 100vh;
+        
+        //grid-template-rows: repeat(2, 1fr);
+        .portfolio-item h3 {
             &:before {
                 display: block;
                 content: "Featured work \2192";
@@ -60,24 +59,28 @@
                 /* line-height: 2em; */
                 transition: .25s all;
             }
-        
-            &:hover {
-                flex-grow: 20;
-                padding-top: 0;
-                color: var(--accent);
+        }
 
+        .portfolio-item:hover {
+            flex-grow: 20;
+            padding-top: 0;
+            color: var(--accent);
+
+            .port-img {
+                height: 70vmin;
             }
+
         }
 
-        .home2 {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
+        // .home2 {
+        //     padding-top: 50px;
+        //     padding-bottom: 50px;
+        // }
 
-        .home3 {
-            padding-top: 100px;
+        // .home3 {
+        //     padding-top: 100px;
             
-        }
+        // }
 
         @media( max-width: 768px), (max-height: 600px) {
             height: auto;
@@ -96,7 +99,7 @@
 } */
 
 .port-img {
-    height: 70vmin;
+    height: 40vmin;
     overflow: hidden;
     border: 1px solid var(--light-grey);
     border-radius: 5px;
@@ -107,5 +110,11 @@
     &:hover {
         transform: translate(0, -8px);
         box-shadow: 0px 3px 6px var(--light-grey);
+    }
+}
+
+.home4,.home5,.home6,.home7 {
+    .port-img {
+        height: 25vmin;
     }
 }
