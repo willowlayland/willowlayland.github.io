@@ -1,6 +1,3 @@
-
-
-
 .portfolio-container {
     width: 100%;
 }
@@ -10,65 +7,64 @@
     //margin-top: 2em;
     height: 100%;
     
-
-     
-
-.portfolio-item {
-    display: flex;
-    flex: 1;
-    background-color: black;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    //background-attachment: fixed;
-    //height: 70vh;
-    height: 60vmin;
-    
-    
-    max-width: 33.33%;
-    //min-width: 10%;
-    margin: 0 1px;
-    position:relative;
-    flex-direction: column;
-    
-    transition: .5s;
-    
-    justify-content: center;
-    text-align: center;
-    
-   
-    
-    img {
-    width: 10em;
-    //padding: 500px;
-    align-self: center;
-    transition: 1s;
-    }
-    
-    p {
-    transition: .5s all;
-    }
-    
-    &:hover {
-        flex-grow: 20;
-        max-width: 80%;
+    .portfolio-item {
+        display: flex;
+        flex: 1;
+        background-color: black;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        //background-attachment: fixed;
+        //height: 70vh;
+        height: 60vmin;
         
-        p {
-            font-size:3em;
-        }
+        
+        max-width: 33.33%;
+        //min-width: 10%;
+        margin: 1px;
+        position:relative;
+        flex-direction: column;
+        
+        transition: .5s;
+        
+        justify-content: center;
+        text-align: center;
+        
+    
         
         img {
-            width: 20em;
+            width: 10em;
+            //padding: 500px;
+            align-self: center;
+            transition: 1s;
+        }
+        
+        p {
+            transition: .5s all;
+        }
+        
+        &:hover {
+            flex-grow: 20;
+            max-width: 80%;
+            
+            p {
+                font-size:3em;
+            }
+            
+            img {
+                width: 20em;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            //flex-direction: row;
+            min-width: 100%;
+            //min-width: 50%;
+            height: 50vw;
+            //margin: 1px 0;
         }
     }
-    
-    @media(max-width: 768px) {
-    min-width: 100%;
-    height: 45vh;
-    margin: 1px 0;
-    }
-}
 }
 
 
