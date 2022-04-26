@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all .5s;
 }
 
 :root {
@@ -113,7 +112,7 @@ section {
 
 .biggy {
     font-size: 4.5rem;
-    font-size: 4.5em;
+    font-size: 4em;
     line-height: 1.25em;
 
     @media (max-width: 768px) {
@@ -153,7 +152,7 @@ section {
 .normalbg {
     background-color: var(--background-color-primary);
     
-    a, p {
+    p {
         color: var(--black);
     }
 }
@@ -243,7 +242,7 @@ section {
     content: "\2193";
 }
 
-.arrowbefore:before, .arrowafter:after, .arrowdown:after {
+.arrowbefore:before, .arrowafter:after {
     font-family: var(--global-font-secondary);
     font-weight: 900;
 }
@@ -256,7 +255,8 @@ footer {
     
     .global-footer,.icons,.contact,.nocookies {
         padding: 1rem;
-        border-top: 2px solid var(--black);
+        border-top: 1px solid var(--black);
+        //filter: drop-shadow(0 15px 20px var(--black));
     }
 
     .global-footer-container,.follow-container,.contact-container {
@@ -309,7 +309,8 @@ footer {
     }
     
     .follow-container {
-        padding: 0 7vw;
+        padding: 0 12vw;
+        width: 768px;
 
         a {
             text-transform: uppercase;
