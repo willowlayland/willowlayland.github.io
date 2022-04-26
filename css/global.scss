@@ -57,6 +57,7 @@ p {
 }
 
 a {
+    cursor: pointer;
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
@@ -83,6 +84,7 @@ img {
 }
 
 section {
+    position: relative;
     width: 100%;
     padding: 3rem;
     background-color: var(--background-color-secondary);
@@ -197,6 +199,10 @@ header {
 
 .full {
     height: 100vh;
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
 }
 
 .strong {
@@ -302,6 +308,8 @@ footer {
     }
     
     .follow-container {
+        padding: 0 7vw;
+
         a {
             text-transform: uppercase;
             font-weight: 800;

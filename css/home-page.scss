@@ -237,12 +237,35 @@ h1 {
 //     }
 // }
 
+@media (min-width:768px) {
+    .homepage {
+        .title {
+            padding: 3em 0;
+
+            // &:last-of-type {
+            //     padding-bottom: 0;
+            // }
+        }
+    }
+}
 
 .learnmore {
     margin: 1rem 0;
     font-weight: 500;
     align-self: flex-end;
     padding-right: 2rem;
+}
+
+.portfolio-item {
+    &:nth-child(1) {
+        background-image:url('https://karenworks.biz/wp-content/uploads/2021/03/kwhero_image.jpg');
+    }
+    &:nth-child(2) {
+        background-image:url('https://source.unsplash.com/featured/?grey,wood');
+    }
+    &:nth-child(3) {
+        background-image:url('https://source.unsplash.com/featured/?silver,plant');
+    }
 }
 
 footer {
@@ -279,83 +302,3 @@ footer {
     }
 }
 
-
-// .follow {
-//     margin: 2rem 3rem;
-//     color: var(--black);
-//     //background-color: var(--light-grey);
-
-//     .title {
-//         margin-top: auto;
-//     }
-
-//     .arrowafter {
-//         color: transparent;
-//         transition: all 0.5s;
-//         transform: translate(-16px, 0);
-//         line-height: 1.15;
-
-//         @media (max-width: 768px) { 
-//             display: none;
-//         }
-        
-//     }
-
-//     &:hover {
-//         .arrowafter {
-//             color: var(--black);
-//             transform: translate(16px, 0);
-//         }
-//     }
-
-//     .follow-links {
-//         font-size: 2rem;
-//         align-content: right;
-//         text-align: right;
-    
-//         .fa-stack {
-//             .fa-stack-2x {
-//                 color: var(--black);
-//             }
-    
-//             .fa-stack-1x {
-//                 color: var(--light-grey);
-//                 transform: scale(.8);
-    
-//                 &:hover {
-//                     transform: scale(1);
-//                 }
-//             }
-//         }
-
-//         .link {
-//             margin-left: 1em;
-//         }
-//     }
-
-//     @media (max-width: 768px) { 
-//         margin: 1rem 1.5rem;
-
-//         .biggy {
-//             line-height: 1.5;
-//         }
-//     }
-
-//     @media (max-width: 425px) { 
-        
-//         .title, .follow-links {
-//             flex-direction: column;
-//             text-align: center;
-//         }
-
-//         .follow-links {
-//             font-size: 50%;
-//         }
-
-//         .link {
-            
-//                 padding: 0;
-            
-//         }
-//     }
-// }
