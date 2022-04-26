@@ -54,11 +54,15 @@ h1,.subhead {
 h1 {
     color: var(--offwhite);
     font-size: 15vw;
-    line-height: 1;
+    line-height: 1em;
     font-weight: 900;
     //text-shadow: textShadow(0.25, 15, royalblue), textShadow(0.25, 30, hotpink),textShadow(0.25, 45, orange);
     //backface-visibility: hidden;
     //transition: all .25s ease;
+
+    @media only screen and (max-width: 768px) {
+        line-height: 3em;
+    }
 
     .willow, .layland {
         display: block;
@@ -67,14 +71,22 @@ h1 {
         -webkit-animation-timing-function: ease;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
+        
 
         @media (max-width: 768px) {
             font-size: 20vmin;
         }
     }
 
+    
+
     .layland {
         animation-name: moveInLeft;
+
+        @media screen and (max-width: 768px) {
+            margin-top: -1.25em;
+        }
+        
     }
 
     .yfix {
@@ -96,7 +108,7 @@ h1 {
 
     100% {
         transform: skew(-10deg, -5deg);
-        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
+        text-shadow: textShadow(0.25, 15, var(--black)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
     }
 }
 
