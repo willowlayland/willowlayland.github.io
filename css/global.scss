@@ -22,81 +22,6 @@
     --global-font-secondary: -apple-system, system-ui;
 }
 
-.accent {
-    color: var(--accent);
-}
-
-.blackbg {
-    background-color: var(--black);
-
-    h1,h2,h3,h4,h5,h6,a,p {
-        color: var(--offwhite);
-    }
-
-    a:hover {
-        color: var(--magenta);
-    }
-}
-
-.yellowbg {
-    background-color: var(--yellow);
-}
-
-.magbg {
-    background-color: var(--magenta);
-}
-
-.cyanbg {
-    background-color: var(--cyan);
-
-    a:hover {
-        color: var(--yellow);
-    }
-}
-
-.offwhitebg {
-    background-color: var(--offwhite);
-}
-
-.normalbg {
-    background-color: var(--background-color-primary);
-    
-    a, p {
-        color: var(--black);
-    }
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-
-    @media (max-width: 425px) {
-        //justify-content: center;
-        justify-content: auto;
-    }
-}
-
-.justify-center {
-    justify-content: center;
-    text-align: center;
-}
-
-.fixed-bottom {
-    position: fixed;
-    bottom: 0;
-}
-
 html {
     background-color: var(--background-color-primary);
     scroll-behavior: smooth;
@@ -125,26 +50,10 @@ h3 {
     //font-size: 14px;
 }
 
-.biggy {
-    font-size: 4.5rem;
-    line-height: 1.25em;
-
-    @media (max-width: 768px) {
-        font-size: 3rem;
-    }
-}
-
-header {
-    h1.biggy {
-    // font-size: 8vmin;
-    //font-size: 72px;
-    font-size: auto;
-    }
-}
-
 p {
     font-family: var(--global-font-secondary);
     line-height: 1.5;
+    max-width: 960px;
 }
 
 a {
@@ -158,12 +67,6 @@ a {
     &:hover {
         color: var(--black);
     }
-}
-
-.link {
-    margin: 0 auto;
-    padding: 1em 0;
-    font-size: 1.25rem;
 }
 
 p, li {
@@ -200,6 +103,97 @@ section {
       
 }
 
+header {
+    h1.biggy {
+    // font-size: 8vmin;
+    //font-size: 72px;
+    font-size: auto;
+    }
+}
+
+
+.biggy {
+    font-size: 4.5rem;
+    line-height: 1.25em;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+
+.accent {
+    color: var(--accent);
+}
+
+.blackbg {
+    background-color: var(--black);
+
+    h1,h2,h3,h4,h5,h6,a,p {
+        color: var(--offwhite);
+    }
+}
+
+.yellowbg {
+    background-color: var(--yellow);
+}
+
+.magbg {
+    background-color: var(--magenta);
+}
+
+.cyanbg {
+    background-color: var(--cyan);
+}
+
+.offwhitebg {
+    background-color: var(--offwhite);
+}
+
+.normalbg {
+    background-color: var(--background-color-primary);
+    
+    a, p {
+        color: var(--black);
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+
+    @media (max-width: 425px) {
+        justify-content: auto;
+    }
+}
+
+.justify-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+
+.link {
+    margin: 0 auto;
+    padding: 1em 0;
+    font-size: 1.25rem;
+}
 
 .full {
     height: 100vh;
@@ -260,7 +254,6 @@ footer {
 
     .global-footer-container,.follow-container,.contact-container {
         width: 75vw;
-        //padding: 3rem;
         max-width: 1920px;
         margin: 0 auto;
     }
@@ -274,13 +267,13 @@ footer {
   
     .global-footer-container {
         flex-wrap: nowrap;
-        //padding: 3rem;
         min-height: 250px;
         text-align: left;
 
         .site-title {
             font-size: 1.5rem;
             font-family: var(--global-font-primary);
+            font-weight: 600;
         }
 
         .site-title,.footer-links {
@@ -290,6 +283,10 @@ footer {
             a {
                 text-transform: uppercase;
                 margin-right: 1em;
+
+                &:hover {
+                    color: var(--magenta);
+                }
             }
         }
 
@@ -309,6 +306,10 @@ footer {
             text-transform: uppercase;
             font-weight: 800;
             //color: var(--offwhite);
+            
+            &:hover {
+                color: var(--yellow);
+            }
         }
     }
     
@@ -323,7 +324,6 @@ footer {
                 text-transform: uppercase;
                 border-bottom: 1px solid var(--black);
                 padding: 0 5px;
-                //padding-right: 8%;
                 width: 23%;
                 margin: 0 .5em;
 
@@ -376,7 +376,6 @@ footer {
             width: 100%;
             display: block;
             padding-top: .5em;
-            //text-align: center;
         }
 
 

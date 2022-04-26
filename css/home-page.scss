@@ -228,10 +228,15 @@ h1 {
 footer {
     justify-content: space-between;
     padding: 0;
+
     .global-footer-container {
         //padding: 3rem 0;
         max-width: auto;
         max-width: 400px;
+
+        .site-title {
+            font-weight: 500;
+        }
     }
 
     .global-footer-container > div:first-of-type {

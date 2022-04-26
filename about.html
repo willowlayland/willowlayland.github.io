@@ -16,18 +16,23 @@
 
 <body class="blackbg">
 
-    <header class="title full">   
+    <header style="position: static;" class="title full">   
         <h1 class="biggy">About me</h1>
 
         <div class="link">
             <a href="index.html" class="arrowbefore">back</a>
         </div> 
 
-        <p>hi</p>
+        <div style="position: flex; flex-direction: row;">
+            <div style="height: 100%; overflow: hidden;" class="image-container">
+                <img style="z-index: 1; object-fit: cover; width: 100%; height: 100%;" class="" src="./images/grey.png">
+            </div>
 
-        <div class="link justify-center">
-            <a href="index.html" class="arrowbefore"></a>
-        </div>
+            <div class="text-container">
+                <h2>Better. Quicker. Together.</h2>
+            </div>
+        </div> 
+        <!-- <img style="position: relative; height: 100%; z-index: 1;" class=""></img> -->
     </header>
     <!-- <div class="title">    
         <h1>About</h2>
@@ -54,12 +59,12 @@
     </footer> -->
     
 
-    <footer class="normalbg">
+    <footer class="normalbg" style="position: relative; z-index: 20;">
 
         <div class="global-footer">
             <span class="global-footer-container flex-row justify-between">
                 <div class="flex-column">
-                    <p class="site-title strong">Willow Layland. <br/>Tryin' Stuff.</p>
+                    <p class="site-title">Willow Layland. <br/>Tryin' Stuff.</p>
                     <p>© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
                 </div>
                 <div class="flex-column">
