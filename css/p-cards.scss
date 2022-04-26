@@ -47,7 +47,7 @@
         //height: 100vh;
         
         //grid-template-rows: repeat(2, 1fr);
-        .portfolio-item h3 {
+        .portfolio-item {
             &:before {
                 display: block;
                 content: "Featured work \2192";
@@ -67,7 +67,8 @@
             color: var(--accent);
 
             .port-img {
-                height: 70vmin;
+                //height: 70vmin;
+                height: auto;
             }
 
         }
@@ -99,7 +100,7 @@
 } */
 
 .port-img {
-    height: 40vmin;
+    height: 80vmin;
     overflow: hidden;
     border: 1px solid var(--light-grey);
     border-radius: 5px;
