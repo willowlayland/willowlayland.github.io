@@ -73,9 +73,9 @@ h1 {
         animation-fill-mode: forwards;
         
 
-        // @media (max-width: 768px) {
-        //     font-size: 20vw;
-        // }
+        @media (max-width: 768px) {
+            font-size: 20vw;
+        }
     }
 
     
@@ -85,8 +85,9 @@ h1 {
 
         @media screen and (max-width: 768px) {
             margin-top: -1.25em;
-            margin-top: -2em;
+            //margin-top: -2em;
             margin-bottom: -1em;
+            margin-bottom: -.75em;
         }
         
     }
