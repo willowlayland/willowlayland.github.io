@@ -27,8 +27,8 @@ header, .name {
         background-position: center, 0% 0%, center;
         background-repeat: repeat, repeat, repeat;
         //opacity: .5;
-        mix-blend-mode: soft-light;
-        //mix-blend-mode: overlay;
+        //mix-blend-mode: soft-light;
+        mix-blend-mode: overlay;
     }
 }
 
@@ -247,7 +247,7 @@ h1 {
 
 
 .title {
-    padding: 5rem 0;
+    padding: 6rem 0;
     max-width:  1920px;
     margin: 0 auto;
 
@@ -259,7 +259,7 @@ h1 {
     }
 
     @media (max-width:768px) {
-        padding: 3rem 1rem;
+        padding: 6rem 1rem;
 
         h2 {
             width: 100%;
@@ -363,7 +363,7 @@ footer {
         font-weight: 500;
     }
 
-    .footer-button,.contact,.mail,.nocookies {
+    .footer-button,.nocookies {
         font-size: .9em;
     }
 
@@ -383,6 +383,20 @@ footer {
                 a,p {
                     color: var(--offwhite);
                 }
+            }
+        }
+
+        .footer-button {
+            width: 7.25em;
+            padding: .75rem;
+            //margin: 2em 0;
+            background-color: var(--offwhite);
+            color: var(--black);
+            border: 1px solid var(--offwhite);
+            text-transform: uppercase;
+        
+            &:hover {
+                background-color: var(--magenta);
             }
         }
 
@@ -488,19 +502,19 @@ footer {
             font-weight: 500;
             font-size: 2em;
         }
+    }
 
-        .footer-button {
-            width: 7.25em;
-            padding: .75rem;
-            margin-top: 2em;
-            background-color: var(--offwhite);
-            color: var(--black);
-            border: 1px solid white;
-            text-transform: uppercase;
-        
-            &:hover {
-                background-color: var(--magenta);
-            }
+    .footer-button {
+        width: 7.25em;
+        padding: .75rem;
+        margin: 2em 0;
+        // background-color: var(--offwhite);
+        // color: var(--black);
+        // border: 1px solid white;
+        text-transform: uppercase;
+    
+        &:hover {
+            background-color: var(--magenta);
         }
     }
 
