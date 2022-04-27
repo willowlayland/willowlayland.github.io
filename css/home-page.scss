@@ -1,9 +1,11 @@
-body {
-    background-color: var(--yellow);
-    background: -webkit-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
-    background: -ms-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
-    background: -moz-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
-    background: linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+@media (min-width: 768px) {
+    body {
+        background-color: var(--yellow);
+        // background: -webkit-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+        // background: -ms-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+        // background: -moz-linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+        // background: linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+    }
 }
 
 header, .name {
