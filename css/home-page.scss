@@ -1,3 +1,8 @@
+body {
+    background-color: var(--yellow);
+    //background-image: linear-gradient(180deg, var(--black) 0%, var(--yellow) 50%);
+}
+
 header, .name {
     min-height: 90vh;
     transition: all .5s;
