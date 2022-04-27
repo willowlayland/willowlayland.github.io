@@ -152,7 +152,7 @@ section {
 .normalbg {
     background-color: var(--background-color-primary);
     
-    p {
+    a,p {
         color: var(--black);
     }
 }
@@ -211,13 +211,13 @@ section {
 }
 
 .title {
-    max-width: 1920px;
-    margin: auto;
+    width: 100%;
     padding: 0 3rem;
     padding-top: 5rem;
 
-    h1,h2,h3 {
-        max-width: 920px;
+    h1,h2,h3,.link {
+        margin: auto;
+        max-width: 1920px;
     }
 
     h2:after {
@@ -258,6 +258,7 @@ footer {
         padding: 1rem;
         border-top: 1px solid var(--black);
         //filter: drop-shadow(0 15px 20px var(--black));
+
     }
 
     .global-footer-container,.follow-container,.contact-container {
@@ -307,73 +308,16 @@ footer {
             padding: 1rem;
             flex-flow: column wrap;
         }
-    }
-    
-    .follow-container {
-        padding: 0 12vw;
-        width: 768px;
-
-        a {
-            text-transform: uppercase;
-            font-weight: 800;
-            //color: var(--offwhite);
-            
-            &:hover {
-                color: var(--yellow);
-            }
-        }
-    }
-    
-    .contact-container {
-        .mail-container {
-            flex-grow: 1;
-            justify-content: center;
-
-            .mail {
-                cursor: text;
-                font-weight: 500;
-                text-transform: uppercase;
-                border-bottom: 1px solid var(--black);
-                padding: 0 5px;
-                width: 23%;
-                margin: 0 .5em;
-
-                &:nth-of-type(3) {
-                    width: 40%;
-
-                    @media (max-width: 768px) {
-                        width: 100%;
-                    }
-                }
-                
-                @media (max-width: 768px) {
-                    justify-content: left;
-                    text-align: left;
-                    margin: 5px;
-                    padding: 5px;
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-
-    .contact,.mail,.nocookies {
-        font-size: .9em;
-    }
-
-    .fa  {
-        font-size: 1.25em;
-        color: var(--black);
     } 
-      
   
     @media (max-width: 768px) {
         font-size: 16px;
         justify-content: center;
         text-align: center;
 
-        .global-footer-container,.icons,.follow-container,.contact-container,.nocookies,.mail-container,div {
+
+
+        .global-footer-container,.icons,.follow-container,.contact-container,.nocookies,.social-container,div {
             flex-direction: column;
             padding: 1.5rem .5rem;
             width: 100%;
@@ -387,21 +331,6 @@ footer {
             width: 100%;
             display: block;
             padding-top: .5em;
-        }
-
-
-        .follow-container {
-            padding: 0;
-            justify-content: center;
-            flex-direction: row;
-            
-            a {
-               padding: 0 1rem;
-            }
-        }
-
-        .contact-container a:last-child {
-            margin-top: 1em;
         }
     }
 }

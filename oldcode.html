@@ -318,3 +318,287 @@
     //         }
     //     }
     // } -->
+
+
+    <!-- footer {
+        margin-top: 1em;
+        width: 100%;
+        
+        .global-footer,.icons,.contact,.nocookies {
+            padding: 1rem;
+            //filter: drop-shadow(0 15px 20px var(--black));
+    
+        }
+    
+        .global-footer-container,.follow-container,.contact-container {
+            width: 75vw;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+      
+        a, p {
+            font-family: var(--global-font-primary);
+            color: var(--black);
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+      
+        .global-footer-container {
+            flex-wrap: nowrap;
+            min-height: 250px;
+            text-align: left;
+    
+            .site-title {
+                font-size: 1.5rem;
+                font-family: var(--global-font-primary);
+                font-weight: 600;
+            }
+    
+            .site-title,.footer-links {
+                margin: 1rem 0;
+                margin-right: 1em;
+    
+                a {
+                    text-transform: uppercase;
+                    margin-right: 1em;
+    
+                    &:hover {
+                        color: var(--magenta);
+                    }
+                }
+            }
+    
+            p {
+                font-family: var(--global-font-secondary);
+                text-transform: none;
+            }
+            
+            @media (max-width: 768px) { 
+                padding: 1rem;
+                flex-flow: column wrap;
+            }
+        }
+        
+        .follow-container {
+            //padding: 0 12vw;
+            max-width: 720px;
+    
+            a {
+                text-transform: uppercase;
+                font-weight: 800;
+                
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+        }
+        
+        .contact-container {
+            width: 720px;
+    
+            .mail-container {
+                flex-grow: 1;
+                justify-content: space-around;
+    
+                .mail {
+                    cursor: text;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid var(--black);
+                    padding: 0 5px;
+                    width: 23%;
+                    margin: 0 .5em;
+    
+                    &:nth-of-type(3) {
+                        width: 40%;
+    
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+                    
+                    @media (max-width: 768px) {
+                        justify-content: left;
+                        text-align: left;
+                        margin: 5px;
+                        padding: 5px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+    
+        .contact,.mail,.nocookies {
+            font-size: .9em;
+        }
+    
+        .fa  {
+            font-size: 1.25em;
+            color: var(--black);
+        } 
+    
+        @media (min-width: 768px) {
+            .global-footer,.icons,.contact,.nocookies {
+                transition: .5s all;
+                border-top: .5px solid var(--offwhite);
+    
+                &:not(:hover) {
+                    background-color: var(--black);
+    
+                    a,p {
+                        color: var(--offwhite);
+                    }
+                }
+    
+            }
+    
+            .follow-container > a {
+                color: var(--offwhite);
+            }
+        }
+          
+      
+        @media (max-width: 768px) {
+            font-size: 16px;
+            justify-content: center;
+            text-align: center;
+    
+    
+    
+            .global-footer-container,.icons,.follow-container,.contact-container,.nocookies,.mail-container,div {
+                flex-direction: column;
+                padding: 1.5rem .5rem;
+                width: 100%;
+            }
+    
+            .global-footer-container > div:first-of-type {
+                order: 2;
+            }
+    
+            .footer-links > a {
+                width: 100%;
+                display: block;
+                padding-top: .5em;
+            }
+    
+    
+            .follow-container {
+                padding: 0;
+                justify-content: center;
+                flex-direction: row;
+                
+                a {
+                   padding: 0 1rem;
+                }
+            }
+    
+            .contact-container a:last-child {
+                margin-top: 1em;
+            }
+        }
+    } -->
+    
+    <!-- footer {
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    
+        .global-footer-container {
+            //padding: 3rem 0;
+            //max-width: auto;
+            max-width: 520px;
+    
+            .site-title {
+                font-weight: 500;
+                font-size: 2em;
+                //font-weight: 700;
+                //text-transform: uppercase;
+                //font-size: 1.25em;
+            }
+    
+            // .footer-links {
+            //     a {
+            //         font-weight: 800;
+            //         //letter-spacing: 2px;
+            //         // color: var(--magenta);
+    
+            //         // &:hover {
+            //         //     color: var(--offwhite);
+            //         // }
+            //     }
+            // }
+        }
+    
+        .global-footer-container > div:first-of-type {
+            order: 0;
+        }
+    } -->
+
+
+    <!-- <footer>
+
+        <div class="global-footer blackbg">
+            <span class="global-footer-container flex-column">
+                <div class="flex-column">
+                    <p class="site-title">Willow Layland. Tryin' Stuff.</p>
+                    <p>Gonna write artist statement here. Small blurb about me.
+                        Small blurb about me. Gonna write artist statement here.
+                        Gonna write artist statement here. 
+                    </p>
+                </div>
+                <div class="flex-column">
+                    <p class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                        <a href="notebook.html">Notebook</a>
+                        <a href="past.html">Portfolio</a>
+                    </p>
+                </div>
+            </span>
+        </div>
+        
+        <div class="icons cyanbg">
+          <span class="follow-container flex-row justify-between">
+                <a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a>
+                <a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a>
+                <a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a>
+                <a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a>
+                <a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a> 
+          </span>
+        </div>
+      
+        <div class="contact magbg">
+            <span class="contact-container flex-row justify-between">
+                <a href="mailto:willowlayland@gmail.com">Contact Me:</a>
+                <span class="mail-container flex-row" href="mailto:willowlayland@gmail.com">
+                    <a class="mail" href="mailto:willowlayland@gmail.com">Name</a>
+                    <a class="mail" href="mailto:willowlayland@gmail.com">Email</a>
+                    <a class="mail" href="mailto:willowlayland@gmail.com">Subject</a>
+                </span>
+                <a href="mailto:willowlayland@gmail.com">SUBMIT</a>
+            </span>
+        </div>
+      
+        <div class="nocookies yellowbg flex-row justify-between">
+          <p>© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
+          <p>NO COOKIES!</p>
+          <p>I'm cuttin' down on sugar</p>
+        </div>
+
+    </footer> -->
+
+
+    <!-- <div class="portfolio-container section-inner">
+            <div class="portfolio flex-row">
+            <a class="portfolio-item" href="website-with-a-k.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/2214px-How_to_use_icon.svg.png" />
+            </a>
+            <a class="portfolio-item" href="#">
+                <p>HELLOOOOOO</p>
+            </a>
+            <a class="portfolio-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/2214px-How_to_use_icon.svg.png" />
+            </a>
+            </div>
+        </div> -->

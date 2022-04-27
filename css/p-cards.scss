@@ -15,7 +15,10 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        height: 60vmin;
+        height: 75vmin;
+        height: 40vw;
+
+        
         
         
         max-width: 33.33%;
@@ -32,12 +35,14 @@
     
         
         img {
-            width: 60%;
+            width: 50%;
+            max-width: 380px;
             min-width: 5em;
             //padding: 500px;
             align-self: center;
             transition: 1s;
-            padding: 1em;
+            //padding: 1em;
+            max-width: 30rem;
         }
         
         p {

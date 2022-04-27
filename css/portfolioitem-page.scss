@@ -12,9 +12,28 @@
     // padding-bottom: 3rem;
 }
 
+
+.gallery-container,.section-inner {
+  max-width: 1920px;
+
+  .lightbox {
+    width: 100%;
+    background-color: black;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        //max-height: 100vh; 
+        //height: 1080px;
+  }
+}
+
 img {
     height: 100%;
+    //height: 1080px;
+  
     width: 100%;
+    
     border: 1px solid black;
 }
 
@@ -68,99 +87,4 @@ img {
 //         }
 //     }
 // }
-
-section.gallery {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 6em 0;
-
-    .inner {
-
-        padding: 0 10em;
-
-        width: 85%;
-        padding: 0 1em;
-        transition: .5s all;
-      
-      @media (max-width: 910px) {
-        //padding: 0 1em;
-        //width: 100%;
-      }
-    
-      .gallery-container {
-        height: 60em;
-        flex: 50%;
-        //cursor: pointer;
-  
-        .img-container {
-          position: relative;
-          background-color: var(--black);
-          background-size: cover;
-          width: 50%;
-          overflow: hidden;
-          margin: 0 .5em .5em 0;
-  
-          &:nth-of-type(1) {
-            background: url(https://source.unsplash.com/featured/?office);
-            background-size: cover;
-            flex-grow: 1;
-          }
-  
-          &:nth-of-type(2) {
-            background: url(https://source.unsplash.com/featured/?meeting);
-            background-size: cover;
-            flex-grow: 2;
-          }
-  
-          &:nth-of-type(3) {
-            background: url(https://source.unsplash.com/featured/?skyscraper);
-            background-size: cover;
-            flex-grow: 3;
-          }
-  
-          &:nth-of-type(4) {
-            background: url(https://source.unsplash.com/featured/?laptop);
-            background-size: cover;
-            flex-grow: 1;
-          }
-          
-          .category {
-            position: absolute;
-            padding: 2em;
-            bottom: 0;
-            right: 0;
-            line-height: 0;
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #fff;
-          }
-  
-          &:before {
-            content: "";
-            background: var(--black);
-            opacity: .75;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            clip-path: polygon(100% 75%, 25% 100%, 100% 100%);
-            transition: .25s all;
-          }
-        }
-  
-        :hover::before {
-          background: black;
-          opacity: .85;
-          clip-path: polygon(100% 70%, 15% 100%, 100% 100%);
-        }
-      }
-  
-    .gallery-container > * {
-        flex: 0 0 33.3333%;
-      }
-      
-      .justifycenter {
-        margin-top: 2em;
-      }
-    }
-  }
 
