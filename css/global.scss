@@ -1,23 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 :root {
     --black: #1b1c1e;
-    //--black: #121212;
     --cyan: royalblue;
     --magenta: hotpink;
     --yellow: orange;
     --offwhite: #fcedd8;
     --dark-grey: #525252;
     --light-grey: #f8f6fa;
-    --accent: #707070; 
+    --accent: #707080; 
     --background-color-primary: #fff;
     --background-color-secondary: #fff;
     --background-color-footer: #fff;
-    --link: #707070;
+    --link: #707080; 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
     --global-font-secondary: -apple-system, system-ui;
 }
@@ -33,6 +33,7 @@ html {
 body {
     font-family: var(--global-font-primary);
     color: var(--black);
+    line-height: 1.5;
 }
 
 h1 {
@@ -52,7 +53,6 @@ h3 {
 
 p {
     font-family: var(--global-font-secondary);
-    line-height: 1.5;
     //max-width: 960px;
 }
 
@@ -70,7 +70,7 @@ a {
     }
 }
 
-p, li {
+a, p, li {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none; 
@@ -83,43 +83,11 @@ img {
     width: 100%;
 }
 
-section {
-    position: relative;
-    width: 100%;
-    padding: 0 3rem;
-    background-color: var(--background-color-secondary);
-    line-height: 1.5em;
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
-    .section-inner {
-        max-width: 1920px;
-        margin: 2rem auto;
-    }
+// COLORS
 
-    @media ( max-width: 768px) {
-        padding: 1em 0;
-
-        .section-inner {
-            margin: 0;
-        }
-
-        .portfolio {
-            padding: 0;
-        }
-      }
-      
-}
-
-
-.biggy {
-    font-size: 4.5rem;
-    font-size: 4em;
-    line-height: 1.25em;
-
-    @media (max-width: 768px) {
-        font-size: 3rem;
-    }
-}
-
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 .accent {
     color: var(--accent);
@@ -157,6 +125,12 @@ section {
     }
 }
 
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
+
+// CUSTOMIZATIONS
+
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -187,11 +161,20 @@ section {
     bottom: 0;
 }
 
+.biggy {
+    font-size: 4em;
+    line-height: 1.25em;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
 
 .link {
     margin: 0 auto;
-    padding: 1em 0;
-    font-size: 1.25rem;
+    padding: .5em 0;
+    font-size: 1.25em;
+    font-weight: 500;
 }
 
 .full {
@@ -203,15 +186,67 @@ section {
 }
 
 .strong {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .thin {
     font-weight: 500;
 }
 
-.title {
+.arrowbefore:before {
+    content: "\2190  ";
+    content: "< ";
+}
+
+.arrowafter:after {
+    content: "  \2192";
+    content: " >";
+}
+
+.arrowdown:after {
+    content: "\2193";
+}
+
+.arrowbefore:before, .arrowafter:after {
+    font-family: var(--global-font-secondary);
+    font-weight: 900;
+    font-family: var(--global-font-primary);
+    font-weight: 600;
+}
+
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
+
+// TEMPLATES
+
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
+
+section,.section {
+    position: relative;
     width: 100%;
+    padding: 0 3rem;
+    background-color: var(--background-color-secondary);
+    line-height: 1.5em;
+
+    .section-inner {
+        max-width: 1920px;
+        margin: 2rem auto;
+    }
+
+    @media ( max-width: 768px) {
+        padding: 1em 0;
+
+        .section-inner {
+            margin: 0;
+        }
+
+        .portfolio {
+            padding: 0;
+        }
+      }
+      
+}
+
+.title {
     padding: 0 3rem;
     padding-top: 5rem;
 
@@ -223,32 +258,28 @@ section {
     h2:after {
         content: " ";
     }
+}
+
+.big-section {
+    padding: 0 5rem;
+
+}
+
+.small-section {
+    padding: 0 3rem;
+
+}
+
+.title,.big-section,.small-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
 
     @media (max-width: 768px) {  
         padding: 1.5rem;
         padding-top: 3rem;
     }
 }
-
-.arrowbefore:before {
-    content: "\2190  ";
-}
-
-.arrowafter:after {
-    content: "  \2192";
-}
-
-.arrowdown:after {
-    content: "\2193";
-}
-
-.arrowbefore:before, .arrowafter:after {
-    font-family: var(--global-font-secondary);
-    font-weight: 900;
-}
-
-
-
 
 footer {
     margin-top: 1em;
