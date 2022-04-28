@@ -15,8 +15,7 @@
         //max-height: 100vh; 
         //height: 1080px;
 
-        
-          position: relative;
+        position: relative;
 
          
   }
@@ -48,4 +47,36 @@ img {
     //height: 1080px;
   
     width: 100%;
+
+    .hover-information {
+      &:hover {
+        &:after{
+          content: "view site";
+        }
+      }
+    }
+}
+
+.halves,.thirds {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  img,a {
+    width: 49%;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    img,a {
+      width: 100%;
+    }
+  }
+}
+
+.thirds {
+  img {
+    width: 32%;
+  }
 }

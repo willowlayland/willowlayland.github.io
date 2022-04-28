@@ -161,6 +161,12 @@ img {
     bottom: 0;
 }
 
+.reverseorder {
+    @media (max-width:768px) {
+        order: 2;
+    }
+}
+
 .biggy {
     font-size: 4em;
     line-height: 1.25em;
@@ -286,6 +292,31 @@ section,.section {
     max-width: 1920px;
     margin: 0 auto;
 }
+
+.halves,.thirds {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+  
+    img,a,div {
+      width: 49%;
+    }
+  
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+  
+      img,a,div {
+        width: 100%;
+      }
+    }
+  }
+  
+  .thirds {
+    img {
+      width: 32%;
+    }
+  }
 
 footer {
     margin-top: 1em;

@@ -13,8 +13,15 @@
 header, .name {
     min-height: 90vh;
     transition: all .5s;
+    --webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     --webkit-filter: blur(0);
+
+}
+
+.willow,.layland {
+    --webkit-transform: translateZ(0);
+    --webkit-font-smoothing: antialiased;
 }
 
 
@@ -229,7 +236,7 @@ h1 {
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
-// INTRODUCTION SECTION
+// INTRODUCTION SECTION PORTFOLIO FEATURED WORKS
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
@@ -297,6 +304,7 @@ h1 {
     }
     &:nth-child(2) {
         background-image:url('https://source.unsplash.com/featured/?grey,wood');
+        background-image:url("../images/canndanswer.jpg");
     }
     &:nth-child(3) {
         background-image:url('https://source.unsplash.com/featured/?silver,plant');
