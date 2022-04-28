@@ -195,12 +195,12 @@ img {
 
 .arrowbefore:before {
     content: "\2190  ";
-    content: "< ";
+    //content: "< ";
 }
 
 .arrowafter:after {
     content: "  \2192";
-    content: " >";
+    //content: " >";
 }
 
 .arrowdown:after {
@@ -210,8 +210,8 @@ img {
 .arrowbefore:before, .arrowafter:after {
     font-family: var(--global-font-secondary);
     font-weight: 900;
-    font-family: var(--global-font-primary);
-    font-weight: 600;
+    //font-family: var(--global-font-primary);
+    //font-weight: 600;
 }
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 

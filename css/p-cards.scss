@@ -13,7 +13,7 @@
         background-color: black;
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center left;
         background-size: cover;
         height: 75vmin;
         height: 40vw;
@@ -71,9 +71,9 @@
             background-size: 512px, auto, cover;
             background-position: center, 0% 0%, center;
             background-repeat: repeat, repeat, repeat;
-            opacity: .5;
+            //opacity: .5;
             //mix-blend-mode: soft-light;
-            //mix-blend-mode: overlay;
+            mix-blend-mode: overlay;
         }    
         
         @media(max-width: 768px) {
