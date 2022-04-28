@@ -258,27 +258,33 @@ section,.section {
     h2:after {
         content: " ";
     }
+
+    @media (max-width: 768px) {  
+        padding: 1.5rem;
+        padding-top: 3rem;
+    }
 }
 
 .big-section {
     padding: 0 5rem;
 
+    @media (max-width: 768px) {  
+        padding: 1.5rem;
+    }
 }
 
 .small-section {
     padding: 0 3rem;
 
+    @media (max-width: 768px) {  
+        padding: 1rem;
+    }
 }
 
 .title,.big-section,.small-section {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-
-    @media (max-width: 768px) {  
-        padding: 1.5rem;
-        padding-top: 3rem;
-    }
 }
 
 footer {
