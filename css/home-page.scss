@@ -18,7 +18,7 @@ header, .name {
     --webkit-filter: blur(0);
 
     @media screen and (max-width: 768px) {
-        min-height: 80vh;
+        min-height: 75vh;
     }
 }
 
@@ -26,6 +26,7 @@ header, .name {
     @media screen and (max-width: 768px) {
         -moz-transform: scale(1.2, 1.2);
         transform: scale(1.2,1.2);
+        opacity: .5;
     }
 }
 
