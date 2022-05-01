@@ -37,3 +37,49 @@
     }
     }
 }
+
+.portfolio-item {
+    overflow: hidden;
+    //justify-content: space-around;
+    color: white;
+
+    p {
+        opacity: 0;
+        display: none;
+        transition: 1s all;
+    }
+
+    &:hover {
+        color: white;
+        .huge {
+            font-size: 6em;
+            letter-spacing: 0;
+        }
+        
+        p {
+            opacity: 1;
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .huge {
+            font-size: 6em;
+            letter-spacing: 0;
+        }
+        
+        p {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.huge {
+    font-size: 50vh;
+    font-weight: 800;
+    letter-spacing: -10px;
+    line-height: 1;
+    margin-left: -.15em;
+    transition: 1s all ease-out;
+}
