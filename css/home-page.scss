@@ -26,7 +26,11 @@ header, .name {
     @media screen and (max-width: 768px) {
         -moz-transform: scale(1.2, 1.2);
         transform: scale(1.2,1.2);
-        opacity: .5;
+
+        .subhead {
+            -moz-transform: scale(.8, .8);
+            transform: scale(.8,.8);
+        }
     }
 }
 
@@ -110,11 +114,11 @@ h1 {
         }
     }
 
-    .willow {
-        @media screen and (max-width: 768px) {
-            margin-top: -1em;
-        }
-    }
+    // .willow {
+    //     @media screen and (max-width: 768px) {
+    //         margin-top: -1em;
+    //     }
+    // }
 
     .layland {
         animation-name: moveInLeft, textShadow;
