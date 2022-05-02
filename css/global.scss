@@ -338,9 +338,11 @@ section,.section {
 }
 .halves > * {
     width: 49.5%;
+    margin-bottom: 1%;
 }
 .thirds > * {
     width: 32.5%;
+    margin-bottom: 1%;
 
     @media (max-width: 1080px) {
         width: 49.5%;
