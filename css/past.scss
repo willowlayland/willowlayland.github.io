@@ -2,39 +2,62 @@
 
     a {
 
-    &:nth-of-type(1) {
-        background-image:url('https://karenworks.biz/wp-content/uploads/2021/03/kwhero_image.jpg');
-    }
-    &:nth-of-type(2) {
-        background-image:url('https://source.unsplash.com/featured/?wood');
-    }
-    &:nth-of-type(3) {
-        background-image:url('https://source.unsplash.com/featured/?silver');
-    }
-
-    &:nth-of-type(4) {
-        background-image:url('https://source.unsplash.com/featured/?silver,plant');
-    }
+        &:nth-of-type(1) {
+            background-image:url('https://source.unsplash.com/featured/?plant');
+            &:after {
+                content: " ";
+                background-color: var(--cyan);
+            }
+        }
+        &:nth-of-type(2) {
+            background-image:url('https://source.unsplash.com/featured/?wood');
+            &:after {
+                content: " ";
+                background-color: var(--magenta);
+            }
+        }
+        &:nth-of-type(3) {
+            background-image:url('https://source.unsplash.com/featured/?silver');
+            &:after {
+                content: " ";
+                background-color: var(--yellow);
+            }
+        }
     }
 }
 
 .row2 {
 
     a {
+        &:nth-of-type(1) {
+            background-image:url('https://source.unsplash.com/featured/?plant');
+            &:after {
+                content: " ";
+                background-color: var(--black);
+            }
+        }
+        &:nth-of-type(2) {
+            background-image:url('https://source.unsplash.com/featured/?grey,wood');
+        }
+        &:nth-of-type(3) {
+            background-image:url('https://source.unsplash.com/featured/?silver,plant');
+        }
+    }
 
-    &:nth-of-type(1) {
-        background-image:url('https://source.unsplash.com/featured/?plant');
-    }
-    &:nth-of-type(2) {
-        background-image:url('https://source.unsplash.com/featured/?grey,wood');
-    }
-    &:nth-of-type(3) {
-        background-image:url('https://source.unsplash.com/featured/?silver,plant');
-    }
+    @media (min-width:768px) {
+        .portfolio-item {
+            &:nth-of-type(1) {
+                h2 {
+                    margin-left: -2.9em;
+                }
 
-    &:nth-of-type(4) {
-        background-image:url('https://source.unsplash.com/featured/?silver,plant');
-    }
+                &:hover {
+                    h2 {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -51,6 +74,7 @@
 
     &:hover {
         color: white;
+
         .huge {
             font-size: 6em;
             letter-spacing: 0;
@@ -81,5 +105,5 @@
     letter-spacing: -10px;
     line-height: 1;
     margin-left: -.15em;
-    transition: 1s all ease-out;
+    transition: .5s all ease-out;
 }
