@@ -29,6 +29,15 @@
     
     position: relative;
 
+    .entry-container {
+      max-width: 100vmin; 
+      margin: 0 auto;
+
+      .entry-inner {
+        border: none;
+      }
+    }
+
     img {
       background: black;
     }
@@ -49,6 +58,8 @@
 }
 
 .fuzz {
+  padding: 0 !important;
+
   &:after {
     content: ""; 
     position: absolute;
@@ -64,7 +75,7 @@
     //mix-blend-mode: soft-light;
     //mix-blend-mode: overlay;
 
-}
+  }
 }
 
 
@@ -112,12 +123,12 @@ img {
   position: sticky;
   top: 0;
   z-index: 200;
-  background-color: var(--black);
+  background-color: inherit;
   padding: 1rem 0;
   transition: .5s all;
 
   a {
-    margin: 4vw;
+    margin: 2vw;
     white-space: nowrap;
   }
 
@@ -133,6 +144,12 @@ img {
     .condensed {
       display: block;
     }
+  }
+}
+
+.thumbs {
+  @media (min-width:768px){
+      max-width: 75vw;
   }
 }
 

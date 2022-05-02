@@ -68,10 +68,11 @@ p {
 nav { 
     ul {
         li {
+            list-style-type: none;
             display: inline-block;
             padding: 1rem;
+            font-family: var(--global-font-secondary);
             line-height: 0;
-            list-style-type: none;
         }
     }
 }
@@ -123,6 +124,10 @@ img {
 
 .yellowbg {
     background-color: var(--yellow);
+
+    a {
+        color: var(--black);
+    }
 }
 
 .magbg {
@@ -131,6 +136,10 @@ img {
 
 .cyanbg {
     background-color: var(--cyan);
+
+    h1,h2,h3,h4,h5,h6,a,p {
+        color: var(--offwhite);
+    }
 }
 
 .offwhitebg {
@@ -140,8 +149,12 @@ img {
 .normalbg {
     background-color: var(--background-color-primary);
     
-    a,p {
+    p {
         color: var(--black);
+    }
+
+    a {
+        color: var(--accent);
     }
 }
 
@@ -187,8 +200,8 @@ img {
     }
 }
 
-.biggy {
-    font-size: 4em;
+h1.biggy {
+    font-size: 5em;
     line-height: 1.25em;
 
     @media (max-width: 768px) {
@@ -200,7 +213,10 @@ img {
     margin: 0 auto;
     padding: .5em 0;
     font-size: 1.25em;
-    font-weight: 500;
+
+    a, .arrowbefore:before {
+        font-weight: 400;
+    }
 }
 
 .full {
@@ -217,6 +233,14 @@ img {
 
 .thin {
     font-weight: 500;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--background-color-primary);
+    //background: inherit;
 }
 
 .arrowbefore:before {
@@ -246,6 +270,36 @@ img {
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
+.small-header {
+    padding: 2rem;
+
+    p,a {
+        font-family: var(--global-font-primary);
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    p,li {
+        padding: 1rem;
+        list-style-type: none;
+        line-height: 1;
+    }
+
+    p {
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-transform: capitalize;
+    }
+
+    @media (max-width: 768px) {
+        //padding: 1rem;
+
+        p,li {
+            padding: .75rem;
+        }
+    }
+}
+
 section,.section {
     position: relative;
     width: 100%;
@@ -272,8 +326,9 @@ section,.section {
 }
 
 .title {
-    padding: 0 3rem;
-    padding-top: 5rem;
+    //padding: 3rem;
+    padding: 5rem 3rem;
+    //padding-top: 5rem;
 
     h1,h2,h3,.link {
         margin: auto;
@@ -285,8 +340,8 @@ section,.section {
     }
 
     @media (max-width: 768px) {  
-        padding: 1.5rem;
-        padding-top: 3rem;
+        padding: 2rem;
+        //padding-top: 3rem;
     }
 }
 
@@ -322,12 +377,12 @@ section,.section {
 }
 
 .entry-container {
-    padding: .5rem;
+    padding: .25rem;
 
     .entry-inner {
         border: 1px solid var(--black);
         padding: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         align-content: top;
     }
 }
@@ -347,51 +402,42 @@ section,.section {
     }
 }
 .halves > * {
-    width: 49.5%;
-    margin-bottom: 1%;
+    width: 49.75%;
+    margin-bottom: .5rem;
+}
+.keephalf {
+    @media (max-width: 768px) {
+        a {
+        width: 49%;
+        }
+    }
 }
 .thirds > * {
-    width: 32.5%;
-    margin-bottom: 1%;
+    width: 32.75%;
+    margin-bottom: .5rem;
 
     @media (max-width: 1080px) {
         width: 49.5%;
     }
 }
-
-.small-header {
-    padding: 2rem;
-
-    p,a {
-        //text-transform: capitalize;
-        font-weight: 500;
-    }
-
-    p,li {
-        padding: 1rem;
-        list-style-type: none;
-        line-height: 1;
-    }
-
-    p {
-        font-weight: 800;
-        letter-spacing: .5px;
-    }
-    
-    @media (max-width: 768px) {
-        padding: 1rem;
-    }
+.fourths > * {
+    width: 24.75%;
+    margin-bottom: .5rem;
+}
+.fifths > * {
+    width: 19.75%;
+    margin-bottom: .5rem;
 }
 
-footer {
-    margin-top: 1em;
+
+footer, #footer {
+    margin-top: 2em;
     width: 100%;
     
     .global-footer,.icons,.contact,.nocookies {
         padding: 1rem;
         border-top: 1px solid var(--black);
         //filter: drop-shadow(0 15px 20px var(--black));
-
     }
 
     .global-footer-container,.follow-container,.contact-container {
@@ -400,7 +446,7 @@ footer {
         margin: 0 auto;
     }
   
-    a, p {
+    p, a {
         font-family: var(--global-font-primary);
         color: var(--black);
         letter-spacing: 1px;
@@ -438,11 +484,12 @@ footer {
         }
         
         @media (max-width: 768px) { 
-            padding: 1rem;
+            padding: 0;
             flex-flow: column wrap;
 
             .footer-links > li {
                 display: block;
+                //padding-left: .5rem;
                 margin-bottom: .5rem;
             }
         }
@@ -468,7 +515,7 @@ footer {
         .footer-links > a {
             width: 100%;
             display: block;
-            padding-top: .5em;
+            //padding-top: .5em;
         }
     }
 }
