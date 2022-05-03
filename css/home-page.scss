@@ -324,7 +324,7 @@ h1 {
 
 .portfolio-container {
     @media (max-width:768px) {
-        padding: 0 1rem;
+        //padding: 0 1rem; ///put this back later
 
         .title {
             padding: 0;
@@ -333,7 +333,7 @@ h1 {
 }
 
 .portfolio-item {
-    transition: .5s !important;
+    //transition: .5s !important; ///put this back later
 
     &:nth-child(1) {
         background-image:url('https://karenworks.biz/wp-content/uploads/2021/03/kwhero_image.jpg');
@@ -346,14 +346,6 @@ h1 {
     }
     &:nth-child(3) {
         background-image:url('https://source.unsplash.com/featured/?silver,plant');
-    }
-}
-
-.testing {
-    margin: 3rem 0;
-
-    &:after {
-        content: " a cool thing. idk. arrow";
     }
 }
 
