@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     body {
-        background-color: var(--yellow);
+        background-color: var(--black);
     }
 }
 
@@ -364,6 +364,7 @@ h1 {
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 #home-footer,footer,.footer {
+    margin-top: 0;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -413,7 +414,7 @@ h1 {
   //     width: 50vmin;
     
     .global-footer-container {
-      width: 66vmin;
+      width: 50vw;
       margin: 0 auto;
       
       .site-title {

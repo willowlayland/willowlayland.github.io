@@ -19,7 +19,7 @@
     --background-color-footer: #fff;
     --link: #707080; 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
-    --global-font-secondary: -apple-system, system-ui;
+    --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -289,9 +289,9 @@ h1.biggy {
     }
 
     p,li {
-        padding: 1rem;
+        padding: 1em;
         list-style-type: none;
-        line-height: 1;
+        line-height: 0;
     }
 
     p {
@@ -310,6 +310,7 @@ h1.biggy {
         
         li,p {
             padding: .5rem;
+            line-height: .1;
         }
     }
 }
@@ -339,10 +340,12 @@ section,.section {
       
 }
 
+// header,.title {
+//     position: fixed;
+// }
+
 .title {
-    //padding: 3rem;
     padding: 5rem 3rem;
-    //padding-top: 5rem;
 
     h1,h2,h3,.link {
         margin: auto;
@@ -354,8 +357,8 @@ section,.section {
     }
 
     @media (max-width: 768px) {  
-        padding: 2rem;
-        //padding-top: 3rem;
+        padding: 3rem .5rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -517,8 +520,9 @@ section,.section {
   @media (max-width: 768px) {
     justify-content: center;
     text-align: center;
+    font-size: 16px;
 
-    .global-footer-container,.icons,.follow-container,.socials-container,.nocookies,.social-links,div {
+    .global-footer-container,.icons,.follow-container,.socials-container,.nocookies,div {
       flex-direction: column;
       padding: 1.5rem .5rem;
       width: 100%;
