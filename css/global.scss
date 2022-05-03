@@ -132,6 +132,10 @@ img {
 
 .magbg {
     background-color: var(--magenta);
+
+    h1,h2,h3,h4,h5,h6,a,p {
+        color: var(--black);
+    }
 }
 
 .cyanbg {
@@ -186,6 +190,11 @@ img {
 
 .justify-center {
     justify-content: center;
+    text-align: center;
+}
+
+.justify-around {
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -425,7 +434,11 @@ section,.section {
 .keephalf {
     @media (max-width: 768px) {
         a {
-        width: 49%;
+            width: 49%;
+            &:last-child {
+                margin: 0 auto;
+                margin-bottom: .5rem;
+            }
         }
     }
 }
@@ -454,6 +467,9 @@ section,.section {
 .footer, #footer {
     margin-top: 2em;
     width: 100%;
+    position: relative;
+    z-index: 200;
+    bottom: 0;
     
     .global-footer {
       padding: 1rem;

@@ -381,7 +381,7 @@ h1 {
     }
     
     .main-navigation-container,.global-footer-container {
-      padding: 3rem;
+      padding: 1.25em 4em;
     }
     
     .main-navigation-container {
@@ -477,6 +477,7 @@ h1 {
     
     @media (max-width: 768px) {
       text-align: center;
+      font-size: 14px;
       
       .main-navigation-container {
         padding: .5em;
