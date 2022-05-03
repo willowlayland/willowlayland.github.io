@@ -272,10 +272,11 @@ h1.biggy {
 
 .small-header {
     padding: 2rem;
+    padding-bottom: 0;
 
     p,a {
         font-family: var(--global-font-primary);
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-weight: 500;
     }
 
@@ -292,10 +293,15 @@ h1.biggy {
     }
 
     @media (max-width: 768px) {
-        //padding: 1rem;
+        width: 100%;
+        padding: 2rem .5rem;
 
-        p,li {
-            padding: .75rem;
+        p {
+            margin-bottom: 1rem;
+        } 
+        
+        li,p {
+            padding: .5rem;
         }
     }
 }
