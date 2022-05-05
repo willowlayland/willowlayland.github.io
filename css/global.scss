@@ -135,6 +135,7 @@ img {
 
     h1,h2,h3,h4,h5,h6,a,p {
         color: var(--black);
+        color: #381338;
     }
 }
 
@@ -225,12 +226,24 @@ h1.biggy {
 .link {
     margin: 0 auto;
     padding: .5em 0;
-    font-size: 1.25em;
+    //font-size: 1.15em;
 
-    a, .arrowbefore:before {
-        font-weight: 400;
-    }
+    // a, .arrowbefore:before {
+    //     font-weight: 400;
+    // }
 }
+
+.button {
+    font-size: .9em;
+    padding: 1.5em 3em;
+    border: 1px solid var(--accent);
+    margin: 2em;
+    text-align: center;
+    
+    &:hover {
+      background: var(--magenta);
+    }
+  }
 
 .full {
     height: 100vh;
@@ -238,6 +251,10 @@ h1.biggy {
     @media (max-width: 768px) {
         height: auto;
     }
+}
+
+.twothirds {
+    height: 90vh;
 }
 
 .strong {
@@ -264,6 +281,13 @@ h1.biggy {
 .arrowafter:after {
     content: "  \2192";
     //content: " >";
+
+    &:hover {
+        a {
+            transform: translate(0, -5px);
+            color: red;
+        }
+    }
 }
 
 .arrowup:before {
@@ -276,9 +300,8 @@ h1.biggy {
 
 .arrowbefore:before, .arrowafter:after {
     font-family: var(--global-font-secondary);
-    font-weight: 900;
-    //font-family: var(--global-font-primary);
-    //font-weight: 600;
+    font-family: var(--global-font-primary);
+    font-weight: inherit;
 }
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
@@ -527,7 +550,6 @@ section,.section {
 
         .footer-links > li {
           display: block;
-          //padding-left: .5rem;
           margin-bottom: .5rem;
         }
       }

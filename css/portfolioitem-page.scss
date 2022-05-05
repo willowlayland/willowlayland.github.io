@@ -60,6 +60,21 @@
   }
 }
 
+.narrow {
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      width: 75vw; 
+    }
+
+    h1,h2,h3,h4,h5,h6,p,a {
+      text-align: left;
+    }
+  }
+}
+
 .fuzz {
   padding: 0 !important;
 
@@ -77,7 +92,7 @@
     opacity: .5;
     //mix-blend-mode: soft-light;
     //mix-blend-mode: overlay;
-
+  
   }
 }
 
@@ -152,11 +167,12 @@ img {
 
 .thumbs {
   //min-height: 70vh;
+  cursor: pointer;
+  
   @media (min-width:768px){
       max-width: 75vw;
       margin: 0 auto;
   }
-
   a:hover {
     opacity: .5;
   }
