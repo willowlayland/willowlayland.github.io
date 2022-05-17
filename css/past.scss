@@ -1,5 +1,9 @@
 .row1 {
 
+    // .portfolio-item {
+    //     max-width: 25%;
+    // }
+
     a {
 
         &:nth-of-type(1) {
@@ -23,10 +27,34 @@
                 background-color: var(--yellow);
             }
         }
+
+        // &:nth-of-type(4) {
+        //     background-image:url('https://source.unsplash.com/featured/?plant');
+        //     &:after {
+        //         content: " ";
+        //         background-color: var(--yellow);
+        //     }
+
+        //     @media (min-width:768px) { 
+        //         h2 {
+        //             margin-left: -2.9em;
+        //         }
+
+        //         &:hover {
+        //             h2 {
+        //                 margin-left: 0;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 
 .row2 {
+
+    // .portfolio-item {
+    //     max-width: 50%;
+    // }
 
     a {
         &:nth-of-type(1) {
@@ -35,18 +63,8 @@
                 content: " ";
                 background-color: var(--black);
             }
-        }
-        &:nth-of-type(2) {
-            background-image:url('https://source.unsplash.com/featured/?grey,wood');
-        }
-        &:nth-of-type(3) {
-            background-image:url('https://source.unsplash.com/featured/?silver,plant');
-        }
-    }
 
-    @media (min-width:768px) {
-        .portfolio-item {
-            &:nth-of-type(1) {
+            @media (min-width:768px) { 
                 h2 {
                     margin-left: -2.9em;
                 }
@@ -58,18 +76,25 @@
                 }
             }
         }
+        &:nth-of-type(2) {
+            background-image:url('https://source.unsplash.com/featured/?grey,wood');
+        }
+
+        &:nth-of-type(3) {
+            background-image:url('https://source.unsplash.com/featured/?silver,plant');
+        }
     }
 }
 
 .portfolio-container {
     @media (min-width:768px){
         width: 75vw;
+        width: 87.5vw;
     }
 }
 
 .portfolio-item {
     overflow: hidden;
-    //justify-content: space-around;
     color: white;
 
     p {
@@ -113,4 +138,10 @@
     line-height: 1;
     margin-left: -.15em;
     transition: .5s all ease-out;
+}
+
+@media (min-width: 768px){
+.link {
+    margin-bottom: 2em;
+}
 }

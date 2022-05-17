@@ -6,6 +6,7 @@
     align-items: center;
     //margin-top: 2em;
     height: 100%;
+    cursor: pointer;
     
     .portfolio-item {
         //display: flex;
@@ -17,8 +18,7 @@
         background-size: cover;
         height: 75vmin;
         height: 40vw;
-
-        
+        cursor: pointer;
         
         
         max-width: 33.33%;
@@ -57,6 +57,7 @@
             // p {
             //     font-size:3em;
             // }
+            cursor: pointer;
             
         }
 
@@ -85,6 +86,10 @@
     }
 }
 
-
+.recent {
+    .portfolio-item{
+        max-width: 50%;
+    }
+}
 
 

@@ -11,7 +11,7 @@
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 header, .name {
-    min-height: 90vh;
+    min-height: 87.5vh;
     transition: all .5s;
     --webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -81,9 +81,9 @@ header, .name {
 }
 
 
-h1,.subhead {
-    will-change: transform, opacity, text-shadow;
-}
+// h1,.subhead {
+//     will-change: transform, opacity, text-shadow;
+// }
 
 h1 {
     color: var(--offwhite);
@@ -113,12 +113,6 @@ h1 {
             // font-size: 20vw;
         }
     }
-
-    // .willow {
-    //     @media screen and (max-width: 768px) {
-    //         margin-top: -1em;
-    //     }
-    // }
 
     .layland {
         animation-name: moveInLeft, textShadow;
@@ -264,7 +258,6 @@ h1 {
     animation: scrollright 60s linear infinite, moveFade 4s;
 }
 
-
 .margin-extra {
     margin: 2.5rem 0;
 }
@@ -334,20 +327,25 @@ h1 {
 
 .portfolio-item {
     //transition: .5s !important; //can put this back later
+    padding: 2em;
 
     &:nth-child(1) {
         background-image:url('https://karenworks.biz/wp-content/uploads/2021/03/kwhero_image.jpg');
         //background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
         //background-image: url('https://images.unsplash.com/photo-1512950050685-b1d4ae63d2df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+        height: 90vh;
     }
     &:nth-child(2) {
         background-image:url('https://source.unsplash.com/featured/?grey,wood');
         background-image:url("../images/grey.png");
+        height: 90vh;
+        margin-top: 25vh;
     }
     &:nth-child(3) {
         background-image:url('https://source.unsplash.com/featured/?silver,plant');
     }
 }
+
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
@@ -357,7 +355,7 @@ h1 {
 
 #home-footer,footer,.footer {
     margin-top: 0;
-    min-height: 70vh;
+    //min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -417,7 +415,7 @@ h1 {
         }
     
         .footer-button {
-            padding: 2rem;
+            padding: 2rem 0;
             border: 1px solid var(--dark-grey);
             margin-top: 2em;
             text-align: center;
@@ -461,10 +459,6 @@ h1 {
 
         .footer-button,.social-links,.copyright {
             font-size: .9rem;
-        }
-        
-        .footer-button {
-            margin: 2rem 0;
         }
     }
     

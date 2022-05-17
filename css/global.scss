@@ -19,6 +19,8 @@
     --background-color-footer: #fff;
     --link: #707080; 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
+    //--global-font-primary: 'Urbane', sans-serif;
+    //--global-font-primary: 'Grenadine MVB', sans-serif;
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -51,7 +53,7 @@ h3 {
     //font-size: 14px;
 }
 
-p {
+p,q {
     font-family: var(--global-font-secondary);
     margin: 1rem 0;
     line-height: 1.75em;
@@ -78,7 +80,7 @@ nav {
 }
 
 a {
-    cursor: pointer;
+    cursor: pointer !important;
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
@@ -104,6 +106,27 @@ img {
     width: 100%;
 }
 
+q {
+    quotes: """ """;
+    font-family: inherit;
+    font-size: 1.15rem;
+}
+q::before {
+    content: open-quote;
+    margin-left: -.25rem;
+}
+q::after {
+    content: close-quote;
+}
+
+.paren::before, .paren::after{
+    content: "(";
+    margin: 0 2px;
+}
+.paren::after {
+    content: ")";
+}
+
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 // COLORS
@@ -117,7 +140,7 @@ img {
 .blackbg {
     background-color: var(--black);
 
-    h1,h2,h3,h4,h5,h6,a,p {
+    h1,h2,h3,h4,h5,h6,a,p,q {
         color: var(--offwhite);
     }
 }
@@ -125,7 +148,7 @@ img {
 .yellowbg {
     background-color: var(--yellow);
 
-    h1,h2,h3,h4,h5,h6,a,p {
+    h1,h2,h3,h4,h5,h6,a,p,q {
         color: #381338;
     }
 }
@@ -133,7 +156,7 @@ img {
 .magbg {
     background-color: var(--magenta);
 
-    h1,h2,h3,h4,h5,h6,a,p {
+    h1,h2,h3,h4,h5,h6,a,p,q {
         color: var(--black);
         color: #381338;
     }
@@ -142,7 +165,7 @@ img {
 .cyanbg {
     background-color: var(--cyan);
 
-    h1,h2,h3,h4,h5,h6,a,p {
+    h1,h2,h3,h4,h5,h6,a,p,q {
         color: var(--offwhite);
     }
 }
@@ -154,7 +177,7 @@ img {
 .normalbg {
     background-color: var(--background-color-primary);
     
-    p {
+    p,q {
         color: var(--black);
     }
 
@@ -210,13 +233,24 @@ img {
     }
 }
 
-h1.biggy {
+h2.biggy, h1.biggy {
     font-size: 5rem;
     line-height: 1.25em;
+    font-weight: 700;
+    letter-spacing: -1px;
 
     @media (max-width: 768px) {
         font-size: 3rem;
     }
+}
+
+.huge {
+    font-size: 20vmin;
+    font-weight: 800;
+    letter-spacing: -5px;
+    line-height: 1;
+    //margin-left: -.15em;
+    transition: .5s all ease-out;
 }
 
 .min {
@@ -255,6 +289,11 @@ h1.biggy {
 
 .twothirds {
     height: 90vh;
+}
+
+.half {
+    height: 50vh;
+    overflow: hidden;
 }
 
 .strong {
@@ -327,7 +366,7 @@ h1.biggy {
     }
 
     p {
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: .5px;
         text-transform: capitalize;
     }
@@ -351,7 +390,6 @@ section,.section {
     position: relative;
     width: 100%;
     padding: 0 3rem;
-    //line-height: 1.5em;
 
     .section-inner {
         max-width: 1920px;
@@ -371,10 +409,6 @@ section,.section {
       }
       
 }
-
-// header,.title {
-//     position: fixed;
-// }
 
 .title {
     padding: 5rem 3rem;
@@ -488,90 +522,94 @@ section,.section {
 
 
 .footer, #footer {
-    margin-top: 2em;
+    //margin-top: 2em;
     width: 100%;
     position: relative;
     z-index: 200;
     bottom: 0;
+
+    .main-navigation {
+        margin-top: 2em;
+    }
     
     .global-footer {
-      padding: 1rem;
-      border-top: 1px solid var(--black);
+        padding: 1rem;
+        border-top: 1px solid var(--black);
     }
 
     .main-navigation,.global-footer-container,.socials-container {
-      width: 75vw;
-      max-width: 1920px;
-      margin: 0 auto;
+        width: 75vw;
+        max-width: 1920px;
+        margin: 0 auto;
     }
   
     .socials-container {
-      width: 100%;
+        width: 100%;
     }
   
     p, a {
-      font-family: var(--global-font-primary);
-      color: var(--black);
-      letter-spacing: 1px;
+        font-family: var(--global-font-primary);
+        color: var(--black);
+        letter-spacing: 1px;
     }
   
     .global-footer-container {
-      flex-wrap: nowrap;
-      min-height: 250px;
-      text-align: left;
+        flex-wrap: nowrap;
+        min-height: 250px;
+        text-align: left;
 
-      .site-title {
-        font-size: 1.5rem;
-        font-family: var(--global-font-primary);
-        font-weight: 600;
-        text-transform: capitalize;
-      }
+        .site-title {
+            font-size: 1.5rem;
+            font-family: var(--global-font-primary);
+            font-weight: 600;
+            text-transform: capitalize;
+        } 
 
-      .site-title,.footer-links {
-        margin: 1rem 0;
+        .site-title,.footer-links {
+            margin: 1rem 0;
 
-        a {
-          text-transform: uppercase;
+            a {
+            text-transform: uppercase;
 
-          &:hover {
-            color: var(--magenta);
-          }
+                &:hover {
+                    color: var(--magenta);
+                }
+            }
         }
-      }
 
-      p {
-        font-family: var(--global-font-secondary);
-        text-transform: none;
-      }
-
-      @media (max-width: 768px) { 
-        padding: 0;
-        flex-flow: column wrap;
-
-        .footer-links > li {
-          display: block;
-          margin-bottom: .5rem;
+        p {
+            font-family: var(--global-font-secondary);
+            text-transform: none;
         }
-      }
+
+        @media (max-width: 768px) { 
+            padding: 0;
+            flex-flow: column wrap;
+
+            .footer-links > li {
+            display: block;
+            margin-bottom: .5rem;
+            }
+        }
     } 
   
-  @media (max-width: 768px) {
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 1em;
+    @media (max-width: 768px) {
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 1em;
 
-    .global-footer-container,.icons,.follow-container,.socials-container,.nocookies,div {
-      flex-direction: column;
-      padding: 1.5rem .5rem;
-      width: 100%;
-    }
+        .global-footer-container,.icons,.follow-container,.socials-container,.nocookies,div {
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+        width: 100%;
+        }
 
-    .footer-links > a {
-      width: 100%;
-      display: block;
+        .footer-links > a {
+        width: 100%;
+        display: block;
+        }
     }
-  }
 }
 
 
