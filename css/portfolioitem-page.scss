@@ -158,8 +158,14 @@ a:hover {
 }
 
 .huge {
+  font-size: 12vmax;
+
   @media (max-width:1024px){
-    font-size: 4rem;
+    font-size: 5rem;
+    letter-spacing: 1px;
+  }
+  @media (max-width:425px){
+    font-size: 3em;
     letter-spacing: 1px;
   }
 }

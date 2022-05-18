@@ -75,6 +75,30 @@ nav {
             padding: 1rem;
             font-family: var(--global-font-secondary);
             line-height: 0;
+
+            &:hover {
+                .sub {
+                    display: block;
+                }
+            }
+        }
+
+        .sub {
+            display: none;
+            position: fixed;
+            white-space: pre-line;
+            border: 1px solid black;
+            margin-top: 1rem; 
+            padding: 2rem;
+            transition: all .25s;
+
+            li {
+                padding: 1rem 0;
+            }
+
+            &:hover {
+                display: block;
+            }
         }
     }
 }
@@ -125,6 +149,24 @@ q::after {
 }
 .paren::after {
     content: ")";
+}
+
+div > * {
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: moveInUp; 
+}
+
+@keyframes moveInUp {
+    0% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
@@ -246,6 +288,7 @@ h2.biggy, h1.biggy {
 
 .huge {
     font-size: 20vmin;
+    font-size: 12vmax;
     font-weight: 800;
     letter-spacing: -5px;
     line-height: 1;
@@ -267,17 +310,49 @@ h2.biggy, h1.biggy {
     // }
 }
 
-.button {
+
+
+.button,.backtotop {
     font-size: .9em;
     padding: 1.5em 3em;
-    border: 1px solid var(--accent);
+    border: 1px solid inherit;
     margin: 2em;
     text-align: center;
     
+    // &:hover {
+    //   background: var(--magenta);
+    // }
+}
+
+.backtotop:before {
+    content: "\2b06 \A ";
+    white-space: pre-wrap;
+}
+.backtotop {
+    mix-blend-mode: difference;
+    //background-color: var(--background-color-primary); 
+    background-color: inherit; 
+    //padding: 1.5em 2.25em;
+    //padding: 0;
+    margin: 1em;
+    //font-size: 1em;
+    //opacity: 75%;
+    transition: .25s;
+    //right: 0;
+    position: fixed;
+    bottom: 0;
+    //right: 0;
+    transform: translateX(1px);  
+
     &:hover {
-      background: var(--magenta);
+        opacity: 100%;
     }
-  }
+
+    @media (max-width:768px) {
+        z-index: 100;
+        padding: 0;
+    }
+}
 
 .full {
     height: 100vh;
@@ -525,7 +600,7 @@ section,.section {
     //margin-top: 2em;
     width: 100%;
     position: relative;
-    z-index: 200;
+    z-index: 5;
     bottom: 0;
 
     .main-navigation {

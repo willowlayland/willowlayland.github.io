@@ -1,1 +1,114 @@
-.row1 a:nth-of-type(1){background-image:url("https://source.unsplash.com/featured/?plant")}.row1 a:nth-of-type(1):after{content:" ";background-color:var(--cyan)}.row1 a:nth-of-type(2){background-image:url("https://source.unsplash.com/featured/?wood")}.row1 a:nth-of-type(2):after{content:" ";background-color:var(--magenta)}.row1 a:nth-of-type(3){background-image:url("https://source.unsplash.com/featured/?silver")}.row1 a:nth-of-type(3):after{content:" ";background-color:var(--yellow)}.row2 a:nth-of-type(1){background-image:url("https://source.unsplash.com/featured/?plant")}.row2 a:nth-of-type(1):after{content:" ";background-color:var(--black)}@media(min-width: 768px){.row2 a:nth-of-type(1) h2{margin-left:-2.9em}.row2 a:nth-of-type(1):hover h2{margin-left:0}}.row2 a:nth-of-type(2){background-image:url("https://source.unsplash.com/featured/?grey,wood")}.row2 a:nth-of-type(3){background-image:url("https://source.unsplash.com/featured/?silver,plant")}@media(min-width: 768px){.portfolio-container{width:75vw;width:87.5vw}}.portfolio-item{overflow:hidden;color:#fff}.portfolio-item p{opacity:0;display:none;transition:1s all}.portfolio-item:hover{color:#fff}.portfolio-item:hover .huge{font-size:6em;letter-spacing:0}.portfolio-item:hover p{opacity:1;display:block}@media(max-width: 768px){.portfolio-item .huge{font-size:15vmin;letter-spacing:0}.portfolio-item p{opacity:1;display:block}}.huge{font-size:50vh;font-size:65vh;font-weight:800;letter-spacing:-10px;line-height:1;margin-left:-0.15em;transition:.5s all ease-out}@media(min-width: 768px){.link{margin-bottom:2em}}
+.row1 a:nth-of-type(1) {
+  background-image: url("https://source.unsplash.com/featured/?plant");
+}
+
+.row1 a:nth-of-type(1):after {
+  content: " ";
+  background-color: var(--cyan);
+}
+
+.row1 a:nth-of-type(2) {
+  background-image: url("https://source.unsplash.com/featured/?wood");
+}
+
+.row1 a:nth-of-type(2):after {
+  content: " ";
+  background-color: var(--magenta);
+}
+
+.row1 a:nth-of-type(3) {
+  background-image: url("https://source.unsplash.com/featured/?silver");
+}
+
+.row1 a:nth-of-type(3):after {
+  content: " ";
+  background-color: var(--yellow);
+}
+
+.row2 a:nth-of-type(1) {
+  background-image: url("https://source.unsplash.com/featured/?plant");
+}
+
+.row2 a:nth-of-type(1):after {
+  content: " ";
+  background-color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .row2 a:nth-of-type(1) h2 {
+    margin-left: -2.9em;
+  }
+  .row2 a:nth-of-type(1):hover h2 {
+    margin-left: 0;
+  }
+}
+
+.row2 a:nth-of-type(2) {
+  background-image: url("https://source.unsplash.com/featured/?grey,wood");
+}
+
+.row2 a:nth-of-type(3) {
+  background-image: url("https://source.unsplash.com/featured/?silver,plant");
+}
+
+@media (min-width: 768px) {
+  .portfolio-container {
+    width: 75vw;
+    width: 87.5vw;
+  }
+}
+
+.portfolio-item {
+  overflow: hidden;
+  color: white;
+}
+
+.portfolio-item p {
+  opacity: 0;
+  display: none;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.portfolio-item:hover {
+  color: white;
+}
+
+.portfolio-item:hover .huge {
+  font-size: 6em;
+  letter-spacing: 0;
+}
+
+.portfolio-item:hover p {
+  opacity: 1;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item .huge {
+    font-size: 15vmin;
+    letter-spacing: 0;
+  }
+  .portfolio-item p {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.huge {
+  font-size: 50vh;
+  font-size: 65vh;
+  font-weight: 800;
+  letter-spacing: -10px;
+  line-height: 1;
+  margin-left: -.15em;
+  -webkit-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+}
+
+@media (min-width: 768px) {
+  .link {
+    margin-bottom: 2em;
+  }
+}
+/*# sourceMappingURL=past.css.map */
