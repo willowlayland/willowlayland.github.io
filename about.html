@@ -9,13 +9,16 @@
     <meta name="author" content="Willow Layland">
     <title>About - Willow Layland</title>
     <link rel="stylesheet" href="./css/global.css" type="text/css">
-    <link rel="stylesheet" href="./css/about.css" type="text/css">
     <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
     <script src="./script/script.js"></script>
+
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
 <body class="blackbg">
+<div class="animsition-overlay" data-animsition-overlay="true">
 
     <!-- <div>    
         <div class="title">
@@ -27,18 +30,18 @@
     </div> -->
 
     <header class="small-header flex-row title justify-center">
-        <div><p>willow layland. tryin stuff.</p></div>
+        <span><p>willow layland. tryin stuff.</p></span>
         <nav>
             <ul class="justify-center">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notebook.html">Notebook</a></li>
+                <li><a href="about.html" class="animsition-link" >About</a></li>
+                <li><a href="notebook.html" class="animsition-link">Notebook</a></li>
                 <li><a href="past.html">Past Work</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="twothirds">   
+    <section class="twothirds" style="overflow: hidden;">   
         <div class="flex-row halves section-inner">
             <img class="reverseorder title" src="./images/group 986.png">
 
@@ -70,14 +73,45 @@
                 <nav class="flex-column">
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="notebook.html">Notebook</a></li>
+                        <li><a href="about.html" class="animsition-link" >About</a></li>
+                        <li><a href="notebook.html" class="animsition-link">Notebook</a></li>
                         <li><a href="past.html">Work</a></li>
                     </ul>
                 </nav>
             </span>
         </div>
     </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+      inClass: 'overlay-slide-in-bottom',
+      outClass: 'overlay-slide-out-top',
+      overlay : true,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
+
+      $('body').removeClass('bg-init');
+
+      $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
+
+      console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+      $('.target', this).html('Callback: End');
+
+      console.log('event -> inEnd');
+    });
+  });
+</script>
 
 </body>
 </html>
