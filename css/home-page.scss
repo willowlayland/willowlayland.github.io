@@ -24,8 +24,8 @@ header, .name {
 
 .name {
     @media screen and (max-width: 768px) {
-        -moz-transform: scale(1.25, 1.25);
-        transform: scale(1.25,1.25);
+        -moz-transform: scale(1.35, 1.35);
+        transform: scale(1.35,1.35);
 
         .subhead {
             -moz-transform: scale(.8, .8);
@@ -193,6 +193,51 @@ h1 {
     animation-fill-mode: forwards;
 }
 
+.star {
+    position: absolute;
+    opacity: 0;
+    animation-name: moveFade;
+    animation-duration: 5s;
+    //animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    &:after {
+        color: var(--offwhite);
+        content: "\2727";
+    }
+
+    &:nth-of-type(1) {
+        font-size: 2em; 
+        top: 55%;
+        left: 5%;
+    }
+
+    &:nth-of-type(2) {
+        font-size: 1em; 
+        top: 10%;
+        left: 20%;
+    }
+
+    &:nth-of-type(3) {
+        font-size: 3em; 
+        top: 25%;
+        left: 90%;
+    }
+
+    &:nth-of-type(4) {
+        font-size: 1em; 
+        top: 80%;
+        left: 85%;
+    }
+
+    &:nth-of-type(5) {
+        font-size: 1em; 
+        top: 40%;
+        left: 90%;
+    }
+}
+
 .arrowdown:after {
     color: var(--offwhite);
     opacity: 0;
@@ -233,7 +278,7 @@ h1 {
 
 @keyframes scrollleft {
     0% {
-        transform: translate(50%, 0);
+        transform: translate(15%, 0);
     }
     100% {
         transform: translate(-100%, 0);
@@ -242,10 +287,7 @@ h1 {
 
 @keyframes scrollright {
     0% {
-        transform: translate(-50%, 0);
-        @media (max-width: 768px) {
-            transform: translate(-150%, 0);
-        }
+        transform: translate(-10%, 0);
     }
     100% {
         transform: translate(100%, 0);
@@ -253,9 +295,10 @@ h1 {
 }
 .scrollleft {
     animation: scrollleft 60s linear infinite, moveFade 4s;
-}
+} 
 .scrollright {
     animation: scrollright 60s linear infinite, moveFade 4s;
+    float: right;
 }
 
 .margin-extra {
