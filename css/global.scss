@@ -7,6 +7,7 @@
 
 :root {
     --black: #1b1c1e;
+    --blackp: #381338;
     --cyan: royalblue;
     --magenta: hotpink;
     --yellow: orange;
@@ -191,7 +192,7 @@ div > * {
     background-color: var(--yellow);
 
     h1,h2,h3,h4,h5,h6,a,p,q {
-        color: #381338;
+        color: var(--blackp);
     }
 }
 
@@ -199,8 +200,8 @@ div > * {
     background-color: var(--magenta);
 
     h1,h2,h3,h4,h5,h6,a,p,q {
-        color: var(--black);
-        color: #381338;
+        color: var(--blackp);
+        //color: var(--offwhite);
     }
 }
 
@@ -264,6 +265,11 @@ div > * {
     text-align: center;
 }
 
+.align-center {
+    align-items: center;
+    align-content: center;
+}
+
 .fixed-bottom {
     position: fixed;
     bottom: 0;
@@ -324,6 +330,18 @@ h2.biggy, h1.biggy {
     // }
 }
 
+.outline-button {
+    padding: 2rem;
+    border: 1px solid var(--dark-grey);
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 2em;
+    
+    &:hover {
+        background: var(--cyan);
+    }
+}
+
 .backtotop:before {
     content: "\2b06 \A ";
     white-space: pre-wrap;
@@ -371,6 +389,10 @@ h2.biggy, h1.biggy {
     overflow: hidden;
 }
 
+.stagger > *:nth-child(2n) {
+    align-self: flex-end;
+}
+
 .strong {
     font-weight: 700;
 }
@@ -396,12 +418,12 @@ h2.biggy, h1.biggy {
     content: "  \2192";
     //content: " >";
 
-    &:hover {
-        a {
-            transform: translate(0, -5px);
-            color: red;
-        }
-    }
+    // &:hover {
+    //     a {
+    //         transform: translate(0, -5px);
+    //         color: red;
+    //     }
+    // }
 }
 
 .arrowup:before {
@@ -410,12 +432,17 @@ h2.biggy, h1.biggy {
 
 .arrowdown:after {
     content: "\2193";
+    
 }
 
 .arrowbefore:before, .arrowafter:after {
     font-family: var(--global-font-secondary);
     font-family: var(--global-font-primary);
     font-weight: inherit;
+}
+
+.arrowdiag:after {
+    content: " ↗ ";
 }
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
@@ -431,7 +458,7 @@ h2.biggy, h1.biggy {
     p,a {
         font-family: var(--global-font-primary);
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     p,li {
@@ -440,24 +467,25 @@ h2.biggy, h1.biggy {
         line-height: 0;
     }
 
-    p {
+    p,.header {
         font-weight: 600;
-        letter-spacing: .5px;
         text-transform: capitalize;
+        margin-bottom: 1rem;
+        //color: var(--black);
     }
 
     @media (max-width: 768px) {
         width: 100%;
         padding: 2rem .5rem;
 
-        p {
+        .header {
             margin-bottom: 1rem;
         } 
         
-        li,p {
-            padding: .5rem;
-            line-height: .1;
-        }
+        // li {
+        //     padding: 1rem;
+        //     line-height: .1;
+        // } //add if more than 2 menu items
     }
 }
 
@@ -517,6 +545,10 @@ section,.section {
     @media (max-width: 768px) {  
         padding: 1rem;
     }
+}
+
+.small-div {
+    max-width: 520px;
 }
 
 .title,.big-section,.small-section {

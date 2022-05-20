@@ -21,7 +21,7 @@
 
     &:first-child {
       margin-top: 0;
-      padding-top: 0;
+      //padding-top: 0;
     }
 
     &:last-child {
@@ -116,7 +116,7 @@ img {
 .portfolio-nav {
   position: sticky;
   top: 0;
-  z-index: 200;
+  z-index: 100;
   background-color: inherit;
   padding: 1rem 0;
   transition: .25s all;
@@ -200,3 +200,39 @@ a:hover {
 //   visibility: visible;
 // }
 // }
+
+
+.magbg,.cyanbg,.yellowbg {
+  .lightbox {
+    max-width: 1440px;
+    padding: 1em;
+    background-color: white;
+    //background-color: var(--blackp);
+    border: 1px solid black;
+    border-radius: .25em;
+
+    h2,h3,h4,p {
+      color: var(--black);
+      //color: var(--offwhite);
+    }
+
+    @media (max-width: 768px) {
+      padding: .5em;
+    }
+  }
+  .gallery-container {
+    @media (max-width: 768px) {
+      padding: .5em;
+    }
+  }
+}
+
+.cyanbg,.magbg {
+  .lightbox {
+    background-color: white;
+    h2,h3,h4,p {
+      color: var(--black);
+      //color: var(--offwhite);
+    }
+  }
+}

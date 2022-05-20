@@ -13,18 +13,22 @@
     <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
     <script src="./script/script.js"></script>
+
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
-<body class="portfolio-page blackbg">
+<body class="portfolio-page blackbg animsition-overlay" data-animsition-overlay="true">
+<!-- <div class="animsition-overlay" data-animsition-overlay="true"> -->
 
-    <header class="small-header flex-row justify-center">
-        <span><p>willow layland. tryin stuff.</p></span>
-        <nav>
+    <header class="small-header">
+        <nav class="flex-row justify-center">
+            <ul>
+                <li><a href="index.html" class="header arrowafter animsition-link">willow layland. tryin stuff </a></li>
+            </ul>
             <ul class="justify-center">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notebook.html">Notebook</a></li>
-                <li><a href="past.html">Past Work</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html" class="animsition-link" >About</a></li>
             </ul>
         </nav>
     </header>
@@ -274,9 +278,6 @@
                 <span class="link arrowafter">View more</span>
                 <h2 class="huge">typography</h2>
             </a>
-            <!-- <div class="link">
-                <a href="index.html" class="arrowbefore">back</a>
-            </div> -->
         </div>
     </section>
 
@@ -303,6 +304,36 @@
             </span>
         </div>
     </footer>
+
+<!-- </div> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+<script>
+$(document).ready(function() {
+$('.animsition-overlay').animsition({
+    inClass: 'overlay-slide-in-bottom',
+    outClass: 'overlay-slide-out-top',
+    overlay : true,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body'
+})
+.one('animsition.inStart',function(){
+
+    $('body').removeClass('bg-init');
+
+    $(this)
+    .find('.item')
+    .append('<h2 class="target">Callback: Start</h2>');
+
+    console.log('event -> inStart');
+})
+.one('animsition.inEnd',function(){
+    $('.target', this).html('Callback: End');
+
+    console.log('event -> inEnd');
+});
+});
+</script>
 
 </body>
 </html>
