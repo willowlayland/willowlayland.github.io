@@ -205,10 +205,12 @@ a:hover {
 .magbg,.cyanbg,.yellowbg {
   .lightbox {
     max-width: 1440px;
+    max-width: 1600px;
+    //max-width: 1920px;
     padding: 1em;
     background-color: white;
     //background-color: var(--blackp);
-    border: 1px solid black;
+    border: 1px solid var(--black);
     border-radius: .25em;
 
     h2,h3,h4,p {
@@ -218,21 +220,12 @@ a:hover {
 
     @media (max-width: 768px) {
       padding: .5em;
+      margin: 0;
     }
   }
   .gallery-container {
     @media (max-width: 768px) {
-      padding: .5em;
-    }
-  }
-}
-
-.cyanbg,.magbg {
-  .lightbox {
-    background-color: white;
-    h2,h3,h4,p {
-      color: var(--black);
-      //color: var(--offwhite);
+      padding: 0;
     }
   }
 }
