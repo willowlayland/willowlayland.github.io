@@ -358,7 +358,10 @@ h2.biggy, h1.biggy {
     background-color: rgba(255, 255, 255, 0.3);
     //background-color: inherit; 
     //color: inherit;
-    padding: 1.25rem 1.5rem;
+    //padding: 1.25rem 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    padding-top: .85rem;
     color: var(--black) !important;
     //width: 2em;
     //height: 2em;
@@ -506,7 +509,7 @@ h2.biggy, h1.biggy {
 section,.section {
     position: relative;
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 2.25rem;
 
     .section-inner {
         max-width: 1920px;
