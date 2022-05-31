@@ -10,6 +10,7 @@
     --blackp: #381338;
     --cyan: royalblue;
     --magenta: hotpink;
+    --magenta: deeppink;
     --yellow: orange;
     --offwhite: #fcedd8;
     --dark-grey: #525252;
@@ -132,16 +133,33 @@ img {
 }
 
 q {
-    quotes: """ """;
+    //quotes: "'";
     font-family: inherit;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    color: var(--black);
+    //line-height: 2.1rem;
+    display: block;
+    padding: 0 1.5em;
+    border-left: 1px solid var(--accent);
 }
-q::before {
-    content: open-quote;
+q::before, q::after {
+    content: open-quote open-quote;
+    font-family: Georgia, sans-serif;
+    color: var(--accent);
+    display: block;
     margin-left: -.25rem;
+    padding-right: .25rem;
+    //padding-left: -2em;
+    font-size: 2.5em;
+    line-height: 0;
+    padding: 1rem 0;
 }
 q::after {
-    content: close-quote;
+    content: close-quote close-quote;
+    display: none;
+}
+q.noquote::before, q.noquote::after{
+    display: none;
 }
 
 .paren::before, .paren::after{
@@ -355,7 +373,7 @@ h2.biggy, h1.biggy {
 .backtotop {
     //mix-blend-mode: difference;
     background-color: var(--black);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #fcedd880;
     //background-color: inherit; 
     //color: inherit;
     //padding: 1.25rem 1.5rem;
@@ -376,6 +394,7 @@ h2.biggy, h1.biggy {
     transition: .25s;
     border-radius: 100%;
     border: 1px solid black;
+    z-index: 4;
 
     &:hover {
         background-color: white;
@@ -390,11 +409,7 @@ h2.biggy, h1.biggy {
 }
 
 .full {
-    height: 100vh;
-
-    @media (max-width: 768px) {
-        height: auto;
-    }
+    min-height: 100vh;
 }
 
 .twothirds {
@@ -404,6 +419,16 @@ h2.biggy, h1.biggy {
 .half {
     height: 50vh;
     overflow: hidden;
+}
+
+.full,.twothirds {
+    @media (max-width: 768px) {
+        height: auto;
+    }
+
+    @media (max-height: 768px) {
+        height: auto;
+    }
 }
 
 .stagger > *:nth-child(2n) {
@@ -581,6 +606,14 @@ section,.section {
     @media (max-width:768px) {
         padding: 1rem;
     }
+
+    // a {
+    //     text-transform: capitalize;
+
+    //     &:after {
+    //         content: " ↗ ";
+    //     }
+    // }
 }
 
 .entry-container {
