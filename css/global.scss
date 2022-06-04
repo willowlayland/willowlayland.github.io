@@ -139,7 +139,7 @@ q {
     //font-size: 1.15rem;
     //font-weight: 500;
     letter-spacing: .5px;
-    //font-style: italic;
+    font-style: italic;
     color: var(--black);
     display: block;
     padding: 0 1.5em;
@@ -463,11 +463,11 @@ h1.biggy, h2.biggy {
 }
 
 .arrowbefore:before {
-    content: "\2190  ";
+    content: "\2190   ";
 }
 
 .arrowafter:after {
-    content: "  \2192";
+    content: "   \2192";
     // &:hover {
     //     a {
     //         transform: translate(0, -5px);
@@ -531,6 +531,10 @@ h1.biggy, h2.biggy {
         .header {
             margin-bottom: 1rem;
             letter-spacing: 0;
+
+            &:after {
+                content: ".";
+            }
         } 
         
         // li {
@@ -655,7 +659,7 @@ section,.section {
 
         a {
             width: 49%;
-            
+
             &:last-child {
                 margin: 0 auto;
                 margin-bottom: .5rem;
