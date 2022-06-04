@@ -181,7 +181,7 @@ h1 {
     }
 
     100% {
-        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, var(--magenta)),textShadow(0.25, 45, var(--yellow));
+        text-shadow: textShadow(0.25, 15, var(--cyan)), textShadow(0.25, 30, hotpink),textShadow(0.25, 45, var(--yellow));
     }
 }
 
@@ -310,6 +310,7 @@ h1 {
 }
 
 
+
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 // INTRODUCTION SECTION PORTFOLIO FEATURED WORKS
@@ -317,15 +318,12 @@ h1 {
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 
-// .homepage {
-//     //max-width: 80rem;
-//     padding: 0 10rem;
-//     margin: 0 auto;
 
-//     @media (max-width:768px) {
-//         padding: 0;
-//     }
-// }
+
+.huge {
+    font-size: 12vmax;
+    font-size: 10vmax;
+}
 
 
 .big-section {

@@ -17,14 +17,14 @@
 
 <body class="portfolio-page normalbg">
 
-    <header class="small-header flex-row justify-center">
-        <span><p>willow layland. tryin stuff.</p></span>
-        <nav>
+    <header class="small-header title">
+        <nav class="flex-row justify-center">
+            <ul>
+                <li><a href="index.html" class="header arrowafter animsition-link">willow layland. tryin stuff </a></li>
+            </ul>
             <ul class="justify-center">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notebook.html">Notebook</a></li>
-                <li><a href="past.html">Past Work</a></li>
+                <li><a href="index.html#recent" class="animsition-link">Work</a></li>
+                <li><a href="about.html" class="animsition-link" >About</a></li>
             </ul>
         </nav>
     </header>
@@ -230,15 +230,43 @@
 
                 <nav class="flex-column">
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="notebook.html">Notebook</a></li>
-                        <li><a href="past.html">Work</a></li>
+                        <li><a href="index.html#recent">Work</a></li>
+                        <li><a href="about.html" class="animsition-link" >About</a></li>
+                        <li><a href="notebook.html" class="animsition-link">Notebook</a></li>
+                        <!-- <li><a href="past.html">Work</a></li> -->
+                        <li><a href="gallery.html"class="animsition-link">Gallery</a></li>
                     </ul>
                 </nav>
             </span>
         </div>
     </footer>
+
+<script>
+    $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
+    
+        $('body').removeClass('bg-init');
+    
+        $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
+    
+        console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
+    
+        console.log('event -> inEnd');
+    });
+    });
+</script>
 
 </body>
 </html>

@@ -1,14 +1,1 @@
-.title {
-  color: red;
-}
-
-body {
-  color: red;
-  background-color: white;
-}
-
-section {
-  overflow: hidden;
-  height: 75vh;
-}
-/*# sourceMappingURL=about.css.map */
+section{overflow:hidden;height:75vh}

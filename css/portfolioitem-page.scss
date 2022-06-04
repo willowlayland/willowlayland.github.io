@@ -116,7 +116,7 @@ img {
 .portfolio-nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 3;
   background-color: inherit;
   padding: 1rem 0;
   transition: .25s all;
@@ -152,23 +152,24 @@ img {
   }
 }
 
-a:hover {
-  h2{letter-spacing: 2px;}
-  //opacity: .75;
-}
-
-.huge {
-  font-size: 12vmax;
-
-  @media (max-width:1024px){
-    font-size: 5rem;
-    letter-spacing: 1px;
-  }
-  @media (max-width:425px){
-    font-size: 3em;
-    letter-spacing: 1px;
+a:hover { //hover animation for huge
+  h2 { 
+    letter-spacing: 2px;
   }
 }
+
+// .huge {
+//   font-size: 12vmax;
+
+//   @media (max-width:1024px){
+//     font-size: 5rem;
+//     letter-spacing: 1px;
+//   }
+//   @media (max-width:425px){
+//     font-size: 3em;
+//     letter-spacing: 1px;
+//   }
+// }
 
 // &:nth-of-type(1) {
 //   &:after {
@@ -205,7 +206,7 @@ a:hover {
 .magbg,.cyanbg,.yellowbg {
   .lightbox {
     max-width: 1440px;
-    max-width: 1600px;
+    //max-width: 1600px;
     //max-width: 1920px;
     padding: 1em;
     background-color: white;
