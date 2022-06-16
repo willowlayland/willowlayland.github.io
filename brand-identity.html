@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="./css/global.css" type="text/css">
     <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
     <link rel="stylesheet" href="./css/p-cards.css" type="text/css">
-    <link rel="stylesheet" href="./css/past.css" type="text/css">
+    <link rel="stylesheet" href="./css/brand.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
-    <script src="./script/script.js"></script>
+
+    <!-- animsition -->
+    <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
-<body>
+<body class="animsition-overlay" data-animsition-overlay="true">
+
 
     <header class="small-header">
         <nav class="flex-row justify-center">
@@ -30,9 +33,9 @@
         </nav>
     </header>
     
-    <!-- <div class="justify-center">    
+    <div class="justify-center">    
             <h1 class="biggy title">Brand Identity</h2>
-    </div> -->
+    </div>
     
     <section>
         <div class="portfolio-container section-inner">
@@ -56,32 +59,11 @@
                     <p>brand identity collection</p>
                 </a>
 
-                <!-- <a class="portfolio-item flex-column justify-center" href="black.html">
+                <a class="portfolio-item flex-column justify-center" href="black.html">
                     <div>
                         <h2 class="huge">black</h2>
                     </div>
                     <p>brand identity collection</p>
-                </a> -->
-            </div>
-
-            <div class="portfolio row2 flex-row">
-                <a class="portfolio-item flex-column justify-center" href="./black.html">
-                    <div>
-                        <h2 class="huge">black</h2>
-                    </div>
-                    <p>brand identity collection</p>
-                </a>
-                <a class="portfolio-item flex-column justify-center" href="./typography.html">
-                    <div>
-                        <h2 class="huge">type</h2>
-                    </div>
-                    <p>editorial design & typography</p>
-                </a>
-                <a class="portfolio-item flex-column justify-center" href="./conceptart.html">
-                    <div>
-                        <h2 class="huge">art</h2>
-                    </div>
-                    <p>conceptual art & illustration</p>
                 </a>
             </div>
         </div>
@@ -97,16 +79,46 @@
 
                 <nav class="flex-column">
                     <ul class="footer-links">
-                        <li><a href="index.html#recent">Work</a></li>
+                        <li><a href="index.html#recent" class="animsition-link">Work</a></li>
                         <li><a href="about.html" class="animsition-link" >About</a></li>
                         <li><a href="notebook.html" class="animsition-link">Notebook</a></li>
-                        <!-- <li><a href="past.html">Work</a></li> -->
                         <li><a href="gallery.html"class="animsition-link">Gallery</a></li>
                     </ul>
                 </nav>
             </span>
         </div>
     </footer>
+
+<script src="./script/script.js"></script>  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+<script>
+$(document).ready(function() {
+    $('.animsition-overlay').animsition({
+    inClass: 'overlay-slide-in-bottom',
+    outClass: 'overlay-slide-out-top',
+    overlay : true,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
+
+    $('body').removeClass('bg-init');
+
+    $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
+
+    console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+    $('.target', this).html('Callback: End');
+
+    console.log('event -> inEnd');
+    });
+});
+</script>
 
 </body>
 </html>
