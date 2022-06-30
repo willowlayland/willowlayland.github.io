@@ -35,14 +35,18 @@
     <div class="justify-center">    
             <h1 class="biggy title">Gallery</h2>
     </div>
+
+    <section class="justify-center">    
+        <div class="link arrowdown"></div>
+    </section>
     
     <section>
         <div class="gallery section-inner">
-
-        <div class="flex-row halves keephalf">
-            <img src="./images/grey.png">
-            <img src="./images/grey.png">
-        </div>
+            
+            <div class="flex-row halves keephalf">
+                <img src="./images/grey.png">
+                <img src="./images/grey.png">
+            </div>
             <div class="flex-row fifths">
                 <img src="./images/grey.png">
                 <img src="./images/grey.png">
@@ -68,14 +72,14 @@
                 <img src="./images/grey.png">
                 <img src="./images/grey.png">
             </div>
+        </div>
 
-            <div class="justify-center half flex-column">
-                <a href="typography.html" class="animsition-link">
-                    <span class="link arrowafter">View more</span>
-                    <h2 class="huge">Typography</h2>
-                </a>
-            </div>
-            </div>
+        <div class="justify-center half flex-column">
+            <a href="about.html" class="animsition-link">
+                <span class="link arrowafter">Learn more</span>
+                <h2 class="huge">About Me</h2>
+            </a>
+        </div>
     </section>
 
     <div class="flex-row justify-center" >
@@ -102,34 +106,34 @@
         </div>
     </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<script src="./dist/js/animsition.min.js" charset="utf-8"></script>
-<script>
-$(document).ready(function() {
-$('.animsition-overlay').animsition({
-    inClass: 'overlay-slide-in-bottom',
-    outClass: 'overlay-slide-out-top',
-    overlay : true,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body'
-})
-.one('animsition.inStart',function(){
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
 
-    $('body').removeClass('bg-init');
+        $('body').removeClass('bg-init');
 
-    $(this)
-    .find('.item')
-    .append('<h2 class="target">Callback: Start</h2>');
+        $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
 
-    console.log('event -> inStart');
-})
-.one('animsition.inEnd',function(){
-    $('.target', this).html('Callback: End');
+        console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
 
-    console.log('event -> inEnd');
-});
-});
-</script>
+        console.log('event -> inEnd');
+    });
+    });
+    </script>
 
 </body>
 </html>

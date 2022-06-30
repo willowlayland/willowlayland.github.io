@@ -14,11 +14,11 @@
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
     <script src="./script/script.js"></script>
 
-
-
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
-<body class="portfolio-page normalbg">
+<body class="animsition-overlay portfolio-page normalbg" data-animsition-overlay="true">
 
     <header class="small-header">
         <nav class="flex-row justify-center">
@@ -68,14 +68,24 @@
     <section class="flex-column">
         <div class="gallery-container section-inner">
 
-            <div id="one1" class="lightbox flex-row halves">
+            <div id="one1" class="lightbox flex-row uneven">
                 <div class="small-section">
                     <div class="sticky" style="padding-top: 3em;">
                         <h3>Website with a K</h3>
-                        <p>2017</p>
+                        <!-- <p>2021</p> -->
+                        <p>A simple, clean website, from design to development.</p>
+                        <img src="./images/k-design-system.jpg">
+                        <div class="button-group">
+                        <a href="website-with-a-k-site.html" target="_blank" rel="noopener noreferrer">
+                            view site (desktop only)
+                        </a>
+                        <a href="https://codepen.io/wlayland/pen/GRjxRZR" target="_blank" rel="noopener noreferrer">
+                            view on codepen.io
+                        </a>
+                    </div>
                     </div>
                 </div>
-                <div>
+                <div class="uneven-child">
                     <img src="./images/k-design-2.jpg">
                 </div>
             </div>
@@ -112,7 +122,7 @@
                 </div>
                 
                 <div class="entry-container">
-                    <div class="entry-inner flex-row halves">
+                    <div class="entry-inner flex-row uneven">
                         <div>
                             <h3>three3</h3>
                             <p>2020</p>
@@ -155,9 +165,9 @@
         </div>
 
         <div class="justify-center half flex-column">
-            <a href="conceptart.html">
+            <a href="brand-identity.html" class="animsition-link">
                 <span class="link arrowafter">View more</span>
-                <h2 class="huge">Concept art</h2>
+                <h2 class="huge">branding</h2>
             </a>
         </div>
     </section>
@@ -185,6 +195,35 @@
             </span>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
+    
+        $('body').removeClass('bg-init');
+    
+        $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
+    
+        console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
+    
+        console.log('event -> inEnd');
+    });
+    });
+    </script>
 
 </body>
 </html>

@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
-<body class="portfolio-page blackbg animsition-overlay" data-animsition-overlay="true">
+<body class="animsition-overlay portfolio-page blackbg" data-animsition-overlay="true">
+    
     <header class="small-header">
         <nav class="flex-row justify-center">
             <ul>
@@ -201,7 +202,7 @@
         </div>
 
         <div class="justify-center half flex-column">
-            <a href="typography.html">
+            <a href="typography.html" class="animsition-link">
                 <span class="link arrowafter">View more</span>
                 <h2 class="huge">typography</h2>
             </a>
@@ -232,34 +233,34 @@
         </div>
     </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<script src="./dist/js/animsition.min.js" charset="utf-8"></script>
-<script>
-$(document).ready(function() {
-$('.animsition-overlay').animsition({
-    inClass: 'overlay-slide-in-bottom',
-    outClass: 'overlay-slide-out-top',
-    overlay : true,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body'
-})
-.one('animsition.inStart',function(){
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
 
-    $('body').removeClass('bg-init');
+        $('body').removeClass('bg-init');
 
-    $(this)
-    .find('.item')
-    .append('<h2 class="target">Callback: Start</h2>');
+        $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
 
-    console.log('event -> inStart');
-})
-.one('animsition.inEnd',function(){
-    $('.target', this).html('Callback: End');
+        console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
 
-    console.log('event -> inEnd');
-});
-});
-</script>
+        console.log('event -> inEnd');
+    });
+    });
+    </script>
 
 </body>
 </html>

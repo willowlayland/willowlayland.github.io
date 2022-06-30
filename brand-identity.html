@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="./css/brand.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
     
-    <!-- animsition -->
+    <!-- animsition.css -->
     <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
 <body class="animsition-overlay" data-animsition-overlay="true">
-
 
     <header class="small-header">
         <nav class="flex-row justify-center">
@@ -40,28 +39,28 @@
     <section>
         <div class="portfolio-container section-inner">
             <div class="portfolio row1 flex-row">
-                <a class="portfolio-item flex-column justify-center" href="./cyan.html">
+                <a class="portfolio-item flex-column justify-center animsition-link" href="./cyan.html">
                     <div>
-                        <h2 class="huge">cyan</h2>
+                        <h2 class="huge huger">cyan</h2>
                     </div>
                     <p>brand identity collection</p>
                 </a>
-                <a class="portfolio-item flex-column justify-center" href="./magenta.html">
+                <a class="portfolio-item flex-column justify-center animsition-link" href="./magenta.html">
                     <div>
-                        <h2 class="huge">magenta</h2>
+                        <h2 class="huge huger">magenta</h2>
                     </div>
                     <p>brand identity collection</p>
                 </a>
-                <a class="portfolio-item flex-column justify-center" href="./yellow.html">
+                <a class="portfolio-item flex-column justify-center animsition-link" href="./yellow.html">
                     <div>
-                        <h2 class="huge">yellow</h2>
+                        <h2 class="huge huger">yellow</h2>
                     </div>
                     <p>brand identity collection</p>
                 </a>
 
-                <a class="portfolio-item flex-column justify-center" href="black.html">
+                <a class="portfolio-item flex-column justify-center animsition-link" href="black.html">
                     <div>
-                        <h2 class="huge">black</h2>
+                        <h2 class="huge huger">black</h2>
                     </div>
                     <p>brand identity collection</p>
                 </a>
@@ -70,9 +69,9 @@
     </section>
 
     <div class="justify-center half flex-column">
-        <a href="gallery.html">
+        <a href="gallery.html" class="animsition-link">
             <span class="link arrowafter">View more</span>
-            <h2 class="">gallery</h2>
+            <h2 class="huge">gallery</h2>
         </a>
     </div>
 
@@ -96,36 +95,36 @@
         </div>
     </footer>
 
-<script src="./script/script.js"></script>  
+    <script src="./script/script.js"></script>  
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<script src="./dist/js/animsition.min.js" charset="utf-8"></script>
-<script>
-$(document).ready(function() {
-    $('.animsition-overlay').animsition({
-    inClass: 'overlay-slide-in-bottom',
-    outClass: 'overlay-slide-out-top',
-    overlay : true,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body'
-    })
-    .one('animsition.inStart',function(){
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+        $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+        })
+        .one('animsition.inStart',function(){
 
-    $('body').removeClass('bg-init');
+        $('body').removeClass('bg-init');
 
-    $(this)
-        .find('.item')
-        .append('<h2 class="target">Callback: Start</h2>');
+        $(this)
+            .find('.item')
+            .append('<h2 class="target">Callback: Start</h2>');
 
-    console.log('event -> inStart');
-    })
-    .one('animsition.inEnd',function(){
-    $('.target', this).html('Callback: End');
+        console.log('event -> inStart');
+        })
+        .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
 
-    console.log('event -> inEnd');
+        console.log('event -> inEnd');
+        });
     });
-});
-</script>
+    </script>
 
 </body>
 </html>

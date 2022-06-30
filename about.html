@@ -35,7 +35,6 @@
     <div style="overflow: hidden;">   
         <div class="flex-row halves"> 
 <!-- <div class="full"style="overflow: hidden;"> -->
-            <!-- <img class="reverseorder" style="min-height: 500px;" src="./images/about.png"> -->
             <img class="reverseorder twothirds" style="bottom: 0; margin-bottom: 0; padding-top: 3em;" src="./images/allaboutme-3.png">
 <!-- </div> -->
             <div class="flex-column">
@@ -63,8 +62,7 @@
                         </p>
                         <p>
                             I love studying history books,
-                            old films, and character design as hobbies
-                            (If we're friends I'll link you my letterboxd lol)
+                            old films, and character design as hobbies.
                         </p>
                     </div>
                 </div>
@@ -73,15 +71,18 @@
                     <div class="title-div fliphide-show">
                         <p class="strong upper">skills</p>
                     </div>
-                    <p class="small-div">  
-                        <span class="strong upper fliphide-hide">skills</span> 
-                        <span class="arrowafter"></span>
-                        Proficient in front-end languages and writing neat code.
-                        Background in graphic design, specifically brand
-                        identity creation.
-                        I am distinctly organized IRL, and I enjoy working with
-                        teams personally.
-                    </p>
+                    <div class="small-div">  
+                        <p>  
+                            <span class="strong upper fliphide-hide">skills</span> 
+                            <span class="arrowafter"></span>
+                            Proficient in front-end languages and writing neat code.
+                            Background in graphic design, specifically editorial design.
+                            Previously worked in marketing graphic design. 
+                            <!-- Today, I'm shifting focus to digital enterprise services. -->
+                            I am distinctly organized IRL and I enjoy working with
+                            teams & coworkers personally.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="flex-row" style="flex-wrap: nowrap;">
@@ -90,18 +91,17 @@
                     </div>
                     <div class="small-div">  
                         <p>
-                        <span class="strong upper fliphide-hide">contact</span> 
-                        <span class="arrowafter"></span>
+                            <span class="strong upper fliphide-hide">contact</span> 
+                            <span class="arrowafter"></span>
                             Want to talk? Feel free to 
-                            connect on social media. I am 
-                            almost always offline 
-                            but I will see it eventually!
+                            reach out. 
+                            <!-- I am almost always offline 
+                            but I will see it eventually! -->
                         </p>
                         <br>
                         <span class="flex-row justify-between media-center">
                             <a href="mailto:willowlayland@gmail.com" class="arrowafter">Email</a>
                             <a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer" class="arrowafter">github</a>
-                            <!-- <a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a> -->
                             <a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer" class="arrowafter">instagram</a>
                             <a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer" class="arrowafter">behance</a>
                             <a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer" class="arrowafter">linkedin</a>
@@ -132,34 +132,34 @@
         </div>
     </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
-  <script>
-  $(document).ready(function() {
-    $('.animsition-overlay').animsition({
-      inClass: 'overlay-slide-in-bottom',
-      outClass: 'overlay-slide-out-top',
-      overlay : true,
-      overlayClass : 'animsition-overlay-slide',
-      overlayParentElement : 'body'
-    })
-    .one('animsition.inStart',function(){
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+        $('.animsition-overlay').animsition({
+        inClass: 'overlay-slide-in-bottom',
+        outClass: 'overlay-slide-out-top',
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body'
+        })
+        .one('animsition.inStart',function(){
 
-      $('body').removeClass('bg-init');
+        $('body').removeClass('bg-init');
 
-      $(this)
-        .find('.item')
-        .append('<h2 class="target">Callback: Start</h2>');
+        $(this)
+            .find('.item')
+            .append('<h2 class="target">Callback: Start</h2>');
 
-      console.log('event -> inStart');
-    })
-    .one('animsition.inEnd',function(){
-      $('.target', this).html('Callback: End');
+        console.log('event -> inStart');
+        })
+        .one('animsition.inEnd',function(){
+        $('.target', this).html('Callback: End');
 
-      console.log('event -> inEnd');
+        console.log('event -> inEnd');
+        });
     });
-  });
-</script>
+    </script>
 
 </body>
 </html>

@@ -29,9 +29,9 @@
     --background-color-footer: #fff;
     --link: #707080; 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
-    //--global-font-primary: 'Urbane', sans-serif;
-    //--global-font-primary: 'Grenadine MVB', sans-serif;
-    //--global-font-primary: 'Dela Gothic One', cursive;
+    // --global-font-primary: 'Urbane', sans-serif;
+    // --global-font-primary: 'Grenadine MVB', sans-serif;
+    // --global-font-primary: 'Dela Gothic One', cursive;
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -290,7 +290,7 @@ div > * {
     // }
 }
 
-.yellowbg,.offwhitebg {
+.yellowbg {
     h1,h2,h3,h4,h5,h6,a,p,q {
         color: var(--blackp);
     }
@@ -435,6 +435,7 @@ h1.biggy, h2.biggy {
 
 .medium {
     font-size: 1.25em;
+
     @media (max-width:1024px){
         font-size: 1em;
     }
@@ -453,6 +454,11 @@ h1.biggy, h2.biggy {
     font-weight: 600;
     letter-spacing: .5vw;
     padding: 1em;
+
+    
+    @media (max-width:1024px){
+        padding: 1em 0;
+    }
 }
 
 .link {
@@ -485,7 +491,7 @@ h1.biggy, h2.biggy {
 }
 
 .twothirds {
-    height: 90vh;
+    height: 92vh;
 }
 
 .half {
@@ -597,7 +603,7 @@ h1.biggy, h2.biggy {
     //mix-blend-mode: difference;
 
     color: inherit;
-    background-color: inherit;
+    background-color: white;
     border: 1px solid black;
 
     position: fixed;
@@ -737,6 +743,7 @@ section,.section {
 }
 
 .small-div {
+    width: 520px;
     max-width: 520px;
     margin: 0 auto;
     padding: 2rem;
@@ -912,8 +919,19 @@ section,.section {
 .fifths > * {
     width: 19.75%;
 }
+.uneven > * {
+    width: 32%;
+    
+    &:last-child {
+        width: 65%;
 
-.halves,.thirds,.fourths,.fifths {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+
+.halves,.thirds,.fourths,.fifths,.uneven {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -951,6 +969,23 @@ section,.section {
     }
 } 
 
+.button-group {
+    margin: 1rem 0;
+
+    a {
+        display: inline-block;
+        padding: 1em;
+        margin: .5rem;
+        border-radius: .25em;
+        text-align: center;
+        color: var(--offwhite);
+        background: var(--accent);
+
+        &:first-child {
+            background: var(--black);
+        }
+    }
+}
 
 .footer, #footer {
     width: 100%;
