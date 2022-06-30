@@ -340,6 +340,10 @@ div > * {
     justify-content: center;
 }
 
+.nowrap {
+    flex-wrap: nowrap;
+}
+
 .justify-between {
     justify-content: space-between;
 
@@ -521,6 +525,7 @@ h1.biggy, h2.biggy {
     position: sticky;
     position: -webkit-sticky;
     top: 3em;
+    padding-top: 3em;
     z-index: 100;
     background: var(--background-color-primary);
     background: inherit;
