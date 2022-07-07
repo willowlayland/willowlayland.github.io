@@ -118,7 +118,7 @@
 
 img {
   position: relative;
-    height: 100%;
+    // height: 100%;
     //height: 1080px;
   
     width: 100%;
@@ -159,12 +159,25 @@ img {
       display: block;
     }
   }
+
+  &.unstick {
+      position: relative;
+  }
 }
 
 .thumbs {
   @media (min-width:768px){
     max-width: 75vw;
+    max-width: 1920px;
     margin: 0 auto;
+    flex-wrap: nowrap;
+
+    div {
+      // height: 10vh;
+      max-width: 33vmin;
+      margin: auto;
+      display: block;
+    }
   }
 
   a:hover {

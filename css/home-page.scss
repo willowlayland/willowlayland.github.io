@@ -11,7 +11,7 @@
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 header, .name {
-    min-height: 87.5vh;
+    // min-height: 87.5vh;
     transition: all .5s;
     --webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -89,6 +89,7 @@ header, .name {
 
 h1 {
     color: var(--offwhite);
+    color: #fcedd8;
     font-size: 15vw;
     line-height: 1em;
     font-weight: 900;
@@ -270,10 +271,6 @@ h1 {
 .subhead, .scrolltext  {
     color: var(--offwhite);
     text-align: center;
-    // text-transform: uppercase;
-    // font-weight: 600;
-    // letter-spacing: .5vw;
-    // padding: 1em;
 }
 
 .scrolltext {
@@ -283,7 +280,7 @@ h1 {
 
 @keyframes scrollleft {
     0% {
-        transform: translate(15%, 0);
+        transform: translate(0, 0);
     }
     100% {
         transform: translate(-100%, 0);
@@ -292,10 +289,10 @@ h1 {
 
 @keyframes scrollright {
     0% {
-        transform: translate(-10%, 0);
+        transform: translate(-100%, 0);
     }
     100% {
-        transform: translate(100%, 0);
+        transform: translate(0, 0);
     }
 }
 .scrollleft {
@@ -320,24 +317,63 @@ h1 {
 
 #recent {
     background-color: var(--offwhite);
+    // background-color: white;
     overflow: hidden;
 }
 
-.stuff-i-do, .more-stuff{
+.about-excerpt {
+    // width: 60%;
+    max-width: 768px;
+    margin-right: 2em;
+}
+
+.about-excerpt,.stuff-i-do, .more-stuff{
+    // flex-grow: 1;
+    // margin: 1em;
+    flex-direction: column;
+    margin: 5rem 0;
     padding: 2em;
     text-align: left;
     // width: 25%; 
-    align-self: flex-end;
+    // align-self: flex-end;
+
+&:after {
+    border-bottom: 1px solid black;
+    width: 50%;
+}
       
     @media (max-width:768px) {
         padding: 0;
+        margin: 2rem 1rem;
         text-align: center;
         width: 100%; 
         align-self: center;
+
+        h2,a {
+            // font-size: 1.5em;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        .stuff-i-do-nav { 
+            flex-direction: row;
+        }
     }
 }
-.stuff-i-do {
-    align-self: flex-start;
+// .stuff-i-do {
+//     width: 2rem;
+// }
+.home-header,.more-stuff {
+    max-width: 1920px;
+    // margin: 0 auto;
+    padding: 0 5vw;
+}
+.more-stuff {
+    align-self: flex-end;
+    margin: 0;
 }
 
 
@@ -357,11 +393,13 @@ h1 {
   max-width: 1920px;
   margin: 0 auto;
   padding: 6em;
-  padding: 8vw 4vw;
+  padding: 10vw 5vw;
+  padding-bottom: 15vw;
 //   padding: 10em 0;
   
     h2 {
       font-size: 10vmin;
+      font-size: 8vmin;
       font-weight: 800;
       line-height: 1;
       display: block;
@@ -371,13 +409,13 @@ h1 {
       padding: 2rem;
       background-color: white;
       color: var(--black);
-      border: 2px solid var(--black);
+      border: 3px solid var(--black);
       
       z-index: 20;
     }
 
     img {
-      border: 2px solid var(--black);
+      border: 3px solid var(--black);
       max-width: 50vmax;
       margin-top: 5rem; 
       
@@ -463,11 +501,13 @@ h1 {
     a {
       h2 {
         position: relative;
+        // border-width: 1px;
       }
 
       img {
         width: 100% !important;
         margin: 1rem 0;
+        // border-width: 1px;
       }
     }
   }
@@ -475,23 +515,28 @@ h1 {
 
 .dev,.typ {
     h2 {
-      transform: rotate(-5deg);
+        transform: rotate(-5deg);
     }
-    
+
     img {
-      float: right;
+        float: right;
+        // order: 2;
+
+        @media (max-width:768px) {
+        float: none;
+        }
     }
-  }
+}
   
-  .bran,.conc {
+.bran,.conc {
     h2 {
-      transform: rotate(5deg);
+        transform: rotate(5deg);
     //   float: right;
-      right: 0;
+        right: 0;
     }
-    
+
     img {
-      float: left;
+        float: left;
     }
 
     &:hover{
@@ -521,10 +566,11 @@ li {
 
 #home-footer,footer,.footer {
     margin-top: 0;
-    //min-height: 70vh;
+    min-height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    // flex-direction: column;
+    // justify-content: space-between;
     background-color: var(--black);
     color: var(--offwhite);
     
@@ -554,7 +600,7 @@ li {
         }
 
         li {
-            padding: 2em;
+            padding: 1.75em;
         }
     }
     
@@ -569,6 +615,62 @@ li {
     //     background-color: white;
     //   }
     // }
+
+    .triangle {
+        // position: absolute;
+        // box-shadow: 0.25, 15, var(--cyan), 0.25, 30, hotpink, 0.25, 45, var(--yellow);
+
+        // &:after {
+            position: absolute;
+            content: " ";
+            padding: 0;
+            height: 0;
+            width: 0;
+            left: 0;
+            top: 0;
+            border-style: solid;
+
+            // &:nth-of-type(1) {
+                border-width: 8vmin 17vmin 0 0;
+                border-color: var(--offwhite) transparent transparent transparent ;
+                z-index: 100;
+
+                @media (max-width: 768px) {
+                    border-width: 0 0 0 0;
+                }
+            // }
+    
+            &:nth-of-type(2) {
+                border-width: 12vmin 18vmin 0 0;
+                border-color: var(--cyan) transparent transparent transparent;
+                z-index: 3;
+
+                @media (max-width: 768px) {
+                    border-width: 4vmin 4vmin 0 0;
+                }
+            }
+    
+            &:nth-of-type(3) {
+                border-width: 16vmin 19vmin 0 0;
+                border-color: hotpink transparent transparent transparent;
+                z-index: 2;
+
+                @media (max-width: 768px) {
+                    border-width: 7vmin 7vmin 0 0;
+                }
+            }
+    
+            &:nth-of-type(4) {
+                border-width: 20vmin 20vmin 0 0;
+                border-color: var(--yellow) transparent transparent transparent;
+                z-index: 1;
+
+                @media (max-width: 768px) {
+                    border-width: 10vmin 10vmin 0 0;
+                }
+            // }
+        }
+    }
     
     .global-footer-container {
         width: 640px;
@@ -577,6 +679,7 @@ li {
         .site-title {
             font-weight: 500;
             font-size: 2rem;
+            line-height: 1.5em;
         }
     
         p {
@@ -629,6 +732,7 @@ li {
     }
     
     @media (max-width: 768px) {
+        min-height: auto;
         text-align: center;
         font-size: 14px;
         

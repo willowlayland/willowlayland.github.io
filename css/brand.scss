@@ -2,35 +2,49 @@
 .row1 {
 
     a {
+        .huge {
+            color: white;
+        }
 
+        background-blend-mode: multiply;
+        
         &:nth-of-type(1) {
-            background-image:url('https://source.unsplash.com/featured/?plant');
-            &:after {
-                content: " ";
-                background-color: var(--cyan);
-            }
+            // background-image:url('https://source.unsplash.com/featured/?plant');
+            background-image: url('../images/laguardia/outdoorsign.png');
+            background-color: var(--cyan);
+            // &:after {
+            //     content: " ";
+            //     background-color: var(--cyan);
+            // }
         }
         &:nth-of-type(2) {
-            background-image:url('https://source.unsplash.com/featured/?wood');
-            &:after {
-                content: " ";
-                background-color: var(--magenta);
-            }
+            // background-image:url('https://source.unsplash.com/featured/?wood');
+            background-image: url('../images/earsoar/Web\ 1920\ –\ 47.jpg');
+            background-color: var(--magenta);
+            // &:after {
+            //     content: " ";
+            //     background-color: var(--magenta);
+            // }
         }
         &:nth-of-type(3) {
-            background-image:url('https://source.unsplash.com/featured/?silver');
-            &:after {
-                content: " ";
-                background-color: var(--yellow);
-            }
+            // background-image:url('https://source.unsplash.com/featured/?silver');
+            background-image: url('../images/bacotato/app.jpg');
+            background-color: var(--yellow);
+            // &:after {
+            //     content: " ";
+            //     background-color: var(--yellow);
+            // }
         }
 
         &:nth-of-type(4) {
-            background-image:url('https://source.unsplash.com/featured/?plant');
-            &:after {
-                content: " ";
-                background-color: var(--yellow);
-            }
+            // background-image:url('https://source.unsplash.com/featured/?plant');
+            background-image: url('../images/atech/mural.jpg');
+            background-blend-mode: soft-light;
+            background-color: var(--black);
+            // &:after {
+            //     content: " ";
+            //     background-color: var(--black);
+            // }
 
             @media (min-width:768px) { 
                 h2 {
@@ -51,6 +65,7 @@
     @media (min-width:768px){
         width: 75vw;
         width: 87.5vw;
+        width: 100%;
         //height: 70vh;
     }
 }
@@ -101,3 +116,100 @@
     margin-left: -.15em;
     transition: .5s all ease-out;
 }
+
+
+.portfolio-container {
+    width: 100%;
+}
+  
+.portfolio {
+    align-items: center;
+    //margin-top: 2em;
+    height: 100%;
+    cursor: pointer;
+    
+    .portfolio-item {
+        //display: flex;
+        flex: 1;
+        background-color: black;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        height: 75vmin;
+        height: 40vw;
+        cursor: pointer;
+        
+        
+        max-width: 33.33%;
+        //width: 100%;
+        //min-width: 10%;
+        margin: 1px;
+        position: relative;
+        //flex-direction: column;
+        
+        transition: 1s;
+        
+        //justify-content: center;
+        //text-align: center;
+        
+    
+        
+        img {
+            width: 50%;
+            max-width: 380px;
+            min-width: 5em;
+            //padding: 500px;
+            align-self: center;
+            transition: 1s ease-out;
+            //padding: 1em;
+            max-width: 30rem;
+        }
+        
+        p {
+            transition: 1s all;
+        }
+        
+        &:hover {
+            flex-grow: 20;
+            max-width: 80%;
+            
+            // p {
+            //     font-size:3em;
+            // }
+            cursor: pointer;
+            
+        }
+
+        &:before {
+            content: ""; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.5%200%22%20%2F%3E%3C%2Ffilter%3E%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E);
+            background-size: 512px, auto, cover;
+            background-position: center, 0% 0%, center;
+            background-repeat: repeat, repeat, repeat;
+            opacity: .5;
+            // mix-blend-mode: soft-light;
+            // mix-blend-mode: overlay;
+        }    
+        
+        @media(max-width: 768px) {
+            flex-direction: column;
+            min-width: 100%;
+            height: 50vh;
+            margin: 1px 0;
+        }
+    }
+}
+
+.recent {
+    .portfolio-item{
+        max-width: 50%;
+    }
+}
+
+

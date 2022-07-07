@@ -14,93 +14,179 @@
     <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
     <link rel="stylesheet" href="./css/home-page.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
-    <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
+<body class="animsition-overlay index" data-animsition-overlay="true">
 
+  <header class="hero full flex-column justify-between">
+      <p class="scrollleft scrolltext upper">
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development
+      </p>
+      <!-- </span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span> -->
 
-<body>
-
-    <header class="hero full flex-column justify-between">
-        <p class="scrollleft scrolltext upper">Concept Art → Logo Design → Graphic Communications → Web design → Creative Development</p>
-
-        <div class="name flex-column" style="min-height: auto;">
-          <h1>
-            <div class="willow">Willow</div>
-            <div class="layland">L<span class="yfix">a</span>yland</div>
-          </h1>
-          <p class="subhead margin-extra upper" style="padding: 3rem;">tryin' stuff</p>
-<!--           <span class="arrowdown"></span> -->
-        </div>
-
-        <p class="scrollright scrolltext upper">Concept Art → Logo Design → Graphic Communications → Web design → Creative Development</p>
-    </header>
-
-   <!-- <section id="recent" class="justify-center flex-column" style="overflow: hidden;">
-      <div class="workscard">
-        <a href="development.html" class="animsition-link">
-          <h2 class="huge">Development</h2>
-        </a>
+      <div class="name flex-column">
+        <h1 class="margin-extra">
+          <span class="willow">Willow</span>
+          <span class="layland">L<span class="yfix">a</span>yland</span>
+        </h1>
+        <p class="subhead margin-extra upper">tryin' stuff</p>
+        <span class="arrowdown"></span>
       </div>
-      <div class="workscard">
-        <a href="brand-identity.html" class="animsition-link">
-          <h2 class="huge">Brand Identity</h2>
-        </a>
+
+      <p class="scrollright scrolltext upper">
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development → 
+        Concept Art → Logo Design → Graphic Communications → Web design → Creative Development
+      </p>
+  </header>
+
+  <section id="recent" class="justify-center flex-column">
+    
+    <div class="home-header flex-row autoheight justify-between">
+      <div class="flex-column about-excerpt">
+        <a href="about.html" class="arrowafter upper">about me</a>
+        <h2 class="thin">From digital concept art, 
+          to branding, to web development, what's next?!
+          No matter what I'm doing, I'm all about 
+          synthesizing creativity with technology.
+        </h2>
       </div>
-      <div class="workscard">
-        <a href="typography.html" class="animsition-link">
-          <h2 class="huge">Typography</h2>
-        </a>
+      <div class="flex-column stuff-i-do">
+        <h3 class="thin">stuff I do</h3>
+        <ul class="stuff-i-do-nav">
+          <li><a href="development.html" class="medium animsition-link">development</a></li>
+          <li><a href="brandidentity.html" class="medium animsition-link">branding</a></li>
+          <li><a href="typography.html" class="medium animsition-link">typography</a></li>
+          <li><a href="conceptart.html" class="medium animsition-link">concept art</a></li>
+        </ul>
       </div>
-      <div class="workscard">
-        <a href="conceptart.html" class="animsition-link">
-          <h2 class="huge">Concept art</h2>
-        </a>
-      </div>
-    </section>
+    </div>
+    
+    <div class="flex-column workscard dev arrowafter">
+      <a href="development.html" class="animsition-link">
+        <h2>Development</h2>
+        <img src="./images/k-design-system.jpg" alt="">
+        <img src="./images/grey.png" alt="">
+      </a>
+    </div>
+  
+    <div class="flex-column workscard bran arrowafter">
+      <a href="brandidentity.html" class="animsition-link">
+        <h2 class="huge">Brand Identity</h2>
+        <img src="./images/earsoar/Web 1920 – 52.jpg" alt="">
+        <img src="./images/grey.png" alt="">
+      </a>
+    </div>
+    
+    <div class="flex-column workscard typ arrowafter">
+      <a href="typography.html" class="animsition-link">
+        <h2>Typography</h2>
+        <img src="./images/TYPOGRAPHY/IMG_1116 copy.jpg" alt="">
+        <img src="./images/TYPOGRAPHY/010_D_Layland_Willow_BFA_GD_Sub copy.jpg" alt="">        
+      </a>
+    </div>
+    
+    <div class="flex-column workscard conc arrowafter">
+      <a href="conceptart.html" class="animsition-link">
+        <h2>Concept art</h2>
+        <img src="./images/after/afterthumb.jpg" alt="">
+      </a>
+    </div>
+  
+    <div class="quarter more-stuff">
+      <h3 class="thin">more stuff</h3>
+      <ul>
+        <li><a href="notebook.html" class="medium animsition-link">notebook</a></li>
+        <li><a href="gallery.html" class="medium animsition-link">gallery</a></li>
+      </ul>
+    </div>
+  </section>
 
     
-    <footer id="home-footer" class="footer">
-        <div class="main-navigation">
-          <nav class="main-navigation-container">
-            <ul class="flex-row justify-center">
-              <li><a href="about.html" class="animsition-link">About</a></li>
-            </ul>
-          </nav>
-        </div>
-      
-        <div class="global-footer flex-row">
-      
-          <span class="global-footer-container flex-column">
-            <p class="site-title">Willow Layland. Tryin' Stuff.</p>
-            <p><strong>From digital concept art, to branding, to web development, what's next?!</strong>
-                No matter what I'm doing, I'm all about synthesizing creativity with technology.
-            </p>
-                
-            <p> I have years of experience in art and marketing graphic 
-                design. These days, I am launching a new career in creative development. 
-                Are you designing a website and need custom markup? I can help.
-            </p>
-            <a href="mailto:willowlayland@gmail.com" class="outline-button">Contact</a>
-          </span>
-        </div>
-      
-        <div class="socials">
-          <span class="socials-container flex-row justify-between">
-            <p class="copyright reverseorder">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
-            
-            <span class="social-links flex-row">
-              <p class="accent">Follow Me:</p>
-              <a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a>
-              <a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a>
-              <a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a>
-              <a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a>
-              <a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a>
-              
-            </span> 
-          </span>
-        </div>
-    </footer> -->
+  <footer id="home-footer" class="footer flex-column justify-between">
+    <div></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <!-- <div class="main-navigation">
+      <nav class="main-navigation-container">
+        <ul class="flex-row justify-center">
+          <li></li>
+          <li><a href="about.html" class="animsition-link">About</a></li>
+          <li><a href="about.html" class="animsition-link"><span class="upper darkgrey">about me</span></a></li>
+        </ul>
+      </nav>
+    </div> -->
+    
+    <div class="global-footer flex-row">
+    <!--     <div class="global-footer-container circle"><img></div> -->
+      <div class="global-footer-container flex-column">
+        <a href="about.html" class="animsition-link" style="margin-bottom: 1.25rem;"><span class="upper darkgrey arrowafter">
+          about me</span></a>
+
+        <p class="site-title">Willow Layland. Tryin' Stuff.</p>     
+        <p> 
+          I have years of experience in art and marketing graphic 
+          design. These days, I am launching a new career in creative development. 
+          Are you designing a website and need custom markup? I can help.
+        </p>
+        <a href="mailto:willowlayland@gmail.com" class="outline-button">Contact</a>
+      </div>
+    </div>
+
+    <div class="socials">
+      <span class="socials-container flex-row justify-between">
+        <p class="copyright reverseorder">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
+        
+        <span class="social-links flex-row">
+          <p class="accent">Follow Me:</p>
+          <a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a>
+          <a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a>
+          <a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a>    
+        </span> 
+      </span>
+    </div>
+  </footer>
+
+  <script src="./script/script.js"></script>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="./dist/js/animsition.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function() {
+      $('.animsition-overlay').animsition({
+      inClass: 'overlay-slide-in-bottom',
+      outClass: 'overlay-slide-out-top',
+      overlay : true,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body'
+      })
+      .one('animsition.inStart',function(){
+
+      $('body').removeClass('bg-init');
+
+      $(this)
+          .find('.item')
+          .append('<h2 class="target">Callback: Start</h2>');
+
+      console.log('event -> inStart');
+      })
+      .one('animsition.inEnd',function(){
+      $('.target', this).html('Callback: End');
+
+      console.log('event -> inEnd');
+      });
+  });
+  </script>
 
 </body>
 </html>
