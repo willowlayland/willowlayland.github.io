@@ -185,6 +185,17 @@ img {
   }
 }
 
+.thumbsrow{
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {  
+        padding: 2rem .5rem;
+    }
+}
+
 a:hover { //hover animation for huge
   h2 { 
     letter-spacing: 2px;
@@ -253,6 +264,8 @@ a:hover { //hover animation for huge
 
     @media (max-width: 768px) {
       padding: .5em;
+      padding: 0;
+      
       margin: 0;
     }
   }

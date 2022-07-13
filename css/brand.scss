@@ -115,6 +115,10 @@
     line-height: 1;
     margin-left: -.15em;
     transition: .5s all ease-out;
+
+    @media (min-height: 768px) {
+        font-size: 50vw;
+    }
 }
 
 
