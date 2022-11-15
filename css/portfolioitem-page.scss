@@ -16,8 +16,29 @@
 // }
 .portfolio-page {
     justify-content: center;
-}
 
+
+    background-color: var(--black);
+
+    h1 {
+      color: var(--offwhite);
+      
+        // text-align: center;
+    }
+    .small-header {
+      .header, a {
+        color: var(--offwhite) !important;
+    }
+  }
+
+  .title {
+    // padding: 10vmin 2rem;
+    height: 50vh;
+    height: auto;
+    // padding: 8vmin 4rem;
+  }
+
+}
 
 .gallery-container,.section-inner {
   max-width: 1920px;
@@ -138,12 +159,14 @@ img {
   z-index: 3;
   background-color: inherit;
   // height: 48px;
-  padding: .75rem 0;
+  padding: 1rem;
   transition: .25s all;
 
   a {
     margin: 1vh;
     white-space: nowrap;
+    flex-grow: 1;
+    flex-basis: 25vw;
   }
 
   .condensed {
@@ -196,11 +219,11 @@ img {
     }
 }
 
-a:hover { //hover animation for huge
-  h2 { 
-    letter-spacing: 2px;
-  }
-}
+// a:hover { //hover animation for huge
+//   h2 { 
+//     letter-spacing: 2px;
+//   }
+// }
 
 // .huge {
 //   font-size: 12vmax;

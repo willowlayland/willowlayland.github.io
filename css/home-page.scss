@@ -52,6 +52,8 @@ header, .name {
     position: relative;
     overflow: hidden;
 
+    justify-content: space-between;
+
     &:after {
         content: ""; 
         position: absolute;
@@ -97,6 +99,8 @@ h1 {
 
     @media only screen and (max-width: 768px) {
         line-height: 3em;
+        // transform: translateX(-3em);
+        padding-right: 5vmin;
     }
 
     .willow, .layland {
@@ -109,11 +113,16 @@ h1 {
         
 
         @media (max-width: 768px) {
+            margin-top: -1em;
             font-size: 15vw;
 
             //font-size: 17.5vw;
 
             // font-size: 20vw;
+        }
+
+        @media (max-width: 425px) {
+            margin-top: -1em;
         }
     }
 
@@ -317,17 +326,36 @@ h1 {
 
 #recent {
     background-color: var(--offwhite);
-    // background-color: white;
     overflow: hidden;
+
+    // background-color: rgb(255, 245, 235);
+    // &::before {
+    //     content: ""; 
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.5%200%22%20%2F%3E%3C%2Ffilter%3E%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E);
+    //     background-size: 512px, auto, cover;
+    //     background-position: center, 0% 0%, center;
+    //     background-repeat: repeat, repeat, repeat;
+    //     opacity: .5;
+    //     mix-blend-mode: multiply;
+    // }
 }
 
 .about-excerpt {
-    // width: 60%;
+    width: 70%;
     max-width: 768px;
     margin-right: 2em;
 
     h2 {
      font-size: 4vmin;
+
+     @media (min-height:1024px) and (min-width:1024px) { 
+        font-size: 36px;
+     }
     }
 }
 
@@ -341,10 +369,10 @@ h1 {
     // width: 25%; 
     // align-self: flex-end;
 
-&:after {
-    border-bottom: 1px solid black;
-    width: 50%;
-}
+    &:after {
+        border-bottom: 1px solid black;
+        width: 50%;
+    }
       
     @media (max-width:768px) {
         padding: 0;
@@ -380,6 +408,12 @@ h1 {
     margin: 0;
 }
 
+@media (max-width:768px) {
+    .quarter {
+        height: auto;
+        margin: 4em 0; 
+    }
+}
 
 // .huge {
 //     font-size: 10vmax;
@@ -404,6 +438,7 @@ h1 {
     h2 {
       font-size: 10vmin;
       font-size: 8vmin;
+      font-size: 5rem;
       font-weight: 800;
       line-height: 1;
       display: block;
@@ -420,21 +455,38 @@ h1 {
       box-shadow: 10px 10px;
       
       z-index: 20;
+
+      @media (max-width:768px) {
+        font-size: 3rem;
+        margin: 0 1em;
+      }
     }
 
     img {
       border: 2px solid var(--black);
       max-width: 50vmax;
       margin-top: 5rem; 
+      box-shadow: black 0 0;
       
       &:nth-of-type(1) {
         transform: rotate(-5deg);
         width: 30vw;
-      }
+    }
 
       &:nth-of-type(2) {
         transform: rotate(5deg);
         width: 65vw;
+        
+        // position: absolute;
+        // left: 50%;
+        
+        @media (max-width:768px) { 
+            position: relative;
+        }
+
+        @media (min-height:1000px) and (max-width:1440px) { 
+            width: 50vw;
+        }
       }
 
       &:hover {
@@ -481,12 +533,13 @@ h1 {
     a {
       justify-content: center;
       max-width: 1920px;
-      flex-wrap: nowrap;
 
       &:hover {
         img {
             transform: scale(1.2);
             scale: 120%;
+            
+            box-shadow: -10px 10px;
 
             &:nth-of-type(1)  {
                 transform: rotate(10deg);
@@ -560,6 +613,32 @@ h1 {
 .conc {
     img {
         min-width: 50vw;
+    }
+}
+
+.gall {
+    h3 a {
+        color: var(--black);
+        transform: rotate(-10deg); 
+        padding: .5em 1em; 
+        background: white; 
+        border: 2px solid black;
+    }
+    .sticker {
+        position: absolute;
+        background: white;
+        height: 50px;
+        width: 50px;
+        right: 0;
+        border: 2px solid black;
+        color: magenta;
+    }
+
+    &:hover {
+        .sticker {
+            transform: rotate(-10deg) !important; 
+            transition: .25s all;
+        }
     }
 }
 
