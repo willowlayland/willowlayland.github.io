@@ -33,7 +33,7 @@
     // --global-font-primary: 'Urbane', sans-serif;
     // --global-font-primary: 'Grenadine MVB', sans-serif;
     // --global-font-primary: 'Dela Gothic One', cursive;
-    --global-font-primary: 'Lexend Deca', sans-serif;
+    // --global-font-primary: 'Lexend Deca', sans-serif;
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --global-font-link: 'Source Code Pro', monospace;
     --decorative-font: 'Lexend Deca', sans-serif;
@@ -824,28 +824,6 @@ section,.section {
     margin: 0 auto;
 }
 
-.aboutadjust {
-    h1 {
-        margin: 2rem 0;
-    }
-
-    @media (min-width: 768px) {  
-        padding-right: 2em;
-
-        h1 {
-            margin: 0 0 4rem 0;
-        }
-    }
-
-    @media (max-width: 900px) {
-        h1 {
-            font-size: 3rem;
-            margin: 1.5rem 0;
-            color: black;
-        }
-    }
-}
-
 .notebook-container {
     max-width: 1920px;
     padding: 2rem;
@@ -1125,8 +1103,8 @@ section,.section {
 .footer, #footer {
     width: 100%;
     position: relative;
-    // z-index: 5;
     bottom: 0;
+    background-color: var(--black);
 
     .main-navigation {
         margin-top: 2em;
@@ -1152,6 +1130,7 @@ section,.section {
         font-family: var(--global-font-primary);
         font-family: var(--global-font-link);
         color: var(--black);
+        color: white;
         letter-spacing: 1px;
     }
   

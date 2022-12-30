@@ -1,4 +1,72 @@
-section {
-    overflow: hidden;
-    height: 75vh;
+// section {
+//     overflow: hidden;
+//     height: 75vh;
+// }
+
+// @media (min-width: 1080px) {  
+//     padding-right: 2em;
+
+//     h1 {
+//         margin: 0 0 4rem 0;
+//     }
+// }
+
+h1 {
+    margin: 2rem 0;
 }
+
+@media (min-width: 1080px) {
+    .small-div {
+        padding-right: 3em;
+    }
+
+    .fliphide-hide {
+            display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .halves {
+        flex-wrap: wrap;
+        
+        img,div {
+            width: 100%;
+        }
+    }
+
+    .twothirds {
+        order: 2;
+    }
+
+    .fliphide-show {
+        display: none;
+    }
+
+   h1 {
+       margin: 3rem auto;
+   }
+}
+
+
+
+// .aboutadjust {
+//     h1 {
+//         margin: 2rem 0;
+//     }
+
+//     @media (min-width: 768px) {  
+//         padding-right: 2em;
+
+//         h1 {
+//             margin: 0 0 4rem 0;
+//         }
+//     }
+
+//     @media (max-width: 1080px) {
+//         h1 {
+//             font-size: 3rem;
+//             margin: 1.5rem auto;
+//             color: black;
+//         }
+//     }
+// }
