@@ -356,6 +356,19 @@ div > * , h1, a {
     align-self: flex-end;
 }
 
+.reverseorder {
+    @media (max-width: 768px) {
+        order: 2;
+    }
+}
+
+.media-center {
+    @media (max-width: 768px) {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 .upper {
     text-transform: uppercase;
     font-weight: 600;
