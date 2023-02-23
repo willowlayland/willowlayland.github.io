@@ -27,7 +27,7 @@
             }
         }
         &:nth-of-type(even) {
-            translate: 0 2em;
+            margin: 2em 0;
         }
 
         &:hover {
@@ -54,6 +54,18 @@
             }
 
             .card-inner {
+                box-shadow: var(--black) 5px 5px;
+            }
+        }
+
+        @media (max-width: 768px) { 
+            &:hover {
+                transform: none !important;
+                scale: 100%;
+                rotate: 0deg;
+             }
+
+             .card-inner {
                 box-shadow: var(--black) 5px 5px;
             }
         }

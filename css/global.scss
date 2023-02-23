@@ -167,6 +167,12 @@ h2 {
 
 h3,.h3 {
     font-size: 2rem;
+    font-weight: 500;
+
+    @media (max-width: 768px) { 
+        font-size: 1.5rem;
+    }
+
 }
 
 p,q {
@@ -465,7 +471,6 @@ div > * , h1, a {
 
 .arrowbefore:before, .arrowafter:after, .arrowafterbefore:before  {
     font-family: var(--global-font-secondary);
-    // font-family: var(--global-font-primary);
     font-weight: inherit;
 }
 
@@ -484,14 +489,13 @@ div > * , h1, a {
     font-family: var(--global-font-secondary);
     white-space: pre-wrap;
     color: black;
-
 }
 
 .backtotop {
     color: inherit;
     background-color: white;
     border: 1px solid black;
-
+    
     position: fixed;
     bottom: 0;
     right: 0;
@@ -501,6 +505,7 @@ div > * , h1, a {
     margin: 2em;
     padding-top: .85rem;
     font-size: .8em;
+    text-align: center;
     transition: .25s;
     border-radius: 100%;
 
@@ -787,7 +792,7 @@ section,.section {
             .footer-links > li {
             display: block;
             margin-bottom: .5rem;
-            //text-align: right;
+            text-align: right;
             }
         }
     } 
