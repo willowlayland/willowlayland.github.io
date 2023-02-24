@@ -17,9 +17,10 @@
     --magenta: #f31969;
     --yellow: orange;
     --offwhite: #f2e8db;
+    --offwhite: #f4f4f4;
     --accent: #515860;
 
-    --background-color-primary: #f4f4f4;
+    --background-color-primary: var(--offwhite);
     --background-color-secondary: var(--black);
     --dark-foreground: #121212;
     --light-foreground: #fff;
@@ -160,16 +161,16 @@ h1 {
     font-weight: 700;
     letter-spacing: -.75vmin;
 
-        // &::first-letter {
-        //     // font: italic 800 15vmin Georgia, serif;
-        //     font-family: 'yink', sans-serif;
-        //     // font-family: 'aziga', sans-serif;
+        &::first-letter {
+            // font: italic 800 15vmin Georgia, serif;
+            font-family: 'yink', sans-serif;
+            // font-family: 'aziga', sans-serif;
 
-        //     font-weight: 400;
-        //     // font-style: italic;
-        //     font-size: 20vmin;
-        //     margin: -1vmin;
-        // }
+            font-weight: 400;
+            // font-style: italic;
+            font-size: 20vmin;
+            margin: -1vmin;
+        }
 }
 
 h2 {
@@ -215,6 +216,7 @@ a {
 
     .huge, &:hover {
         color: var(--black);
+        white-space: nowrap;
 
         h2 { 
             letter-spacing: 3px;
