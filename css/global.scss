@@ -37,8 +37,7 @@
     // --decorative-font:  'Urbane', sans-serif;
 
     --laptop: 5em 4vmax;
-    // --laptop: 3rem;
-    --tablet : 2rem .5rem;
+    --tablet: 2rem .5rem;
 }
 
 html {
@@ -47,6 +46,7 @@ html {
     -webkit-text-size-adjust: 100%;
 	pointer-events: auto;
     font-size: 14px;
+    font-size: 1rem;
     max-width: 2440px;
 }
 
@@ -155,19 +155,34 @@ nav {
 }
 
 h1 {
-    // font-size: 15vmin;
-    font-size: 11vw;
+    font-size: 15vmin;
+    // font-size: 11vw;
+    font-weight: 700;
+    letter-spacing: -.75vmin;
+
+        // &::first-letter {
+        //     // font: italic 800 15vmin Georgia, serif;
+        //     font-family: 'yink', sans-serif;
+        //     // font-family: 'aziga', sans-serif;
+
+        //     font-weight: 400;
+        //     // font-style: italic;
+        //     font-size: 20vmin;
+        //     margin: -1vmin;
+        // }
 }
 
 h2 {
     font-size: 2.5rem;
+    font-size: 2.166rem;
     line-height: 1.25;
     // font-weight: 400;
 }
 
 h3,.h3 {
     font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.833rem;
+    // font-weight: 500;
 
     @media (max-width: 768px) { 
         font-size: 1.5rem;
@@ -430,6 +445,10 @@ div > * , h1, a {
     @media (max-height: 768px) {
         height: auto;
     }
+
+    @media (max-width: 425px) {
+        min-height: revert;
+    }
 }
 
 .sticky {
@@ -452,12 +471,6 @@ div > * , h1, a {
 
 .arrowafter:after {
     content: "   \2192";
-    // &:hover {
-    //     a {
-    //         transform: translate(0, -5px);
-    //         color: red;
-    //     }
-    // }
 }
 
 .arrowup:before {
@@ -509,7 +522,7 @@ div > * , h1, a {
     transition: .25s;
     border-radius: 100%;
 
-    z-index: 4;
+    z-index: 100;
 
     &:hover {
         background-color: var(--black);
@@ -518,10 +531,6 @@ div > * , h1, a {
             color: white;
             mix-blend-mode: difference;
         }
-    }
-
-    @media (max-width: 768px) {
-        z-index: 100;
     }
 }
 
@@ -562,12 +571,10 @@ section,.section {
 
     
     h1 {
-        letter-spacing: -.5vmin;
         inline-size: auto;
         overflow-wrap: break-word;
         padding: 1rem;
         padding-bottom: 3vmin;
-        font-weight: 800;
         line-height: .9;
         // align-self: flex-end;
     }
@@ -608,7 +615,7 @@ section,.section {
     padding: 1.5rem;
 
     p {
-        max-width: 620px;
+        max-width: 768px;
     }
 }
 
@@ -719,6 +726,7 @@ section,.section {
 
     .copyright {
         font-size: 12px;
+        font-size: 0.875rem;
         line-height: 0;
         // color: var(--accent);
     }
@@ -827,9 +835,9 @@ section,.section {
             justify-content: center;
         }
         
-        .socials-container {
-            border-top: 1px solid var(--accent);
-        }
+        // .socials-container {
+        //     border-top: 1px solid var(--accent);
+        // }
     }
 }
 
