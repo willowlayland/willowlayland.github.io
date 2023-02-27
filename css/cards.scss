@@ -17,7 +17,7 @@
             width: auto;
             background: var(--foreground-color);
             border: 1px solid var(--black);
-            box-shadow: var(--black) 0px 0px;
+            box-shadow: var(--black) 5px 5px;
             transition: all .25s;
             padding: 1rem;
 
@@ -37,12 +37,17 @@
             transition: all .5s;
 
             &:nth-of-type(odd) {
-                rotate: 5deg;
+                rotate: -5deg;
+
             }
 
-            &:nth-of-type(even) {
-                rotate: -5deg;
-            }
+            // &:nth-of-type(even) {
+                rotate: 5deg;
+
+                .card-inner {
+                    box-shadow: var(--black) 15px 15px;
+                }
+            // }
 
             h3 { 
                 border: none;
@@ -53,9 +58,7 @@
                 // translate: 100%;
             }
 
-            .card-inner {
-                box-shadow: var(--black) 5px 5px;
-            }
+            
         }
 
         @media (max-width: 768px) { 

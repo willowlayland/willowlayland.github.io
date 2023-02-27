@@ -17,20 +17,17 @@
     --magenta: #f31969;
     --yellow: orange;
     --offwhite: #f2e8db;
-    --offwhite: #f4f4f4;
+    --white: #f4f4f4;
     --accent: #515860;
 
-    --background-color-primary: var(--offwhite);
+    --background-color-primary: var(--white);
     --background-color-secondary: var(--black);
-    --dark-foreground: #121212;
+    --dark-foreground: #000000;
     --light-foreground: #fff;
 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    // --global-font-link: 'Courier', monospace;
-    // --global-font-link: 'aglet-mono', mono;
     --global-font-link: 'Space mono', monospace;
-
 
 
     // --decorative-font: 'Lexend Deca', sans-serif;
@@ -46,9 +43,12 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 	pointer-events: auto;
+    max-width: 2440px;
     font-size: 14px;
     font-size: 1rem;
-    max-width: 2440px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -67,8 +67,9 @@ header {
     position: absolute; 
     top: 0;
 
-    .headernav {
+    .headername {
         font-weight: 600;
+        font-family: var(--global-font-primary);
         text-transform: capitalize;
         margin-bottom: 1rem;
         color: var(--black);
@@ -82,7 +83,7 @@ header {
         width: 100%;
         padding: var(--tablet);
 
-        .headernav {
+        .headername {
             margin-bottom: 1rem;
             letter-spacing: 0;
 
@@ -115,7 +116,7 @@ nav {
 
         a {
             font-family: var(--global-font-link);
-            font-family: var(--global-font-primary);
+            // font-family: var(--global-font-primary);
             text-transform: uppercase;
             font-weight: 400;
         }
@@ -156,8 +157,9 @@ nav {
 }
 
 h1 {
-    font-size: 15vmin;
+    // font-size: 15vmin;
     // font-size: 11vw;
+    font-size: 94px;
     font-weight: 700;
     letter-spacing: -.75vmin;
 
@@ -171,13 +173,16 @@ h1 {
         //     font-size: 20vmin;
         //     margin: -1vmin;
         // }
+
+        @media (max-width: 768px) { 
+            font-size: 56px;
+        }
 }
 
 h2 {
     font-size: 2.5rem;
     font-size: 2.166rem;
     line-height: 1.25;
-    // font-weight: 400;
 }
 
 h3,.h3 {
@@ -570,7 +575,6 @@ section,.section {
     padding-top: 15vmax;
     position: relative;
     z-index: 99;
-
     
     h1 {
         inline-size: auto;
@@ -715,6 +719,7 @@ section,.section {
     width: 100%;
     position: relative;
     bottom: 0;
+
     
     .global-footer {
         padding: 1rem;
@@ -743,10 +748,6 @@ section,.section {
         
         .social-links {
             align-self: flex-end;
-
-            p {
-                color: var(--accent) !important;
-            }
     
             a,p {
             text-transform: uppercase;
@@ -880,7 +881,7 @@ section,.section {
     h1,h2,h3,h4,h5,h6,a,p {
         color: var(--offwhite);
     }
-    .headernav {
+    .headername {
         color: var(--offwhite);
     }
 }
@@ -903,7 +904,7 @@ section,.section {
 }
 
 .accent {
-    color: var(--accent);
+    color: var(--accent) !important;
 }
 
 .darkgrey {
