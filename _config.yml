@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
+email: write@willowlayland.com
 permalink: /:title/
+github_username:  willowlayland
+ogimg: /images/favicon.png
