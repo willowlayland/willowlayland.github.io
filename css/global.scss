@@ -22,12 +22,16 @@
 
     --background-color-primary: var(--white);
     --background-color-secondary: var(--black);
-    --dark-foreground: #000000;
+    --dark-foreground: #2c2d30;
     --light-foreground: #fff;
 
     --global-font-primary: 'Poppins', Helvetica, sans-serif;
+    // --global-font-primary: "obviously-variable", sans-serif;
+    // --global-font-primary: "arboria", sans-serif;
+
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --global-font-link: 'Space mono', monospace;
+    --global-font-link: "space-mono", monospace;
 
 
     // --decorative-font: 'Lexend Deca', sans-serif;
@@ -102,6 +106,10 @@ header {
         //     padding: 1rem;
         //     line-height: .1;
         // }
+    }
+
+    @media (max-width: 425px) {
+        position: relative; 
     }
 }
 
@@ -409,7 +417,7 @@ div > * , h1, a {
     font-size: 12vmax;
     font-weight: 800;
     letter-spacing: -5px;
-    line-height: 1;
+    // line-height: 1;
     transition: .5s all ease-out;
 
     @media (max-width:1024px){
@@ -580,8 +588,8 @@ section,.section {
         inline-size: auto;
         overflow-wrap: break-word;
         padding: 1rem;
-        padding-bottom: 3vmin;
-        line-height: .9;
+        // padding-bottom: 3vmin;
+        // line-height: .9;
         // align-self: flex-end;
     }
 
@@ -597,10 +605,9 @@ section,.section {
 
     @media (max-width: 768px) {  
         padding: var(--tablet);
-        padding-top: 15vmax;
 
         div {
-            padding: 3rem 1rem;
+            padding: var(--tablet);
 
             &:last-child {
                 align-self: center;
@@ -720,54 +727,16 @@ section,.section {
     position: relative;
     bottom: 0;
 
-    
-    .global-footer {
-        padding: 1rem;
+    p,a {
+        letter-spacing: 1px;
     }
 
-    .global-footer-container,.socials-container {
+
+    .global-footer-container {
         width: 75vw;
         max-width: 1920px;
         margin: 0 auto;
-    }
 
-    .copyright {
-        font-size: 12px;
-        font-size: 0.875rem;
-        line-height: 0;
-        // color: var(--accent);
-    }
-  
-    .socials-container {
-        width: 100%;
-        padding: 2em;
-
-        .copyright {
-            margin: 1em;
-        }
-        
-        .social-links {
-            align-self: flex-end;
-    
-            a,p {
-            text-transform: uppercase;
-            font-weight: 500;
-            margin: 1em;
-            line-height: 0;
-            }
-            
-            a:hover {
-            color: var(--yellow);
-            }
-        }
-    }
-    
-    p, a {
-        letter-spacing: 1px;
-        // margin: 0;
-    }
-  
-    .global-footer-container {
         flex-wrap: nowrap;
         min-height: 200px;
         text-align: left;
@@ -808,6 +777,26 @@ section,.section {
         }
     } 
   
+    .copyright {
+        font-size: 0.875rem;
+        line-height: 0;
+        margin: 1rem 0;
+    }
+    
+    .social-links {
+        p,a {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 1rem;
+        line-height: 0;
+        }
+        
+        a:hover {
+        color: var(--yellow);
+        }
+    }
+    
+
     @media (max-width: 768px) {
         justify-content: center;
         text-align: center;
@@ -819,28 +808,18 @@ section,.section {
         text-align: center;
         font-size: 14px;
 
-        .global-footer-container,.socials-container,div {
-        padding: 1.5rem .5rem;
+        .global-footer-container,div {
+        // padding: 1.5rem .5rem;
         width: 100%;
         }
 
-        .footer-links > a {
-        width: 100%;
-        display: block;
-        }
-    
-        .global-footer-container,.socials-container,.social-links,div {
+        .global-footer-container,.social-links,div {
             width: 100%;
         }
     
-        .global-footer-container,.social-links, .copyright {
-            // padding: 1em;
+        .global-footer-container,.social-links,.copyright {
             justify-content: center;
         }
-        
-        // .socials-container {
-        //     border-top: 1px solid var(--accent);
-        // }
     }
 }
 

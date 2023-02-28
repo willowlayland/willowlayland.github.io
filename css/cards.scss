@@ -20,12 +20,14 @@
             box-shadow: var(--black) 5px 5px;
             transition: all .25s;
             padding: 1rem;
+            overflow: hidden;
 
             h3 {
                 padding-top: 1rem;
                 border-top: 1px solid var(--black);
             }
         }
+        
         &:nth-of-type(even) {
             margin: 2em 0;
         }
@@ -36,28 +38,11 @@
             z-index: 10;
             transition: all .5s;
 
-            &:nth-of-type(odd) {
-                rotate: -5deg;
-
-            }
-
-            // &:nth-of-type(even) {
                 rotate: 5deg;
 
                 .card-inner {
                     box-shadow: var(--black) 15px 15px;
                 }
-            // }
-
-            h3 { 
-                border: none;
-                // background-color: black;
-                // color: white;
-                // width: 50%;
-                // rotate: 10deg;
-                // translate: 100%;
-            }
-
             
         }
 
