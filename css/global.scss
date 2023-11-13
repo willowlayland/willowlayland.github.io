@@ -215,7 +215,7 @@ a {
         }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         margin-right: 0;
 
         &:before{
@@ -366,7 +366,7 @@ img {
     width: 3rem;
     margin: 2em;
     padding-top: .85rem;
-    font-size: 0.750rem;
+    font-size: 12px;
     text-align: center;
     transition: .5s;
     border-radius: 100%;
@@ -703,6 +703,7 @@ section,.section {
     margin: 0;
     margin-left: .5em;
     background-color: var(--background-color-primary);
+    // color: var(--accent) !important;
 
     align-self: flex-start;
     font-family: var(--global-font-secondary);
@@ -1163,6 +1164,10 @@ footer, #footer {
     --background-color-primary: var(--black);
     --foreground-color: var(--dark-foreground);
     --border-color: var(--accent);
+
+    a {
+        color: var(--accent);
+    }
 }
 
 .color-white {
