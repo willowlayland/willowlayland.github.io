@@ -11,7 +11,7 @@
     <meta name="author" content="Willow Layland">
     <title>Willow Layland. tryin' stuff.</title>
     <link rel="stylesheet" href="./css/global.css" type="text/css">
-    <link rel="stylesheet" href="./css/cards.css" type="text/css">
+    <link rel="stylesheet" href="./css/hero.css" type="text/css">
     <link rel="stylesheet" href="./css/fonts/fonts.css" type="text/css">
     <link href="./images/favicon.png" rel="icon" type="image/x-icon">
 
@@ -19,109 +19,79 @@
     <link rel="stylesheet" href="./dist/css/animsition.min.css">
 </head>
 
-<body class="animsition-overlay" data-animsition-overlay="true">
+<body 
+class="animsition-overlay datacolor" data-color="white" data-animsition-overlay="true">
     
-    <main>
-        <section class="full datacolor" style="display: flex; flex-wrap: wrap; justify-content: space-between;" data-color="white">
-            
-                <h1 class="section-inner" style="align-self: flex-end; font-size: 15vmin; font-weight: 800; line-height: .9; padding-bottom: 3vmin;">
-                Willow<br>Layland
-                </h1>
-                <div class="flex-column justify-between section-inner" style="max-width: 200px; text-align: center;">
-                    <p class="upper">tryin' stuff</p>
-                    <img src="./images/outfits2.jpg" alt="black-and-white stick figure drawing of Willow walking" width=200px height=200px class="multiply">
-                </div>
-        </section>
 
-        <section class="full flex-column datacolor" data-color="yellow">
-            
-            <div id="recent" class="section-inner">
-                <a href="about.html" class="upper">about me</a>
-                <p style="max-width: 620px;">From digital concept art, 
-                    to branding, to web development, what's next?!
-                    No matter what I'm doing, I'm all about 
-                    synthesizing creativity with technology.
-                </p>
-            
+    <section class="half flex-row justify-between">
+        <span></span>
+        <a href="#footer" style="padding: 0 10%;" class="h6 noarrow arrowdown"></a>
+    </section>
 
-                <div class="cards-container flex-row fourths">
-                    <a href="development.html" class="card animsition-link">
-                        <div class="card-inner">
-                            <img src="grey.png" alt="">
-                            <h3>Development</h3>
-                        </div>
-                    </a>
-                    <a href="typography.html" class="card animsition-link">
-                        <div class="card-inner">
-                            <img src="grey.png" alt="">
-                            <h3>Typography</h3>
-                        </div>
-                    </a>
-                    <a href="conceptart.html" class="card animsition-link">
-                        <div class="card-inner">
-                            <img src="grey.png" alt="">
-                            <h3>Concept Art</h3>
-                        </div>
-                    </a>
-                    <a href="gallery.html" class="card animsition-link">
-                        <div class="card-inner">
-                            <!-- <img src="grey.png" alt=""> -->
-                            <h3>Past Work</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- <a class="arrowafterbefore" href="gallery.html">past work</a> -->
-            </div>
-
-        </section>
-    </main>
-
-    <footer id="footer" class="section full flex-column justify-between datacolor" data-color="black">
-        <div class="section-inner flex-row justify-between">
-            <p class="upper accent">Drop a line</p>
-            <!-- <p class="upper accent">write@willowlayland.com</p> -->
-            <!-- <p class="accent arrowafter"></p> -->
-            <!-- <a class="arrowafterbefore" href="mailto:write@willowlayland.com"> Email</a> -->
+    <section class="willowlayland half sticky flex-row align-center justify-between datacolor" data-color="white">
+        <div class="section-inner">
+            <h1>
+                <span class="h2">
+                You've found the dot com of<br>
+                </span>
+                Willow Layland
+            </h1>
         </div>
-
-        <div class="section-inner flex-row media-center">
-            <div class="global-footer-container flex-column" style="max-width: 520px; margin: 0;">
-                <a href="about.html" class="animsition-link hide" style="margin-bottom: 1.25rem;"><span class="upper arrowafter">
-                    about me</span></a>
-
-                <h3 class="site-title" style="font-size: 2rem;">Willow Layland. Tryin' Stuff.</h3>     
-                <p> 
-                    I have years of experience in art and marketing graphic 
-                    design. These days, I am launching a new career in creative development. 
-                    Are you designing a website and need custom code? I can help.
-                </p>
-                <!-- <a href="mailto:write@willowlayland.com" class="button">contact</a> -->
-            </div>
-        </div>
+        <img src="./images/outfits.png" alt="black-and-white stick figure drawing of Willow walking" width="200px" height="200px">
+    </section>
+    
+    <footer id="footer" class="section full flex-column justify-around datacolor" data-color="black">
+                
+        <section class="mobilehide"></section>
 
         <div class="section-inner">
-            <!-- <p class="" style="max-width: 520px;"> 
-                I have years of experience in art and marketing graphic 
-                design. These days, I am launching a new career in creative development. 
-                Are you designing a website and need custom code? I can help.
-            </p> -->
 
-            <div class="flex-row justify-between media-center">
-                <p class="copyright reverseorder">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
+            <div class="flex-row global-footer-container justify-between">
+                <span class="separator"></span>
+
+                <div class="section-inner flex-column justify-between">
+                    <p>utilizing. whatever <br>
+                    <span class="accent" style="width: auto;">mail@willowlayland.com</span></p>
+                    <a href="mailto:mail@willowlayland.com" class="button">Email</a>
+                </div>
+
+                <nav class="flex-row">
+                    <ul class="section-inner footer-links flex-column">
+                        <li><h4>Sitemap</h4></li>
+                        <li><a href="index.html" class="">Home</a></li>
+                        <li><a href="work.html">Works</a></li>
+                        <!-- <li id="image2" class="image2"><a href="typography.html" class="animsition-link">Typography</a></li> -->
+                        <!-- <li id="image3" class="image3"><a href="development.html" class="animsition-link">Development</a></li> -->
+                        <li><a href="about.html" class="">About</a></li> 
+                        <li><a href="notebook.html" class="">Notebook</a></li>
+                        <!-- <li><a href="styleguide.html" class="">Styleguide</a></li> -->
+                        <!-- <li><a href="colophon.html" class="">Colophon</a></li> -->
+                    </ul> 
+                    <ul class="section-inner footer-links flex-column">
+                        <li><h4>Socials</h4></li>
+                        <li><a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a></li>
+                        <li><a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a></li>
+                        <li><a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a></li>
+                        <li><a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a></li>
+                        <li><a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                    </ul>
+                </nav>
                 
-                <div class="social-links flex-row align-bottom">
-                    <!-- <p class="accent" style="margin-left: 0;">Follow Me:</p> -->
-                    <p class="accent arrowafter"></p>
-                    <a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a>
-                    <a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a>
-                    <a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a>
-                    <a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a>
-                    <a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a>    
-                </div> 
-            </div>        
+                <span style="margin-top: 1em;" class="separator"></span>
+                     
+                <div style="padding-top:1em; width: 100%;"
+                class="flex-row justify-between">
+                    <p class="copyright accent">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
+                    <!-- <p class="copyright accent">no trackers to report</p> -->
+
+                    <!-- <a href="colophon.html" class="copyright accent">colophon</a> -->
+                    <a href="styleguide.html" class="copyright accent">styleguide</a>
+                </div>  
+            </div>
         </div>
     </footer>
+    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script src="./dist/js/animsition.min.js"></script>
