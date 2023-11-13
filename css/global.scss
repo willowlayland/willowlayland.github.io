@@ -217,6 +217,14 @@ a {
             transition: .5s all;
         }
     }
+
+    @media (max-width: 425px) {
+        margin-right: 0;
+
+        &:before{
+            display: none;
+        }
+    }
     
 
     .huge {
@@ -226,7 +234,7 @@ a {
         text-transform: uppercase;
         font-family: var(--global-font-primary);
 
-        margin-top: -32px;
+        margin-top: -3vmax;
 
         &:hover { 
             margin-left: 1rem;
@@ -348,7 +356,7 @@ img {
 }
 
 .backtotop {
-    color: inherit;
+    color: var(--border-color);
     // background-color: var(--background-color-primary);
     border: 1px solid var(--border-color);
     
@@ -433,11 +441,20 @@ section,.section {
     @media (max-width: 425px) {
         justify-content: center;
         text-align: center;
+        padding-top: 1em;
+
+        h1 {
+            padding: 1em 0;
+        }
     }
 }
 
 
 .submenu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
     margin: 0 calc(4vmax + 1em);
     padding: 2em 0;
     // border-top: 1px solid var(--border-color);
@@ -448,7 +465,6 @@ section,.section {
         text-transform: auto;
         letter-spacing: 1px;
         // font-size: 12px;
-        // margin: 1em;
         // padding: 1em 0;
     }
 
@@ -461,6 +477,21 @@ section,.section {
             margin-top: auto;
             // margin: 0;
             margin-right: .25em;
+        }
+    }
+
+    @media (max-width: 425px) {
+        // top: unset;
+        // position: fixed;
+        // bottom: .5em;
+        // margin-right: 4em;
+
+        div {
+            justify-content: center;
+        }
+
+        .button {
+            margin: 0 .5em .5em  0;
         }
     }
 }
@@ -525,6 +556,7 @@ section,.section {
         display: unset;
         display: block;
         margin: 0 -2vmax;
+        margin-top: 2em;
     }
 }
 
@@ -836,6 +868,14 @@ section,.section {
     align-self: flex-end;
 }
 
+.content-bottom {
+    align-content: flex-end; 
+
+    @media (max-width: 425px) {
+        align-content: space-between; 
+    }
+}
+
 .float-right {
     float: right !important;
 }
@@ -904,11 +944,6 @@ section,.section {
     position: -webkit-sticky;
     top: 0;
     z-index: 99;
-    // background: inherit;
-
-    &.submenu {
-        z-index: 100;
-    }
 }
 
 .arrowbefore:before {

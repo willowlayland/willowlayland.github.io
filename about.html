@@ -35,15 +35,18 @@
             max-height: 100%;
         }
 
-        .submenu {
-            margin: auto 1em;
+        .write {
+            /* margin: 0 calc(4vmax + 1em); */
+            /* padding: 1em; */
+
+            margin: auto 2em;
             padding-top: 1.5em;
             /* padding-bottom: 0; */
             border: none;
             border-top: 1px solid var(--border-color);
         }
 
-        .submenu > a {
+        .write > a {
             /* margin: 1em; */
             /* margin-left: .5em; */
             width: auto;
@@ -52,6 +55,7 @@
 
         a {
             overflow: visible;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -72,8 +76,8 @@
     </header>
 
     <main>
-        <section style="align-content: flex-end;" 
-        class="hero full flex-row datacolor" data-color="white">
+        <section style="min-height: 100vh;" 
+        class="hero flex-row content-bottom datacolor" data-color="white">
         
             <div class="section-inner flex-row justify-between">
                 <div class="align-bottom">
@@ -98,8 +102,8 @@
 
             <!-- <div class="section-inner flex-row justify-between" style="width: 100%;"> -->
                 <!-- <div class="section-inner"> -->
-                    <div class="flex-row justify-between align-center submenu" style="width:100%">
-                        <a href="mailto:write@willowlayland.com"><span  class="button">email</span> write@willowlayland.com</a>
+                    <div class="flex-row justify-between align-center write" style="width:100%">
+                        <a href="mailto:mail@willowlayland.com"><span  class="button">email</span> mail@willowlayland.com</a>
                         
                         <ul class="li-inline flex-row noarrow">
                             <li><p class="arrowafter accent" style="padding-left: 0"></p></li>
