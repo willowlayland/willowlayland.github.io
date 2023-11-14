@@ -26,10 +26,7 @@
         }
 
         h1 {
-            /* flex-grow: 1; */
-            /* max-width: 650px; */
             padding-bottom: 2rem;
-            line-height: .8em;
         }
 
         img {
@@ -43,22 +40,41 @@
             /* padding: 1em; */
 
             margin: auto 2em;
-            padding-top: 1.5em;
-            /* padding-bottom: 0; */
+            padding-top: 2em;
             border: none;
             border-top: 1px solid var(--border-color);
         }
 
         .write > a {
-            /* margin: 1em; */
-            /* margin-left: .5em; */
             width: auto;
-            /* padding-bottom: 2em; */
         }
 
         a {
             overflow: visible;
             letter-spacing: 1px;
+        }
+
+        p {
+            padding-top: 1em;
+        }
+
+        @media (max-width:1035px) {
+            .arrowafter {
+               display: none;
+            }
+
+            .li-inline {
+                /* display: block; */
+                /* padding: 1em 0; */
+                /* padding: 0; */
+                padding: 1.5em 0;
+                /* text-align: right; */
+                width: 100%;
+            }
+
+            .write a {
+                margin-right: 1em;
+            }
         }
 
         @media (max-width: 768px) {
@@ -76,28 +92,17 @@
             }      
             
             .write {
-                margin: 0;
-
-                padding: 1em;
+                margin: 0 .5em;
+                align-items: flex-start;
+                /* padding: 1em; */
                 padding-top: 2em;
             }
-
-            /* li p.arrowafter {
-                display: none;
-            } */
 
             .li-inline p, .li-inline a {
                 padding: .5em;
             }
 
-            .li-inline {
-                display: block;
-                /* padding: 1em 0; */
-                padding: 0;
-                padding-top: 1em;
-                /* text-align: right; */
-                align-self: flex-end;
-            }
+            
          }
 
     </style>
@@ -146,16 +151,24 @@
             <!-- <div class="section-inner flex-row justify-between" style="width: 100%;"> -->
                 <!-- <div class="section-inner"> -->
                     <div class="flex-row justify-between align-center write" style="width:100%">
-                        <a href="mailto:mail@willowlayland.com"><span  class="button">email</span> mail@willowlayland.com</a>
                         
+
+                        <div class="flex-row">
+                            <a><span class="button">Resume</span></a>
+                            <a href="mailto:mail@willowlayland.com"><span  class="button">Email</span> mail@willowlayland.com</a>
+                        </div>
+                        <span class="arrowafter accent"></span>
+
                         <ul class="li-inline flex-row noarrow">
-                            <li><p class="arrowafter accent" style="padding-left: 0"></p></li>
                             <li><a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer" class="">github</a></li>
                             <li><a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer" class="">codepen</a></li>
                             <li><a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a></li>
                             <li><a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a></li>
                             <li><a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a></li>
                         </ul> 
+
+                        <!-- <p class="accent">|</p>
+                        <a><span class="button">Resume</span></a> -->
                     </div>  
                 <!-- </div> -->
             <!-- </div> -->

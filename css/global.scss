@@ -19,12 +19,17 @@
     --offwhite: #f2e8db;
     --white: #f4f4f4;
     --accent: grey;
+    --accent: dimgrey;
     --dark-foreground: #2c2d30;
     --light-foreground: #fff;
     --border-color: var(--accent);
 
     --global-font-primary: 'bc-ludva', Helvetica, sans-serif;
     --global-font-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --global-font-secondary: 'Space mono', monospace;
+    --global-font-secondary: "space-mono", monospace;
+
+
     --global-font-link: 'Space mono', monospace;
     --global-font-link: "space-mono", monospace;
 
@@ -61,7 +66,7 @@ header {
     position: absolute; 
     top: 0;
 
-    .headername {
+    .site-title {
         font-family: var(--global-font-secondary);
         font-weight: 600;
         text-transform: capitalize;
@@ -202,6 +207,7 @@ a {
         color: transparent;
         font-family: var(--global-font-secondary);
         margin-right: -1em;
+        margin-right: -.65em; //space-mono fix
         transition: .5s all;
     }
 
@@ -230,7 +236,7 @@ a {
         font-weight: 700;
         text-transform: uppercase;
         font-family: var(--global-font-primary);
-
+        margin-right: -5px;
         margin-top: -3vmax;
 
         &:hover { 
@@ -508,7 +514,7 @@ section,.section {
 
 .li-inline {
     p,a {
-        padding-left: 2em;
+        padding-right: 2em;
     }
     
     li {
@@ -612,11 +618,14 @@ section,.section {
         transition: .5s;
     }
     
-    @media (min-width: 768px) {
-        left: 1rem;
+    @media (min-width: 768px) {        
         img {
             margin-bottom: 1.9vmax;
         }
+    }
+
+    @media (max-width: 768px){
+        left: 1rem;
     }
 }
 
@@ -702,6 +711,7 @@ section,.section {
     padding: .5em 1em;
     margin: 0;
     margin-left: .5em;
+    margin-bottom: 1em;
     background-color: var(--background-color-primary);
     // color: var(--accent) !important;
 
@@ -1003,6 +1013,7 @@ section,.section {
 .separator {
     border-bottom: 1px solid var(--border-color);
     width: 100%;
+    margin: 1em 0;
 }
 
 .submenuseparator {
@@ -1056,6 +1067,16 @@ footer, #footer {
             font-size: 1.166rem;
             font-weight: 600;
             text-transform: capitalize;
+
+            margin-bottom: -1em; 
+            flex-grow: 1; 
+            flex-wrap: nowrap; 
+            align-items: baseline;
+
+            p {
+                margin: 0;
+                min-width: 180px;
+            }
         } 
 
         nav {
@@ -1073,9 +1094,13 @@ footer, #footer {
         @media (max-width: 768px) { 
             flex-flow: column wrap;
 
+            .site-title {
+                margin-bottom: 1em;
+            }
+
             .footer-links > li {
                 display: block;
-                margin-bottom: .5rem;
+                padding-bottom: .5rem;
                 text-align: right;
             }
         }
@@ -1090,7 +1115,8 @@ footer, #footer {
     @media (max-width: 768px) {
         justify-content: center;
         margin-top: 1em;
-
+        padding-left: 1em;
+        padding-right: 1em;
         min-height: 100vh;
 
         justify-content: space-around;
