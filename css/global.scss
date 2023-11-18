@@ -438,12 +438,17 @@ section,.section {
       }
 }
 
+details {
+    height: calc(3.5* var(--tablet));
+}
+
 details summary { 
   cursor: pointer;
   width: max-content;
 }
 
 details[open] {
+
     @media (min-width: 425px) {
     summary {
         display: none;
