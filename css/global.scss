@@ -54,6 +54,8 @@ html {
     -webkit-font-smoothing: antialiased !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+
+    // padding: 10px;
 }
 
 body {
@@ -69,10 +71,11 @@ body {
     overflow-x: hidden;
 
     @media (max-width: 768px) {
-        outline: 6px solid var(--black);
-        outline-offset: -5px;
-        border-radius: 20px;
+        outline: unset;
+        border-radius: 0;
     }
+
+    // margin: 10px;
 }
 
 header {
@@ -80,6 +83,7 @@ header {
     width: 100%;
     padding: var(--laptop);
     padding-right: 2em;
+    padding-top: calc(var(--laptop) + var(--tablet));
     top: 0;
 
     .site-title {
@@ -93,6 +97,7 @@ header {
 
     @media (max-width: 768px) {
         padding: var(--tablet);
+        padding-top: var(--laptop);
     }
 
     @media (max-width: 425px) {
@@ -445,9 +450,9 @@ section,.section {
       }
 }
 
-details {
-    height: calc(3.5* var(--tablet));
-}
+// details {
+//     height: calc(4* var(--tablet));
+// }
 
 details summary { 
   cursor: pointer;
@@ -466,7 +471,7 @@ details[open] {
 
 .hero {
     padding: var(--laptop);
-    padding-top: 15em;
+    padding-top: 10em;
     padding-bottom: 5em;
     position: relative;
     z-index: 99;
@@ -1120,15 +1125,13 @@ footer, #footer {
         text-align: left;
 
         .site-title {
-            font-size: 1.166rem;
-
             margin-bottom: -1em; 
-            // flex-grow: 1; 
 
             flex-wrap: nowrap; 
             align-items: baseline;
 
             p {
+                font-size: 1.166rem;
                 margin-right: 1em;
                 min-width: max-content;
             }
