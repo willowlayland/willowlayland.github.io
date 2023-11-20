@@ -36,7 +36,9 @@
         img {
             /* margin-bottom: -1em; */
             margin-left: -580px;
+            text-align: right;
             max-height: 100%;
+            width: 50%;
         }
 
         .write {
@@ -62,24 +64,30 @@
             padding-bottom: 1em;
         }
 
-        .li-inline p, .li-inline a {
+        /* .li-inline p, .li-inline a {
                 padding-left: 2em;
         }
 
         li {
             list-style-type: none;
-        }
+        } */
 
         .button {
             margin-right: 1em;
         }
 
-        @media (max-width:1035px) {
+        @media (min-width: 768px) {
+            section{
+            padding-top: 0;
+            }
+        }
+
+        @media (max-width: 1035px) {
             .img {
                 margin-left: 0;
             }
 
-            .li-inline {
+            .inline {
                 /* display: block; */
                 /* padding: 1em 0; */
                 /* padding: 0; */
@@ -114,7 +122,7 @@
                 padding-top: 2em;
             }
 
-            .li-inline p, .li-inline a {
+            .inline p, .inline a {
                 padding: .5em;
             }
 
@@ -141,9 +149,10 @@
 
     <main>
         <section 
-        class="hero flex-row content-bottom datacolor" data-color="white">
+        class="flex-row content-bottom datacolor" data-color="white">
         
-            <div class="section-inner flex-row justify-between">
+            <div class="flex-row justify-between" style="width: 100%;">
+                
                 <div class="align-bottom">
                     <h1 class="h1">
                         I am a creative developer <br>based in Las Vegas. 
@@ -175,7 +184,7 @@
                         </div>
                         <span class="arrowafter accent"></span>
 
-                        <ul class="li-inline flex-row noarrow">
+                        <ul class="inline flex-row noarrow">
                             <li><a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer" class="">github</a></li>
                             <li><a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer" class="">codepen</a></li>
                             <li><a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a></li>

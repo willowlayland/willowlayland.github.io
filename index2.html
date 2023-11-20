@@ -19,20 +19,26 @@
 
     <style>
         section, footer {
-            padding: 0 15vmin !important;
-            /* max-width: 900px; */
+            /* padding: 0 15vmin !important; */
+            max-width: 1080px;
+            margin: 0 auto;
         }
 
         footer {
             padding: 0;
         }
-        .willowlayland > h1 {
+
+        h1 {
             font-size: 15vmin; 
             font-weight: 700; 
             text-transform: uppercase;
             line-height: .85; 
             /* margin-top: -.8em; //same as line */
             z-index: 7; 
+        }
+
+        h1 > span {
+            text-transform: capitalize;
         }
 
         .willowlayland > span {
@@ -42,8 +48,9 @@
 
         @media (max-width: 768px) { 
             .willowlayland {
-                position: relative;
-                height: unset;
+                padding-top: 0;
+                /* position: relative;
+                height: unset; */
             }
         }
 
@@ -59,19 +66,19 @@
 </head>
 
 <body 
-class="animsition-overlay datacolor" data-color="white" data-animsition-overlay="true">
-    
+class="animsition-overlay" data-animsition-overlay="true">
+    <main class="datacolor" data-color="white">
 
-    <section class="half flex-row justify-between">
+    <section 
+    class="half flex-row justify-between datacolor" data-color="white">
         <span></span>
         <a href="#footer" style="padding: 0 10%;" class="h6 noarrow arrowdown"></a>
     </section>
 
-    <section 
-    class="willowlayland half sticky flex-row align-center justify-between datacolor" data-color="white">
-        <div class="section-inner">
+    <section class="willowlayland half sticky flex-row align-center justify-between datacolor" data-color="white">
+        <div class="">
             <h1 class="display">
-                <span class="h2">
+                <span class="h3">
                     Utilizing creativity & technology.<br>
                 </span>
                 Willow Layland
@@ -80,14 +87,14 @@ class="animsition-overlay datacolor" data-color="white" data-animsition-overlay=
         <img src="./images/outfits.png" alt="black-and-white stick figure drawing of Willow walking" width="200px" height="200px">
     </section>
     
-    <footer id="footer" class="section full flex-column justify-around datacolor" data-color="black">
+    <section id="footer" class="full flex-column justify-center datacolor" data-color="black">
                 
-        <section class="mobilehide"></section>
+        <div class="quarter"></div>
 
-        <div class="section-inner">
+        <div class="">
+            <span class="separator"></span>
 
             <div class="flex-row global-footer-container justify-between">
-                <span class="separator"></span>
 
                 <div class="flex-column justify-between">
                     <p>tryin' stuff.<br>
@@ -97,23 +104,26 @@ class="animsition-overlay datacolor" data-color="white" data-animsition-overlay=
 
                 <nav class="flex-row">
                     <ul class="footer-links flex-column">
-                        <li><h4>Sitemap</h4></li>
+                        <li><p class="h6">Sitemap</p></li>
                         <li><a href="index.html" class="">Home</a></li>
                         <li><a href="work.html">Works</a></li>
-                        <!-- <li id="image2" class="image2"><a href="typography.html" class="animsition-link">Typography</a></li> -->
-                        <!-- <li id="image3" class="image3"><a href="development.html" class="animsition-link">Development</a></li> -->
                         <li><a href="about.html" class="">About</a></li> 
                         <li><a href="notebook.html" class="">Notebook</a></li>
-                        <!-- <li><a href="styleguide.html" class="">Styleguide</a></li> -->
-                        <!-- <li><a href="colophon.html" class="">Colophon</a></li> -->
                     </ul> 
-                    <ul class="footer-links flex-column">
+                    <!-- <ul class="footer-links flex-column">
                         <li><h4>Socials</h4></li>
                         <li><a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a></li>
                         <li><a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a></li>
                         <li><a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a></li>
                         <li><a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a></li>
                         <li><a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                    </ul> -->
+                    <ul class="footer-links flex-column">
+                        <li><p class="h6">Featured Works</p></li>
+                        <li><a href="work.html">Concept Art</a></li>
+                        <li><a href="work.html">Typography</a></li>
+                        <li><a href="work.html">Development</a></li>
+                        <li><a href="work.html">Gallery</a></li>
                     </ul>
                 </nav>
                 
@@ -123,15 +133,24 @@ class="animsition-overlay datacolor" data-color="white" data-animsition-overlay=
                 class="flex-row justify-between">
                     <p class="copyright accent">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
                     <!-- <p class="copyright accent">no trackers to report</p> -->
-
-                    <!-- <a href="colophon.html" class="copyright accent">colophon</a> -->
+                    <div>
                     <a href="styleguide.html" class="copyright accent arrowafterbefore">Styleguide</a>
+                    <span class="accent">/</span>
+                    <a href="colophon.html" class="copyright accent arrowafterbefore">Colophon</a>
+                    </div>
+                    <ul class="inline accent flex-row">
+                        <li><a href="https://github.com/willowlayland" target="_blank" rel="noopener noreferrer">github</a></li>
+                        <li><a href="https://codepen.io/willowlayland" target="_blank" rel="noopener noreferrer">codepen</a></li>
+                        <li><a href="https://instagram.com/willowlaylandotcom" target="_blank" rel="noopener noreferrer">instagram</a></li>
+                        <li><a href="https://www.behance.net/willowlayland" target="_blank" rel="noopener noreferrer">behance</a></li>
+                        <li><a href="https://www.linkedin.com/in/willow-layland" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                    </ul> 
                 </div>  
             </div>
         </div>
-    </footer>
+    </section>
     
-
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script src="./dist/js/animsition.min.js"></script>

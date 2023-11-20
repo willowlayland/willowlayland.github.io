@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#1b1c1e" />
+    <meta name="theme-color" content="#1b1c1e">
 
     <meta name="description" content="Styleguide for willowlayland.com">
     <meta name="author" content="Willow Layland">
@@ -37,18 +37,32 @@
 
     <main class="datacolor" data-color="white">
 
+        <!-- <div class="header">
+            <nav class="flex-row">
+                <ul class="noarrow">
+                    <li><a href="./index.html" class="site-title arrowafter">willow layland. tryin stuff</a>
+                    <a href="#" class="active-title">Styleguide</a>
+                    </li>
+                </ul>
+                <ul class="justify-center">
+                    <li><a href="./work.html" >Work</a></li>
+                    <li><a href="./about.html" >About</a></li>
+                </ul>
+            </nav>
+        </div> -->
+
         <section class="flex-column hero">
             <h1 class="display">Styleguide</h1>
             <p>This style guide page contains styles and components used through the website.</p>
         </section>
-        <span class="submenuseparator"></span>
+        <span class="separator width"></span>
         <details open class="submenu flex-row">
             <summary>Jump to</summary>
             <div class="flex-row">
                 <a href="#type" class="button">typography</a>
                 <a href="#images" class="button">images</a>
                 <a href="#blocks" class="button">blocks</a>
-                <a href="#portfolio" class="button">portfolio</a>
+                <!-- <a href="#portfolio" class="button">portfolio</a> -->
                 <a href="#sections" class="button">sections</a>
                 <a href="#backgrounds" class="button">backgrounds</a>
              
@@ -120,113 +134,116 @@
         </section>
 
         <section id="images" class="">
-            <h2>Images</h2>
-            <div class="grid-container">
-                <img src="https://source.unsplash.com/featured/?color,plant" class="">
-                <img src="https://source.unsplash.com/featured/?color,flower">
-                <img src="https://source.unsplash.com/featured/?color,person">
-                <img src="https://source.unsplash.com/featured/?color,sky" class="span2">
-                <img src="https://source.unsplash.com/featured/?color,art" class="">
-                <img src="https://source.unsplash.com/featured/?color,flower">
-                <img src="https://source.unsplash.com/featured/?color,person">
-                <img src="https://source.unsplash.com/featured/?color,sky" class="">
-                <img src="https://source.unsplash.com/featured/?color,art" class="">
-                <img src="https://source.unsplash.com/featured/?color,flower">
+            <h2 class="h6">Images</h2>
+
+            <h2>Clickable Images</h2>
+
+            <div class="gallery portfolio">
+                <a src="#">
+                    <img src="https://source.unsplash.com/featured/?color,plant" alt="">
+                </a>
+                <img src="https://source.unsplash.com/featured/?color,art" alt="">
+            
+                <img src="https://source.unsplash.com/featured/?color,art" alt="">
+                <a src="#">
+                    <img src="https://source.unsplash.com/featured/?color,plant" alt="">
+                </a>
+                
+                <a src="#">
+                    <img src="https://source.unsplash.com/featured/?color,plant" alt="">
+                </a>            
+                <img src="https://source.unsplash.com/featured/?color,art" alt="">
             </div>
 
-        </section>
+
+            <h2>Masonry Gallery</h2>
+            
+            <div class="gallery fourths">
+                <img src="https://source.unsplash.com/featured/?color,plant" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,person" alt="">
+                <img src="https://source.unsplash.com/featured/?color,art" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,sky" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,art" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,flower" alt="">
+                <img src="https://source.unsplash.com/featured/?color,person" alt="">
+                <img src="https://source.unsplash.com/featured/?color,sky" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,art" class="" alt="">
+                <img src="https://source.unsplash.com/featured/?color,flower" alt="">
+                <img src="https://source.unsplash.com/featured/?color,plant" class="" alt="">
+            </div>
+       
+            <h2>Cover</h2>
+            
+            <div class="cover">
+                <img src="https://source.unsplash.com/featured/?color,art" alt="">
+            </div>
+
         
-        <!-- <section id="images" class="gallery datacolor" data-color="black">
-            images
-            <br><br>
-                <div class="cover">
-                    <img src="https://source.unsplash.com/featured/?color,art">
-                </div>
-
-                <div class="flex-row halves">
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                    </div>
-                </div>
-
-                <div class="flex-row thirds">
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,plant">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <img src="https://source.unsplash.com/featured/?color,plant">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,plant">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                </div>
-
-                <div class="flex-row fourths keephalf">
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                </div>
-        </section> -->
+        </section>
 
         <section id="blocks">
             <h2 class="h6">Building Blocks</h2>
             
-            <div class="section-inner">
-               <h2>Notes</h2>
-                <div class="flex-row notebox">
-                    <br>
-                    <div>
-                        <p>7-1-2022 grey.png</p>
-                        <img src="grey.png" alt="">
-                        <!-- <p>got a new tablet!</p> -->
-                    </div>
-        
-                    <div>
-                        <p>10-8-2023</p>
-                        <q>You've been drifting out with the
-                            tide, my friend<br>
-                            But you can have what's mine, if it helps you stay
-                            afloat<br><br>
-                            And I close my eyes, I can't watch you drown anymore, my
-                            friend<br>
-                            But I'll tell you lies if it helps you sleep at night...</q>
-                        <p>- Electric President</p>
-                    </div>
-        
-        
-                    <div>
-                        <p>2-19-2019</p>
-                        <q><strong>1. Create.</strong> The worst it can do is suck.<br>
-                            <strong>2. Create again.</strong>  Bad art happens to good artists.<br>
-                            <strong>3. Just create: </strong>Art is cheaper than therapy.
-                        </q>
-                        <p>the three laws of art</p>
-                    </div>
-                        
+            <h2>Notebook</h2>
+
+            <div class="grid-container notebox fourths">
+                <div class="span2">
+                    <p>7-1-2022 grey.png</p>
+                    <img src="grey.png" alt="">
+                    <!-- <p>got a new tablet!</p> -->
+                </div>
+    
+                <div>
+                    <p>10-8-2023</p>
+                    <q>You've been drifting out with the
+                        tide, my friend<br>
+                        But you can have what's mine, if it helps you stay
+                        afloat<br><br>
+                        And I close my eyes, I can't watch you drown anymore, my
+                        friend<br>
+                        But I'll tell you lies if it helps you sleep at night...</q>
+                    <p>- Electric President</p>
+                </div>
+    
+    
+                <div>
+                    <p>2-19-2019</p>
+                    <q><strong>1. Create.</strong> The worst it can do is suck.<br>
+                        <strong>2. Create again.</strong>  Bad art happens to good artists.<br>
+                        <strong>3. Just create: </strong>Art is cheaper than therapy.
+                    </q>
+                    <p>the three laws of art</p>
+                </div>
+
+                <div>
+                    <p>Oct-21-2021 12:00</p>
+                    <q>
+                        I remember what playwright 
+                        Tony Kushner told a reporter 
+                        (for the New York Times Vows 
+                        column, of all places) about
+                         his creative process: <strong>"I 
+                         work best after the deadline
+                          has passed, when I'm in a panic."</strong>
+                    </q>
+                    <p>– The Deadline Effect</p>
+                </div>
+    
+                <div>
+                    <p>2/14/2022 happyvalentinesday.jpg</p>
+                    <img src="./images/notebook/Web 1920 – 6.jpg" alt="">
+                    <!-- <p>happy valentine's day</p> -->
+                </div>
+
+                <div class="span2">
+                    <p>7/11/2020</p>
+                    <q>Sometimes at night I would leave the lights on in my little house and walk across the flat fields. When I looked back from a distance, the house looked like a boat at sea, and all around me the vast Delta night.
+                        <br><br>I soon became acquainted with the semi-feral dogs who roamed free across the fields in what was more or less a pack. Some of them had casual arrangements with the families of farm workers, but much of the time they had to forage for themselves. In the hard winter months with the ground frozen and dry, I started giving them dog food and soon they were going through fifty pounds of dog food a week. They followed me around, and they were a lot of company- tall dogs, short ones, relatively friendly dogs and big rough dogs you could not touch. They walked with me in the fields at night and when I couldn't see them, I could hear them all around me, breathing and snuffling along in the dark. When I was working in the cabin, they waited on the font porch,
+                        <br><br><strong>and when the moon was full they would sing...</strong></q>
+                    </q>
+                    <p class="arrowafterbefore"> Thomas Harris</p>
                 </div>
             </div>
-            
         </section>
 
         <section class="flex-row uneven">
@@ -235,34 +252,13 @@
                 <p>Lorem ipsum dolor sit amet. Aut praesentium molestiae sit amet consectetur id consequuntur velit et enim asperiores aut molestias ratione sit molestias iste in galisum maiores! Sit quibusdam omnis cum perferendis officia et molestiae beatae hic dolores architecto. </p>
             </div>
             <div>
-                <img src="https://source.unsplash.com/featured/?color,art">
-            </div>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio Section</h2>
-            <div class="">
-                <div class="portfolio-container">
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <!-- <h3>Heading</h3>
-                        <p>Aut praesentium molestiae sit amet consectetur id consequuntur velit et enim asperiores aut molestias ratione sit molestias iste in galisum maiores! Sit quibusdam omnis cum perferendis officia et molestiae beatae hic dolores architecto.</p> -->
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,sky">
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                    </div>
-                    <div>
-                        <img src="https://source.unsplash.com/featured/?color,art">
-                        <!-- <img src="https://source.unsplash.com/featured/?color,sky"> -->
-                    </div>
-                </div>
+                <img src="https://source.unsplash.com/featured/?color,art" alt="">
             </div>
         </section>
 
 
         section
-        <section id="sections" class="full outline">
+        <div id="sections" class="section full outline">
             section-inner
 
             <div 
@@ -274,7 +270,7 @@
             <div 
             class="section-narrow half outline">section-narrow</div>
 
-        </section>
+        </div>
 
         <div id="white"></div>
         
@@ -315,7 +311,7 @@
         <a href="#"  aria-label="Top" class="backtotop"></a>
     </main>
 
-    <footer id="footer" class="section full flex-column justify-aroound datacolor" data-color="black">
+    <footer id="footer" class="section full flex-column datacolor" data-color="black">
         
         <div class="">   
             <div class="section-narrow global-footer-container quarter flex-column">
@@ -338,7 +334,7 @@
 
                 <nav class="flex-row">
                     <ul class="footer-links flex-column">
-                        <li><p class="h6">Sitemap</p></li>
+                        <li><p class="h6 pee">Sitemap</p></li>
                         <li><a href="index.html" class="">Home</a></li>
                         <li><a href="work.html" class="">Works</a></li>
                         <li><a href="about.html" class="">About</a></li>
