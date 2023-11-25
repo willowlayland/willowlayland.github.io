@@ -64,7 +64,7 @@
                 <a href="#blocks" class="button">blocks</a>
                 <!-- <a href="#portfolio" class="button">portfolio</a> -->
                 <a href="#sections" class="button">sections</a>
-                <a href="#backgrounds" class="button">backgrounds</a>
+                <a href="#backgrounds" class="mobilehide button">backgrounds</a>
              
                 <a href="#footer" class="button">footer</a>
             </div>
@@ -96,31 +96,35 @@
                 <p>Lorem ipsum dolor sit amet. Aut praesentium molestiae sit amet consectetur id consequuntur velit et enim asperiores aut molestias ratione sit molestias iste in galisum maiores! Sit quibusdam omnis cum perferendis officia et molestiae beatae hic dolores architecto. </p>
 
                 <h6>H6 Heading 6</h6>
-                <p>Lorem ipsum dolor sit amet. Aut praesentium molestiae sit amet consectetur id consequuntur velit et enim asperiores aut molestias ratione sit molestias iste in galisum maiores! Sit quibusdam omnis cum perferendis officia et molestiae beatae hic dolores architecto. </p>
+                <p>Lorem ipsum dolor sit amet. 
+                    <a href="#">Link.</a>
+                    Aut praesentium molestiae sit amet consectetur id consequuntur velit et enim asperiores aut molestias ratione sit molestias iste in galisum maiores! Sit quibusdam omnis cum perferendis officia et molestiae beatae hic dolores architecto. </p>
                 
                 <a href="#" class="button">button</a>
                 
                 <q>Hic error cumque aut reiciendis molestias ut voluptas consectetur et corrupti nihil. Et molestias atque et repellat repellat est quasi aliquid ut maiores sunt et eaque nihil et vero dolor rem ullam cumque. Nam quaerat cumque et ipsa suscipit</q>
                 
-                <a href="#">Link</a>
-
-                <ul class="footer-links flex-column">
+                
+                <ul>
                     <li><a href="#" class="">List with link</a></li>
                     <li><a href="#" class="">List with link</a></li>
                     <li><a href="#" class="">List with link</a></li>
                     <li><a href="#" class="">List with link</a></li>
                 </ul>
 
-                <ul class="flex-column">
-                    <li><p>List item</p></li>
-                    <li><p>List Item</p></li>
-                    <li><p>List item</p></li>
-                    <li>List with sub items
-                        <li>Sublist Item</li>
-                        <li>Sublist Item</li>
-                    </li>
-                    <li><p>List item</p></li>
+                <ul>
+                    <li><p>Unordered list item</p></li>
+                    <li><p>Unordered list item</p></li>
+                    <li><p>Unordered list item</p></li>
+                    <li><p>Unordered list item</p></li>
                 </ul>
+
+                <ol>
+                    <li><p>Ordered list item</p></li>
+                    <li><p>Ordered list item</p></li>
+                    <li><p>Ordered list item</p></li>
+                    <li><p>Ordered list item</p></li>
+                </ol>
 
                 <div class="flex-column">
                     <span class="arrowbefore"></span>
@@ -139,7 +143,7 @@
             <h2>Clickable Images</h2>
 
             <div class="gallery portfolio">
-                <a src="#">
+                <a href="#">
                     <img src="https://source.unsplash.com/featured/?color,plant" alt="">
                 </a>
                 <img src="https://source.unsplash.com/featured/?color,art" alt="">
@@ -274,7 +278,7 @@
 
         <div id="white"></div>
         
-        <section id="backgrounds" class="full sticky datacolor" data-color="white">
+        <section id="backgrounds" class="full sticky mobilehide datacolor" data-color="white">
             <h2 class="h6">Background colors</h2>
             <div class="section-inner">
                 
@@ -311,10 +315,10 @@
         <a href="#"  aria-label="Top" class="backtotop"></a>
     </main>
 
-    <footer id="footer" class="section full flex-column datacolor" data-color="black">
+    <footer id="footer" class="section full flex-column color-black datacolor" data-color="black">
         
         <div class="">   
-            <div class="section-narrow global-footer-container quarter flex-column">
+            <div class="global-footer-container quarter flex-column">
                 <a href="mailto:mail@willowlayland.com">
                     <span class="link upper">Learn more</span>
                     <h2 class="display">Get in Touch</h2>
@@ -323,7 +327,7 @@
         </div>
 
         <div class="">                
-            <div class="section-narrow global-footer-container flex-column">
+            <div class="global-footer-container flex-column">
                 
                 <div class="site-title flex-row">
                     <p>
@@ -334,14 +338,14 @@
 
                 <nav class="flex-row">
                     <ul class="footer-links flex-column">
-                        <li><p class="h6 pee">Sitemap</p></li>
+                        <li><p class="h5">Sitemap</p></li>
                         <li><a href="index.html" class="">Home</a></li>
                         <li><a href="work.html" class="">Works</a></li>
                         <li><a href="about.html" class="">About</a></li>
                         <li><a href="notebook.html" class="">Notebook</a></li>
                     </ul>
                     <ul class="footer-links flex-column">
-                        <li><p class="h6">Featured Works</p></li>
+                        <li><p class="h5">Featured Works</p></li>
                         <li><a href="work.html">Concept Art</a></li>
                         <li><a href="work.html">Typography</a></li>
                         <li><a href="work.html">Development</a></li>
@@ -353,7 +357,7 @@
 
             </div>                 
             
-            <div class="section-narrow global-footer-container">
+            <div class="global-footer-container">
                 <p class="copyright accent">© Willow Layland <script>document.write(new Date().getFullYear())</script></p>
             </div>
         </div>
